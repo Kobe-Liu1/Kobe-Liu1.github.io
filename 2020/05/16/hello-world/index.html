@@ -811,6 +811,43 @@ typora直接下载就完事了嗷
 </div>
 
 
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Kobe-Liu1<br />'
+            + '文章作者: Kobe-Liu1<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
 
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
@@ -951,8 +988,8 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             
             
             
-            <!-- <span id="busuanzi_container_site_pv">
-                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+            <span id="busuanzi_container_site_pv">
+                &nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
                     class="white-color"></span>&nbsp;次
             </span>
             
@@ -960,12 +997,12 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <span id="busuanzi_container_site_uv">
                 |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
                     class="white-color"></span>&nbsp;人
-            </span> -->
+            </span>
             
             <br>
             
             <span id="sitetime">载入运行时间...</span>
-            <!-- <script>
+            <script>
                 function siteTime() {
                     window.setTimeout("siteTime()", 1000);
                     var seconds = 1000;
@@ -974,9 +1011,9 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
                     var days = hours * 24;
                     var years = days * 365;
                     var today = new Date();
-                    var startYear = "2019";
-                    var startMonth = "6";
-                    var startDate = "28";
+                    var startYear = "2020";
+                    var startMonth = "5";
+                    var startDate = "17";
                     var startHour = "0";
                     var startMinute = "0";
                     var startSecond = "0";
@@ -998,21 +1035,30 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
                         diffMinutes * minutes) / seconds);
                     if (startYear == todayYear) {
                         document.getElementById("year").innerHTML = todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
-                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                        document.getElementById("sitetime").innerHTML = "小破站已成立 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒了！！";
                     } else {
                         document.getElementById("year").innerHTML = startYear + " - " + todayYear;
-                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
-                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                        document.getElementById("sitetime").innerHTML = "小破站已成立 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒了！！";
                     }
                 }
                 setInterval(siteTime, 1000);
-            </script> -->
+            </script>
             
             <br>
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Kobe-Liu1" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1193235646@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
 
 
 
@@ -1020,8 +1066,15 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
 
 
 
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1193235646" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1193235646" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
 
 
+
+    <a href="https://weibo.com/u/6026550837" class="tooltipped" target="_blank" data-tooltip="关注我的微博: https://weibo.com/u/6026550837" data-position="top" data-delay="50">
+        <i class="fab fa-weibo"></i>
+    </a>
 
 
 
