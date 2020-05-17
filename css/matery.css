@@ -371,12 +371,11 @@ header .side-nav .social-link {
 
 .cover-btns {
     position: relative;
-    top: 10vh;
     text-align: center;
 }
 
 .cover-btns a {
-    margin: 10px 15px;
+    margin: 30px 15px;
     padding: 0 35px;
     height: 45px;
     line-height: 45px;
@@ -502,6 +501,7 @@ header .side-nav .social-link {
 
 .cover-social-link {
     bottom: 0;
+	padding:20px;
     width: 100%;
     text-align: center;
 }
