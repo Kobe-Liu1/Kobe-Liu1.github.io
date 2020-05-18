@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="近期工作中的bug(第一弹), Kobe-Liu1">
-    <meta name="description" content="近期工作bug(第一弹)将本地jar包导入到本地maven依赖mvn install:install-file -Dfile=包所在位置.jar -DgroupId=${groupId} -DartifactId=${artifactId}">
+    <meta name="keywords" content="一些自己用的软件整理, Kobe-Liu1">
+    <meta name="description" content="常用软件以及下载地址(第一弹)SoapUI 5.5.0本来是想整pro版的，但是由于装的时候有报错(淦)，200多个g你跟老子讲硬盘容量不够，果断放弃 ，整了个个人版的，日常测试还是够了，提取码：k15fSoapUI 提取地址   
+STS">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +15,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="baidu-site-verification" content="GK8E8w3tFS">
-    <title>近期工作中的bug(第一弹) | Kobe-Liu1</title>
+    <title>一些自己用的软件整理 | Kobe-Liu1</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -242,13 +243,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        近期工作中的bug(第一弹)
+                        一些自己用的软件整理
                     </div>
                 </div>
             </div>
@@ -360,8 +361,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/work/">
-                                <span class="chip bg-color">work</span>
+                            <a href="/tags/software/">
+                                <span class="chip bg-color">software</span>
                             </a>
                         
                     </div>
@@ -376,7 +377,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-17
+                    2020-05-18
                 </div>
                 
 
@@ -385,7 +386,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    372
+                    250
                 </div>
                 
 
@@ -408,39 +409,13 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="近期工作bug-第一弹"><a href="#近期工作bug-第一弹" class="headerlink" title="近期工作bug(第一弹)"></a>近期工作bug(第一弹)</h2><h3 id="将本地jar包导入到本地maven依赖"><a href="#将本地jar包导入到本地maven依赖" class="headerlink" title="将本地jar包导入到本地maven依赖"></a>将本地jar包导入到本地maven依赖</h3><pre><code>mvn install:install-file -Dfile=包所在位置.jar -DgroupId=${groupId} -DartifactId=${artifactId} -Dversion=${version} -Dpackaging=jar</code></pre><h3 id="本地jar包加载到依赖时"><a href="#本地jar包加载到依赖时" class="headerlink" title="本地jar包加载到依赖时"></a>本地jar包加载到依赖时</h3><pre><code>报错:Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.pom
-[WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-clean-plugin:2.5: Plugin org.apache.maven.plugins:maven-clean-plugin:2.5 or 
-one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-clean-plugin:jar:2.5
-
-
-原因:maven库中的远程库下载不了需要的插件，这时候 添加 mirror如下，完成修改  
-
-&lt;mirror&gt;
-    &lt;id&gt;alimaven&lt;/id&gt;
-    &lt;name&gt;aliyun maven&lt;/name&gt;
-    &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;
-    &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;
-&lt;/mirror&gt;</code></pre><h3 id="JAXBException-occurred"><a href="#JAXBException-occurred" class="headerlink" title="JAXBException occurred"></a>JAXBException occurred</h3><pre><code>报错： 意外的元素 (uri:&quot;&quot;, local:&quot;msgCats&quot;)。所需元素为&lt;{}Task&gt;  
-- 问题：webService在soapUI调试的时候，post方式在界面上写入一个json，然而server服务端并不能知道传过来的是什么，因为缺少一个id</code></pre><p>修改前传入的是:  </p>
-<pre><code>{
-    &quot;msgCats&quot;: &quot;****&quot;,
-    &quot;origin&quot;: &quot;****&quot;,
-    &quot;dest&quot;: &quot;****&quot;,
-    &quot;originParam&quot;: &quot;****&quot;,
-    &quot;estParam&quot;: &quot;****&quot;,
-    &quot;taskId&quot;: &quot;****&quot;
-}</code></pre><p>修改后:  </p>
-<pre><code>{&quot;Task&quot;:
-    {
-
-    &quot;msgCats&quot;: &quot;****&quot;,
-    &quot;origin&quot;: &quot;****&quot;,
-    &quot;dest&quot;: &quot;****&quot;,
-    &quot;originParam&quot;: &quot;****&quot;,
-    &quot;estParam&quot;: &quot;****&quot;,
-    &quot;taskId&quot;: &quot;****&quot;
-    }
-}</code></pre><p>之后还需要在那个对象上面加上：<br>    #### @XmlRootElement(name = “Task”)<br>    以保证能找到将json转化为那个对象</p>
+                <h2 id="常用软件以及下载地址-第一弹"><a href="#常用软件以及下载地址-第一弹" class="headerlink" title="常用软件以及下载地址(第一弹)"></a>常用软件以及下载地址(第一弹)</h2><h3 id="SoapUI-5-5-0"><a href="#SoapUI-5-5-0" class="headerlink" title="SoapUI 5.5.0"></a>SoapUI 5.5.0</h3><p>本来是想整pro版的，但是由于装的时候有报错(淦)，200多个g你跟老子讲硬盘容量不够，果断放弃 ，整了个个人版的，<br>日常测试还是够了，提取码：k15f<br><a href="https://pan.baidu.com/s/1cQaXWr9wqPX7ClbgOja1Jw" target="_blank" rel="noopener">SoapUI 提取地址</a>   </p>
+<h3 id="STS-3-9-3-RELEASE"><a href="#STS-3-9-3-RELEASE" class="headerlink" title="STS-3.9.3-RELEASE"></a>STS-3.9.3-RELEASE</h3><p>spring官方推荐唯一正版IDE，但是自我感觉不咋滴，还是idea香，提取码：mfn8<br><a href="https://pan.baidu.com/s/1pWqrBWok9RtojU_o07yjWw" target="_blank" rel="noopener">STS 提取地址</a>   </p>
+<h3 id="idea-2019-1-2"><a href="#idea-2019-1-2" class="headerlink" title="idea-2019.1.2"></a>idea-2019.1.2</h3><p>本来想找2019.3.4的，但是1.2用的还行，所以干脆就它吧，非常好用，idea牛批，提取码：0eyq<br><a href="https://pan.baidu.com/s/11Sa7lMiquOETGH9Leh0wCw" target="_blank" rel="noopener">idea 提取地址</a>  </p>
+<h3 id="maven-3-5-4"><a href="#maven-3-5-4" class="headerlink" title="maven-3.5.4"></a>maven-3.5.4</h3><p>之前用过3.3.6 和 3.6.3 但是都遇到了一些兼容的问题，3.5.4的maven和idea配合，很舒服，提取码：5h9u<br><a href="https://pan.baidu.com/s/1lFaZSLBGxlOME1WgXKez7w" target="_blank" rel="noopener">maven 提取地址</a> </p>
+<h3 id="JDK8"><a href="#JDK8" class="headerlink" title="JDK8"></a>JDK8</h3><p>注入灵魂，提取码：zbun<br><a href="https://pan.baidu.com/s/1WpUXqN2hSLOUE0C3Lr4ayw" target="_blank" rel="noopener">JDK 提取地址</a> </p>
+<h3 id="VMware"><a href="#VMware" class="headerlink" title="VMware"></a>VMware</h3><p>在传一版虚拟机吧，VMWare10+centOS5.6,个人使用还可以，提取码：0dc2<br><a href="https://pan.baidu.com/s/15Y03u8pEmfC7Tgm-xw_6zw" target="_blank" rel="noopener">linux 提取地址</a> </p>
+<h3 id="xshell"><a href="#xshell" class="headerlink" title="xshell"></a>xshell</h3><p>公司必备，提取码：lok3<br><a href="https://pan.baidu.com/s/1wOFSlemBJAQbnlSmK45tdA" target="_blank" rel="noopener">xshell 提取地址</a> </p>
 
             </div>
             <hr/>
@@ -466,7 +441,7 @@ one of its dependencies could not be resolved: Failed to read artifact descripto
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Kobe-Liu1.github.io/p/3391d39b.html">http://Kobe-Liu1.github.io/p/3391d39b.html</a>
+                    <a href="http://Kobe-Liu1.github.io/p/45bed6e9.html">http://Kobe-Liu1.github.io/p/45bed6e9.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -504,8 +479,8 @@ one of its dependencies could not be resolved: Failed to read artifact descripto
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/work/">
-                                    <span class="chip bg-color">work</span>
+                                <a href="/tags/software/">
+                                    <span class="chip bg-color">software</span>
                                 </a>
                             
                         </div>
@@ -693,9 +668,10 @@ one of its dependencies could not be resolved: Failed to read artifact descripto
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/p/45bed6e9.html">
                     <div class="card-image">
@@ -714,9 +690,9 @@ STS
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -725,6 +701,7 @@ STS
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -743,21 +720,19 @@ STS
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/p/50a38d4.html">
+                <a href="/p/3391d39b.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="博客搭起来的第一天，谈谈遇到的坑">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="近期工作中的bug(第一弹)">
                         
-                        <span class="card-title">博客搭起来的第一天，谈谈遇到的坑</span>
+                        <span class="card-title">近期工作中的bug(第一弹)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            博客搭起来的第一天，谈谈遇到的坑搭建原生hexo时报错Error: your blog file is still not created, please check it yourself  
-
-原因：我的原因呢是因为在配置nodejs时
+                            近期工作bug(第一弹)将本地jar包导入到本地maven依赖mvn install:install-file -Dfile=包所在位置.jar -DgroupId=${groupId} -DartifactId=${artifactId}
                         
                     </div>
                     <div class="publish-info">
@@ -775,8 +750,8 @@ STS
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/hexo/">
-                        <span class="chip bg-color">hexo</span>
+                    <a href="/tags/work/">
+                        <span class="chip bg-color">work</span>
                     </a>
                     
                 </div>
