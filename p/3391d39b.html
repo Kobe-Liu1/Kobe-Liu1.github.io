@@ -384,7 +384,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    366
+                    372
                 </div>
                 
 
@@ -419,7 +419,8 @@ one of its dependencies could not be resolved: Failed to read artifact descripto
     &lt;name&gt;aliyun maven&lt;/name&gt;
     &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;
     &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;
-&lt;/mirror&gt;</code></pre><h3 id="JAXBException-occurred-意外的元素-uri-””-local-”msgCats”-。所需元素为-lt-Task-gt"><a href="#JAXBException-occurred-意外的元素-uri-””-local-”msgCats”-。所需元素为-lt-Task-gt" class="headerlink" title="JAXBException occurred : 意外的元素 (uri:””, local:”msgCats”)。所需元素为&lt;{}Task&gt;"></a>JAXBException occurred : 意外的元素 (uri:””, local:”msgCats”)。所需元素为&lt;{}Task&gt;</h3><pre><code>- 问题：webService在soapUI调试的时候，post方式在界面上写入一个json，然而server服务端并不能知道传过来的是什么，因为缺少一个id</code></pre><p>修改前传入的是:  </p>
+&lt;/mirror&gt;</code></pre><h3 id="JAXBException-occurred"><a href="#JAXBException-occurred" class="headerlink" title="JAXBException occurred"></a>JAXBException occurred</h3><pre><code>报错： 意外的元素 (uri:&quot;&quot;, local:&quot;msgCats&quot;)。所需元素为&lt;{}Task&gt;  
+- 问题：webService在soapUI调试的时候，post方式在界面上写入一个json，然而server服务端并不能知道传过来的是什么，因为缺少一个id</code></pre><p>修改前传入的是:  </p>
 <pre><code>{
     &quot;msgCats&quot;: &quot;****&quot;,
     &quot;origin&quot;: &quot;****&quot;,
@@ -438,7 +439,7 @@ one of its dependencies could not be resolved: Failed to read artifact descripto
     &quot;estParam&quot;: &quot;****&quot;,
     &quot;taskId&quot;: &quot;****&quot;
     }
-}</code></pre><p>之后还需要在那个对象上面加上：<br>    #####@XmlRootElement(name = “Task”)<br>    以保证能找到将json转化为那个对象</p>
+}</code></pre><p>之后还需要在那个对象上面加上：<br>    #### @XmlRootElement(name = “Task”)<br>    以保证能找到将json转化为那个对象</p>
 
             </div>
             <hr/>
