@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="近期工作中的bug(第一弹), Kobe-Liu1">
-    <meta name="description" content="近期工作bug(第一弹)将本地jar包导入到本地仓库，用于maven依赖:mvn install:install-file -Dfile=opentcs-api-base-4.18.0.jar -DgroupId=org.opentcs -">
+    <meta name="description" content="近期工作bug(第一弹)将本地jar包导入到本地maven依赖mvn install:install-file -Dfile=包所在位置.jar -DgroupId=${groupId} -DartifactId=${artifactId}">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -384,14 +384,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    393
+                    366
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 				
@@ -407,7 +407,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="近期工作bug-第一弹"><a href="#近期工作bug-第一弹" class="headerlink" title="近期工作bug(第一弹)"></a>近期工作bug(第一弹)</h2><h3 id="将本地jar包导入到本地仓库，用于maven依赖"><a href="#将本地jar包导入到本地仓库，用于maven依赖" class="headerlink" title="将本地jar包导入到本地仓库，用于maven依赖:"></a>将本地jar包导入到本地仓库，用于maven依赖:</h3><pre><code>mvn install:install-file -Dfile=opentcs-api-base-4.18.0.jar -DgroupId=org.opentcs -DartifactId=opentcs-api-base -Dversion=4.18.0 -Dpackaging=jar</code></pre><h3 id="本地jar包加载到依赖，报错"><a href="#本地jar包加载到依赖，报错" class="headerlink" title="本地jar包加载到依赖，报错:"></a>本地jar包加载到依赖，报错:</h3><pre><code>Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.pom
+                <h2 id="近期工作bug-第一弹"><a href="#近期工作bug-第一弹" class="headerlink" title="近期工作bug(第一弹)"></a>近期工作bug(第一弹)</h2><h3 id="将本地jar包导入到本地maven依赖"><a href="#将本地jar包导入到本地maven依赖" class="headerlink" title="将本地jar包导入到本地maven依赖"></a>将本地jar包导入到本地maven依赖</h3><pre><code>mvn install:install-file -Dfile=包所在位置.jar -DgroupId=${groupId} -DartifactId=${artifactId} -Dversion=${version} -Dpackaging=jar</code></pre><h3 id="本地jar包加载到依赖时"><a href="#本地jar包加载到依赖时" class="headerlink" title="本地jar包加载到依赖时"></a>本地jar包加载到依赖时</h3><pre><code>报错:Downloading from alimaven: http://maven.aliyun.com/nexus/content/groups/public/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.pom
 [WARNING] Failed to retrieve plugin descriptor for org.apache.maven.plugins:maven-clean-plugin:2.5: Plugin org.apache.maven.plugins:maven-clean-plugin:2.5 or 
 one of its dependencies could not be resolved: Failed to read artifact descriptor for org.apache.maven.plugins:maven-clean-plugin:jar:2.5
 
@@ -421,24 +421,24 @@ one of its dependencies could not be resolved: Failed to read artifact descripto
     &lt;mirrorOf&gt;central&lt;/mirrorOf&gt;
 &lt;/mirror&gt;</code></pre><h3 id="JAXBException-occurred-意外的元素-uri-””-local-”msgCats”-。所需元素为-lt-Task-gt"><a href="#JAXBException-occurred-意外的元素-uri-””-local-”msgCats”-。所需元素为-lt-Task-gt" class="headerlink" title="JAXBException occurred : 意外的元素 (uri:””, local:”msgCats”)。所需元素为&lt;{}Task&gt;"></a>JAXBException occurred : 意外的元素 (uri:””, local:”msgCats”)。所需元素为&lt;{}Task&gt;</h3><pre><code>- 问题：webService在soapUI调试的时候，post方式在界面上写入一个json，然而server服务端并不能知道传过来的是什么，因为缺少一个id</code></pre><p>修改前传入的是:  </p>
 <pre><code>{
-    &quot;msgCats&quot;: &quot;TaskRequest&quot;,
-    &quot;origin&quot;: &quot;1104&quot;,
-    &quot;dest&quot;: &quot;4120&quot;,
-    &quot;originParam&quot;: &quot;Load cargo&quot;,
-    &quot;estParam&quot;: &quot;Unload cargo&quot;,
-    &quot;taskId&quot;: &quot;1211&quot;
+    &quot;msgCats&quot;: &quot;****&quot;,
+    &quot;origin&quot;: &quot;****&quot;,
+    &quot;dest&quot;: &quot;****&quot;,
+    &quot;originParam&quot;: &quot;****&quot;,
+    &quot;estParam&quot;: &quot;****&quot;,
+    &quot;taskId&quot;: &quot;****&quot;
 }</code></pre><p>修改后:  </p>
 <pre><code>{&quot;Task&quot;:
     {
 
-    &quot;msgCats&quot;: &quot;TaskRequest&quot;,
-    &quot;origin&quot;: &quot;1104&quot;,
-    &quot;dest&quot;: &quot;4120&quot;,
-    &quot;originParam&quot;: &quot;Load cargo&quot;,
-    &quot;estParam&quot;: &quot;Unload cargo&quot;,
-    &quot;taskId&quot;: &quot;1211&quot;
+    &quot;msgCats&quot;: &quot;****&quot;,
+    &quot;origin&quot;: &quot;****&quot;,
+    &quot;dest&quot;: &quot;****&quot;,
+    &quot;originParam&quot;: &quot;****&quot;,
+    &quot;estParam&quot;: &quot;****&quot;,
+    &quot;taskId&quot;: &quot;****&quot;
     }
-}</code></pre><p>之后还需要在那个对象上面加上：@XmlRootElement(name = “Task”)，以保证能找到将json转化为那个对象</p>
+}</code></pre><p>之后还需要在那个对象上面加上：<br>    #####@XmlRootElement(name = “Task”)<br>    以保证能找到将json转化为那个对象</p>
 
             </div>
             <hr/>
@@ -708,7 +708,7 @@ one of its dependencies could not be resolved: Failed to read artifact descripto
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            近期工作bug(第一弹)将本地jar包导入到本地仓库，用于maven依赖:mvn install:install-file -Dfile=opentcs-api-base-4.18.0.jar -DgroupId=org.opentcs -
+                            近期工作bug(第一弹)将本地jar包导入到本地maven依赖mvn install:install-file -Dfile=包所在位置.jar -DgroupId=${groupId} -DartifactId=${artifactId}
                         
                     </div>
                     <div class="publish-info">
