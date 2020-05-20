@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Kobe-Liu1</title>
+  <title>Kobe-Liu的blog</title>
   
-  <subtitle>Kobe-Liu1</subtitle>
+  <subtitle>Kobe-Liu的blog</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kobe-liu1.github.io/"/>
