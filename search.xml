@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>工作中遇到的问题(第二弹)</title>
+      <link href="/p/f7a8fc85.html"/>
+      <url>/p/f7a8fc85.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="记2020-5-19遇到的问题"><a href="#记2020-5-19遇到的问题" class="headerlink" title="记2020.5.19遇到的问题"></a>记2020.5.19遇到的问题</h2><h3 id="webService-使用时，找不到分派方法"><a href="#webService-使用时，找不到分派方法" class="headerlink" title="webService 使用时，找不到分派方法"></a>webService 使用时，找不到分派方法</h3><ul><li><p>报错：org.springframework.remoting.jaxws.JaxWsSoapFaultException: Client received SOAP Fault from server: 找不到{XXXXX}function的分派方法  </p></li><li><p>原因：是在接口上，我使用的是idea自带的插件去下载wsdl上的接口，导致下载下来的接口上缺少了一些注解，如下：<br><img src="https://i.loli.net/2020/05/20/nTdJEsKZFGOCzhu.png" alt="work_2_1.jpg">  </p></li><li><p>解决方法：webservice服务注入的bean实现的接口必须提供targetNamespace，对应的服务实现类的operationName必须和接口的operationName保持一致 不然找不到方法，修改如下：<br><img src="https://i.loli.net/2020/05/20/nP3vlEf4KyZwMd1.png" alt="work_2_2.jpg">  </p></li></ul><h3 id="webService调用常见错误原因"><a href="#webService调用常见错误原因" class="headerlink" title="webService调用常见错误原因"></a>webService调用常见错误原因</h3><ul><li><p>如果出现这个错误:java.lang.NoClassDefFoundError: javax/xml/soap/SOAPException，原因是没有导入 axis2-saaj.jar包   </p></li><li><p>如果出现这个错误:java.lang.NoClassDefFoundError: org/apache/commons/discovery/tools/DiscoverSingleton，原因是没有导入commons-discovery.jar包   </p></li><li><p>如果出现这个错误:org.apache.commons.logging.LogFactory，原因是没有导入commons-logging.jar包   </p></li><li><p>如果出现这个错误：Exception in thread “main” javax.xml.ws.soap.SOAPFaultException: Error invoking (……) Nested exception is java.lang.reflect.InvocationTargetException: null，原因是代码上传到服务器时不完全导致的。  </p></li><li><p>如果客户端使用的是axis调用webservice方式，服务器端收到了请求，但请求的参数显示却为null，原因是在客户端使用call.addParameter设置参数时，和发布的wsdl服务中的参数名不完全一致(大小写也要保持相同)。将客户端每个接口的参数设置为和wsdl中的相同即可。  </p></li><li><p>如果出现这个错误:java.lang.NoClassDefFoundError: javax/xml/rpc/Service，原因是没有导入jaxrpc.jar包(可以到axis官网下载对应版本的axis，在其中的lib目录可以找到)；如果使用的是maven，可以导入org.apache.axis下的axis-jaxrpc-1.4.jar。</p></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> work </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>一些自己用的软件整理</title>
       <link href="/p/45bed6e9.html"/>
       <url>/p/45bed6e9.html</url>
