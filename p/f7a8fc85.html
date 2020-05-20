@@ -412,9 +412,9 @@
                 <h2 id="记2020-5-19遇到的问题"><a href="#记2020-5-19遇到的问题" class="headerlink" title="记2020.5.19遇到的问题"></a>记2020.5.19遇到的问题</h2><h3 id="webService-使用时，找不到分派方法"><a href="#webService-使用时，找不到分派方法" class="headerlink" title="webService 使用时，找不到分派方法"></a>webService 使用时，找不到分派方法</h3><ul>
 <li><p>报错：org.springframework.remoting.jaxws.JaxWsSoapFaultException: Client received SOAP Fault from server: 找不到{XXXXX}function的分派方法  </p>
 </li>
-<li><p>原因：是在接口上，我使用的是idea自带的插件去下载wsdl上的接口，导致下载下来的接口上缺少了一些注解，如下：<br><img src="https://i.loli.net/2020/05/20/nTdJEsKZFGOCzhu.png" alt="work_2_1.jpg">  </p>
+<li><p>原因：是在接口上，我使用的是idea自带的插件去下载wsdl上的接口，导致下载下来的接口上缺少了一些注解，如下：<br><img src="https://i.loli.net/2020/05/20/nOgEc2QFtj9PJ3T.png" alt="图1"></p>
 </li>
-<li><p>解决方法：webservice服务注入的bean实现的接口必须提供targetNamespace，对应的服务实现类的operationName必须和接口的operationName保持一致 不然找不到方法，修改如下：<br><img src="https://i.loli.net/2020/05/20/nP3vlEf4KyZwMd1.png" alt="work_2_2.jpg">  </p>
+<li><p>解决方法：webservice服务注入的bean实现的接口必须提供targetNamespace，对应的服务实现类的operationName必须和接口的operationName保持一致 不然找不到方法，修改如下：<br><img src="https://i.loli.net/2020/05/20/8S6T1a3AQ9J2bKu.png" alt="图2"></p>
 </li>
 </ul>
 <h3 id="webService调用常见错误原因"><a href="#webService调用常见错误原因" class="headerlink" title="webService调用常见错误原因"></a>webService调用常见错误原因</h3><ul>
