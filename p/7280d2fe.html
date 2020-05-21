@@ -5,9 +5,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="工作中遇到的问题(第三弹), Kobe-Liu">
-    <meta name="description" content="记5.20-5.21工作中遇到的问题###首先是mybatis部分的问题####update操作的时候，代码中显示已update完成，但是数据库中对应的数据并没有更新  
+    <meta name="description" content="记5.20-5.21工作中遇到的问题首先是mybatis部分的问题####update操作的时候，代码中显示已update完成，但是数据库中对应的数据并没有更新  
 
-原因：在获取sqlSession对象的时候：SqlSession ">
+原因：在获取sqlSession对象的时候：SqlSession sql">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -387,7 +387,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    303
+                    302
                 </div>
                 
 
@@ -410,18 +410,16 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="记5-20-5-21工作中遇到的问题"><a href="#记5-20-5-21工作中遇到的问题" class="headerlink" title="记5.20-5.21工作中遇到的问题"></a>记5.20-5.21工作中遇到的问题</h2><p>###首先是mybatis部分的问题<br>####update操作的时候，代码中显示已update完成，但是数据库中对应的数据并没有更新  </p>
+                <h2 id="记5-20-5-21工作中遇到的问题"><a href="#记5-20-5-21工作中遇到的问题" class="headerlink" title="记5.20-5.21工作中遇到的问题"></a>记5.20-5.21工作中遇到的问题</h2><h3 id="首先是mybatis部分的问题"><a href="#首先是mybatis部分的问题" class="headerlink" title="首先是mybatis部分的问题"></a>首先是mybatis部分的问题</h3><p>####update操作的时候，代码中显示已update完成，但是数据库中对应的数据并没有更新  </p>
 <ul>
 <li>原因：在获取sqlSession对象的时候：<br>SqlSession sqlSession = sqlSessionFactory.openSession()；</li>
 <li>解决方法：后面的参数可以填true/false:true为自动提交事务 ,false则相反(用于是否开启事务,默认为false)<br>当我加上true后，数据库的数据就可以正常提交了：SqlSession sqlSession = sqlSessionFactory.openSession(true)；  </li>
 </ul>
-<p>####数据库添加数据，代码中无法找到新增的数据</p>
-<ul>
+<h4 id="数据库添加数据，代码中无法找到新增的数据"><a href="#数据库添加数据，代码中无法找到新增的数据" class="headerlink" title="数据库添加数据，代码中无法找到新增的数据"></a>数据库添加数据，代码中无法找到新增的数据</h4><ul>
 <li>原因：在每一次循环之后，没有关闭sqlSession，导致再次循环时，拿到的依旧是没有更新数据的sqlSession对象，<br>所以并不会找到新增的数据  </li>
 <li>解决方法：在循环的最后将sqlSession对象close掉，保证每一次拿sqlSession对象拿到的都是最新的。</li>
 </ul>
-<p>###搭建mybatis环境的时候，&amp; 符号xml文件报错</p>
-<ul>
+<h3 id="搭建mybatis环境的时候，-amp-符号xml文件报错"><a href="#搭建mybatis环境的时候，-amp-符号xml文件报错" class="headerlink" title="搭建mybatis环境的时候，&amp; 符号xml文件报错"></a>搭建mybatis环境的时候，&amp; 符号xml文件报错</h3><ul>
 <li>报错信息：org.xml.sax.SAXParseException;在实体引用中, 实体名称必须紧跟在 ‘’&amp;’’ 后面  </li>
 <li>原因：在xml文件中，&amp;读不出来  </li>
 <li>解决方法：用&amp;代替<br>useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true</li>
