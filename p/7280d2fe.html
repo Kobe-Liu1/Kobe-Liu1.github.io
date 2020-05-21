@@ -4,9 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="工作中遇到的问题(第二弹), Kobe-Liu">
-    <meta name="description" content="记2020.5.19遇到的问题webService 使用时，找不到分派方法
-报错：org.springframework.remoting.jaxws.JaxWsSoapFaultException: Client received SOA">
+    <meta name="keywords" content="工作中遇到的问题(第三弹), Kobe-Liu">
+    <meta name="description" content="记5.20-5.21工作中遇到的问题###首先是mybatis部分的问题####update操作的时候，代码中显示已update完成，但是数据库中对应的数据并没有更新  
+
+原因：在获取sqlSession对象的时候：SqlSession ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -15,7 +16,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="baidu-site-verification" content="GK8E8w3tFS">
-    <title>工作中遇到的问题(第二弹) | Kobe-Liu</title>
+    <title>工作中遇到的问题(第三弹) | Kobe-Liu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -243,13 +244,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        工作中遇到的问题(第二弹)
+                        工作中遇到的问题(第三弹)
                     </div>
                 </div>
             </div>
@@ -377,7 +378,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-20
+                    2020-05-21
                 </div>
                 
 
@@ -386,7 +387,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    435
+                    303
                 </div>
                 
 
@@ -409,27 +410,21 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="记2020-5-19遇到的问题"><a href="#记2020-5-19遇到的问题" class="headerlink" title="记2020.5.19遇到的问题"></a>记2020.5.19遇到的问题</h2><h3 id="webService-使用时，找不到分派方法"><a href="#webService-使用时，找不到分派方法" class="headerlink" title="webService 使用时，找不到分派方法"></a>webService 使用时，找不到分派方法</h3><ul>
-<li><p>报错：org.springframework.remoting.jaxws.JaxWsSoapFaultException: Client received SOAP Fault from server: 找不到{XXXXX}function的分派方法  </p>
-</li>
-<li><p>原因：是在接口上，我使用的是idea自带的插件去下载wsdl上的接口，导致下载下来的接口上缺少了一些注解，如下：<br><img src="https://i.loli.net/2020/05/20/nOgEc2QFtj9PJ3T.png" alt="图1"></p>
-</li>
-<li><p>解决方法：webservice服务注入的bean实现的接口必须提供targetNamespace，对应的服务实现类的operationName必须和接口的operationName保持一致 不然找不到方法，修改如下：<br><img src="https://i.loli.net/2020/05/20/8S6T1a3AQ9J2bKu.png" alt="图2"></p>
-</li>
+                <h2 id="记5-20-5-21工作中遇到的问题"><a href="#记5-20-5-21工作中遇到的问题" class="headerlink" title="记5.20-5.21工作中遇到的问题"></a>记5.20-5.21工作中遇到的问题</h2><p>###首先是mybatis部分的问题<br>####update操作的时候，代码中显示已update完成，但是数据库中对应的数据并没有更新  </p>
+<ul>
+<li>原因：在获取sqlSession对象的时候：<br>SqlSession sqlSession = sqlSessionFactory.openSession()；</li>
+<li>解决方法：后面的参数可以填true/false:true为自动提交事务 ,false则相反(用于是否开启事务,默认为false)<br>当我加上true后，数据库的数据就可以正常提交了：SqlSession sqlSession = sqlSessionFactory.openSession(true)；  </li>
 </ul>
-<h3 id="webService调用常见错误原因"><a href="#webService调用常见错误原因" class="headerlink" title="webService调用常见错误原因"></a>webService调用常见错误原因</h3><ul>
-<li><p>如果出现这个错误:java.lang.NoClassDefFoundError: javax/xml/soap/SOAPException，原因是没有导入 axis2-saaj.jar包   </p>
-</li>
-<li><p>如果出现这个错误:java.lang.NoClassDefFoundError: org/apache/commons/discovery/tools/DiscoverSingleton，原因是没有导入commons-discovery.jar包   </p>
-</li>
-<li><p>如果出现这个错误:org.apache.commons.logging.LogFactory，原因是没有导入commons-logging.jar包   </p>
-</li>
-<li><p>如果出现这个错误：Exception in thread “main” javax.xml.ws.soap.SOAPFaultException: Error invoking (……) Nested exception is java.lang.reflect.InvocationTargetException: null，原因是代码上传到服务器时不完全导致的。  </p>
-</li>
-<li><p>如果客户端使用的是axis调用webservice方式，服务器端收到了请求，但请求的参数显示却为null，原因是在客户端使用call.addParameter设置参数时，和发布的wsdl服务中的参数名不完全一致(大小写也要保持相同)。将客户端每个接口的参数设置为和wsdl中的相同即可。  </p>
-</li>
-<li><p>如果出现这个错误:java.lang.NoClassDefFoundError: javax/xml/rpc/Service，原因是没有导入jaxrpc.jar包(可以到axis官网下载对应版本的axis，在其中的lib目录可以找到)；如果使用的是maven，可以导入org.apache.axis下的axis-jaxrpc-1.4.jar。</p>
-</li>
+<p>####数据库添加数据，代码中无法找到新增的数据</p>
+<ul>
+<li>原因：在每一次循环之后，没有关闭sqlSession，导致再次循环时，拿到的依旧是没有更新数据的sqlSession对象，<br>所以并不会找到新增的数据  </li>
+<li>解决方法：在循环的最后将sqlSession对象close掉，保证每一次拿sqlSession对象拿到的都是最新的。</li>
+</ul>
+<p>###搭建mybatis环境的时候，&amp; 符号xml文件报错</p>
+<ul>
+<li>报错信息：org.xml.sax.SAXParseException;在实体引用中, 实体名称必须紧跟在 ‘’&amp;’’ 后面  </li>
+<li>原因：在xml文件中，&amp;读不出来  </li>
+<li>解决方法：用&amp;代替<br>useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true</li>
 </ul>
 
             </div>
@@ -456,7 +451,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Kobe-Liu1.github.io/p/f7a8fc85.html">http://Kobe-Liu1.github.io/p/f7a8fc85.html</a>
+                    <a href="http://Kobe-Liu1.github.io/p/7280d2fe.html">http://Kobe-Liu1.github.io/p/7280d2fe.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -687,21 +682,19 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/p/7280d2fe.html">
+                <a href="/p/e9ddbaa9.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="工作中遇到的问题(第三弹)">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="注册域名之后踩的坑">
                         
-                        <span class="card-title">工作中遇到的问题(第三弹)</span>
+                        <span class="card-title">注册域名之后踩的坑</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记5.20-5.21工作中遇到的问题###首先是mybatis部分的问题####update操作的时候，代码中显示已update完成，但是数据库中对应的数据并没有更新  
-
-原因：在获取sqlSession对象的时候：SqlSession 
+                            注册域名之后踩的坑由于静态网页托管在github上，服务器在国外，访问速度实在是感人，所以为了速度，将代码托管到了国内的coding上，于是新的问题又来了，coding托管后，gages服务开启后，发现网址的前一段时随机的，简直low爆了，
                         
                     </div>
                     <div class="publish-info">
@@ -719,8 +712,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/work/">
-                        <span class="chip bg-color">work</span>
+                    <a href="/tags/blog/">
+                        <span class="chip bg-color">blog</span>
                     </a>
                     
                 </div>
@@ -734,25 +727,25 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/p/45bed6e9.html">
+                <a href="/p/f7a8fc85.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="一些自己用的软件整理">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="工作中遇到的问题(第二弹)">
                         
-                        <span class="card-title">一些自己用的软件整理</span>
+                        <span class="card-title">工作中遇到的问题(第二弹)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            常用软件以及下载地址(第一弹)SoapUI 5.5.0本来是想整pro版的，但是由于装的时候有报错(淦)，200多个g你跟老子讲硬盘容量不够，果断放弃 ，整了个个人版的，日常测试还是够了，提取码：k15fSoapUI 提取地址   
-STS
+                            记2020.5.19遇到的问题webService 使用时，找不到分派方法
+报错：org.springframework.remoting.jaxws.JaxWsSoapFaultException: Client received SOA
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-20
                             </span>
                         <span class="publish-author">
                             
@@ -765,8 +758,8 @@ STS
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/software/">
-                        <span class="chip bg-color">software</span>
+                    <a href="/tags/work/">
+                        <span class="chip bg-color">work</span>
                     </a>
                     
                 </div>
