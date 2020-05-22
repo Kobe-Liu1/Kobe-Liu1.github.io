@@ -4,8 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="注册域名之后踩的坑, Kobe-Liu">
-    <meta name="description" content="注册域名之后踩的坑由于静态网页托管在github上，服务器在国外，访问速度实在是感人，所以为了速度，将代码托管到了国内的coding上，于是新的问题又来了，coding托管后，gages服务开启后，发现网址的前一段时随机的，简直low爆了，">
+    <meta name="keywords" content="工作中遇到的问题(第四弹), Kobe-Liu">
+    <meta name="description" content="记5.22号工作中遇到的问题集合迭代器使用报错
+报错：Exception in thread “main” java.util.ConcurrentModificationException  
+问题：代码如下：while(iterator">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +16,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="baidu-site-verification" content="GK8E8w3tFS">
-    <title>注册域名之后踩的坑 | Kobe-Liu</title>
+    <title>工作中遇到的问题(第四弹) | Kobe-Liu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -242,13 +244,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        注册域名之后踩的坑
+                        工作中遇到的问题(第四弹)
                     </div>
                 </div>
             </div>
@@ -360,8 +362,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/blog/">
-                                <span class="chip bg-color">blog</span>
+                            <a href="/tags/work/">
+                                <span class="chip bg-color">work</span>
                             </a>
                         
                     </div>
@@ -376,7 +378,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-21
+                    2020-05-22
                 </div>
                 
 
@@ -385,7 +387,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    269
+                    362
                 </div>
                 
 
@@ -408,14 +410,29 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="注册域名之后踩的坑"><a href="#注册域名之后踩的坑" class="headerlink" title="注册域名之后踩的坑"></a>注册域名之后踩的坑</h2><p>由于静态网页托管在github上，服务器在国外，访问速度实在是感人，所以为了速度，<br>将代码托管到了国内的coding上，于是新的问题又来了，coding托管后，gages服务开启后，<br>发现网址的前一段时随机的，简直low爆了，所以去注册了一个域名</p>
-<h3 id="coding绑定域名，获取证书获取不到"><a href="#coding绑定域名，获取证书获取不到" class="headerlink" title="coding绑定域名，获取证书获取不到"></a>coding绑定域名，获取证书获取不到</h3><ul>
-<li>报错：Let’s Encrypt SSL证书配置错误”DNS problem: NXDOMAIN looking up A for xxx.com”  </li>
-<li>原因：注册完域名之后，没有解析域名  </li>
-<li>解决方法：以我注册的华为云举例：  </li>
+                <h2 id="记5-22号工作中遇到的问题"><a href="#记5-22号工作中遇到的问题" class="headerlink" title="记5.22号工作中遇到的问题"></a>记5.22号工作中遇到的问题</h2><h3 id="集合迭代器使用报错"><a href="#集合迭代器使用报错" class="headerlink" title="集合迭代器使用报错"></a>集合迭代器使用报错</h3><ul>
+<li>报错：Exception in thread “main” java.util.ConcurrentModificationException  </li>
+<li>问题：代码如下：<br>while(iterator.hasNext()){<pre><code>    Integer key = iterator.next();
+    if(key.equals(k)){
+        map.remove(key);
+    }
+}</code></pre>  }<br>  使用了迭代器遍历，但是在删除时，调用了map的删除方法，我忘记了一点：map在进行遍历操作的时候，是不能做修改操作的，如果做了，就会报错  </li>
+<li>解决方法：调用迭代器的删除方法，代码如下：<br>  while(iterator.hasNext()){<pre><code>    Integer key = iterator.next();
+    if(key.equals(k)){
+        iterator.remove(); //注意这里的不同
+    }
+}</code></pre>  }  </li>
 </ul>
-<p>1.到所买的域名的界面，如下操作：<br><img src="https://i.loli.net/2020/05/21/PRjAl3dsBVvbDNJ.png" alt="图1"><br>2.注册A，CAA（需要首先去申请SSL证书，免费的）<br><img src="https://i.loli.net/2020/05/21/yafqiUhPMm7SIzp.png" alt="图2"><br>3.域名需要去实名的，个人网站好像普通的域名不用备案，企业级的需要备案：<br><img src="https://i.loli.net/2020/05/21/LgezErtRusVDpvx.png" alt="图3"><br>完事  </p>
-<h3 id="上传图片网址"><a href="#上传图片网址" class="headerlink" title="上传图片网址"></a>上传图片网址</h3><p>markdown需要图片的话，上传图片到网上会比较好，我用的是一个小众的网址：<br><a href="https://sm.ms/" target="_blank" rel="noopener">网址</a><br>挺好用的</p>
+<h3 id="注解报错"><a href="#注解报错" class="headerlink" title="注解报错"></a>注解报错</h3><ul>
+<li>报错：Unable to close ApplicationContext；org.springframework.beans.factory.BeanCreationException: Error creating bean with name ‘org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration’  </li>
+<li>问题：Mapper层没有添加@Mapper注解，以为一个简单的@Repository就可以了  </li>
+<li>原因：@Mapper是Mybatis的注解，是用来说明这个是一个Mapper，对应的xxxMapper.xml就是来实现这个Mapper,如果是改成了@repository，使用的是Spring的Bean注解，当然是不可以的</li>
+<li>解决方法：在类前面添加@Mapper注解  </li>
+</ul>
+<h3 id="导入SSL证书到JDK里"><a href="#导入SSL证书到JDK里" class="headerlink" title="导入SSL证书到JDK里"></a>导入SSL证书到JDK里</h3><ul>
+<li>以阿里云镜像库举例子：  </li>
+</ul>
+<p>1.首先去下载证书到本地<br>2.cmd 输入：keytool -import -alias xxx -keystore <JAVA_HOME>/jre/lib/security/cacerts -file xxx.cer<br>3.如果有确认提示，y就好了，很多人做完上面第一步就好了<br>4.如果还未好：将下面的内容加入sts.ini 或者是 eclipse.ini 中<br>-Djavax.net.ssl.trustStore=<JAVA_HOME>\jre\lib\security\cacerts -Djava.net.ssl.trustStorePassword=changeit</p>
 
             </div>
             <hr/>
@@ -441,7 +458,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Kobe-Liu1.github.io/p/e9ddbaa9.html">http://Kobe-Liu1.github.io/p/e9ddbaa9.html</a>
+                    <a href="http://Kobe-Liu1.github.io/p/4fef6a30.html">http://Kobe-Liu1.github.io/p/4fef6a30.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -479,8 +496,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/blog/">
-                                    <span class="chip bg-color">blog</span>
+                                <a href="/tags/work/">
+                                    <span class="chip bg-color">work</span>
                                 </a>
                             
                         </div>
@@ -668,9 +685,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/p/4fef6a30.html">
                     <div class="card-image">
@@ -690,9 +708,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -701,6 +719,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -719,20 +738,19 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/p/7280d2fe.html">
+                <a href="/p/e9ddbaa9.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="工作中遇到的问题(第三弹)">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="注册域名之后踩的坑">
                         
-                        <span class="card-title">工作中遇到的问题(第三弹)</span>
+                        <span class="card-title">注册域名之后踩的坑</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记5.20-5.21工作中遇到的问题首先是mybatis部分的问题update操作的时候，代码中显示已update完成，但是数据库中对应的数据并没有更新
-原因：在获取sqlSession对象的时候：SqlSession sqlSession
+                            注册域名之后踩的坑由于静态网页托管在github上，服务器在国外，访问速度实在是感人，所以为了速度，将代码托管到了国内的coding上，于是新的问题又来了，coding托管后，gages服务开启后，发现网址的前一段时随机的，简直low爆了，
                         
                     </div>
                     <div class="publish-info">
@@ -750,8 +768,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/work/">
-                        <span class="chip bg-color">work</span>
+                    <a href="/tags/blog/">
+                        <span class="chip bg-color">blog</span>
                     </a>
                     
                 </div>
