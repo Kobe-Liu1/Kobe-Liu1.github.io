@@ -5,9 +5,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="工作中遇到的问题(第三弹), Kobe-Liu">
-    <meta name="description" content="记5.20-5.21工作中遇到的问题首先是mybatis部分的问题####update操作的时候，代码中显示已update完成，但是数据库中对应的数据并没有更新  
-
-原因：在获取sqlSession对象的时候：SqlSession sql">
+    <meta name="description" content="记5.20-5.21工作中遇到的问题首先是mybatis部分的问题update操作的时候，代码中显示已update完成，但是数据库中对应的数据并没有更新
+原因：在获取sqlSession对象的时候：SqlSession sqlSession">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -387,7 +386,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    302
+                    301
                 </div>
                 
 
@@ -410,8 +409,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="记5-20-5-21工作中遇到的问题"><a href="#记5-20-5-21工作中遇到的问题" class="headerlink" title="记5.20-5.21工作中遇到的问题"></a>记5.20-5.21工作中遇到的问题</h2><h3 id="首先是mybatis部分的问题"><a href="#首先是mybatis部分的问题" class="headerlink" title="首先是mybatis部分的问题"></a>首先是mybatis部分的问题</h3><p>####update操作的时候，代码中显示已update完成，但是数据库中对应的数据并没有更新  </p>
-<ul>
+                <h2 id="记5-20-5-21工作中遇到的问题"><a href="#记5-20-5-21工作中遇到的问题" class="headerlink" title="记5.20-5.21工作中遇到的问题"></a>记5.20-5.21工作中遇到的问题</h2><h3 id="首先是mybatis部分的问题"><a href="#首先是mybatis部分的问题" class="headerlink" title="首先是mybatis部分的问题"></a>首先是mybatis部分的问题</h3><h4 id="update操作的时候，代码中显示已update完成，但是数据库中对应的数据并没有更新"><a href="#update操作的时候，代码中显示已update完成，但是数据库中对应的数据并没有更新" class="headerlink" title="update操作的时候，代码中显示已update完成，但是数据库中对应的数据并没有更新"></a>update操作的时候，代码中显示已update完成，但是数据库中对应的数据并没有更新</h4><ul>
 <li>原因：在获取sqlSession对象的时候：<br>SqlSession sqlSession = sqlSessionFactory.openSession()；</li>
 <li>解决方法：后面的参数可以填true/false:true为自动提交事务 ,false则相反(用于是否开启事务,默认为false)<br>当我加上true后，数据库的数据就可以正常提交了：SqlSession sqlSession = sqlSessionFactory.openSession(true)；  </li>
 </ul>
