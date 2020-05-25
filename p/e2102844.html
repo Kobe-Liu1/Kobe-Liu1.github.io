@@ -4,10 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="工作中遇到的问题(第四弹), Kobe-Liu">
-    <meta name="description" content="记5.22号工作中遇到的问题集合迭代器使用报错
-报错：Exception in thread “main” java.util.ConcurrentModificationException  
-问题：代码如下：while(iterator">
+    <meta name="keywords" content="工作中遇到的问题(第五弹)), Kobe-Liu">
+    <meta name="description" content="记5.25好工作中遇到的问题 今天主要是前端相关，用springboot里面的thymeleaf以及bootstrap遇到的一些问题  
+如何在表格中显示checkbox
+问题：从bootStrap上弄下来的组件不显示checkbox，导致">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +16,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="baidu-site-verification" content="GK8E8w3tFS">
-    <title>工作中遇到的问题(第四弹) | Kobe-Liu</title>
+    <title>工作中遇到的问题(第五弹)) | Kobe-Liu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -250,7 +250,7 @@
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        工作中遇到的问题(第四弹)
+                        工作中遇到的问题(第五弹))
                     </div>
                 </div>
             </div>
@@ -360,13 +360,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/work/">
-                                <span class="chip bg-color">work</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -378,7 +374,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-22
+                    2020-05-25
                 </div>
                 
 
@@ -387,14 +383,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    362
+                    605
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 				
@@ -410,29 +406,64 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="记5-22号工作中遇到的问题"><a href="#记5-22号工作中遇到的问题" class="headerlink" title="记5.22号工作中遇到的问题"></a>记5.22号工作中遇到的问题</h2><h3 id="集合迭代器使用报错"><a href="#集合迭代器使用报错" class="headerlink" title="集合迭代器使用报错"></a>集合迭代器使用报错</h3><ul>
-<li>报错：Exception in thread “main” java.util.ConcurrentModificationException  </li>
-<li>问题：代码如下：<br>while(iterator.hasNext()){<pre><code>    Integer key = iterator.next();
-    if(key.equals(k)){
-        map.remove(key);
+                <h2 id="记5-25好工作中遇到的问题"><a href="#记5-25好工作中遇到的问题" class="headerlink" title="记5.25好工作中遇到的问题"></a>记5.25好工作中遇到的问题</h2><p> 今天主要是前端相关，用springboot里面的thymeleaf以及bootstrap遇到的一些问题  </p>
+<h3 id="如何在表格中显示checkbox"><a href="#如何在表格中显示checkbox" class="headerlink" title="如何在表格中显示checkbox"></a>如何在表格中显示checkbox</h3><ul>
+<li><p>问题：从bootStrap上弄下来的组件不显示checkbox，导致无法选取某一行  </p>
+</li>
+<li><p>解决方法：<br>在列名处加上了一列：  </p>
+<pre><code>&lt;th&gt;
+    &lt;input id=&quot;selall&quot; type=&quot;checkbox&quot; onclick=&quot;checkOrCancelAll();&quot;&gt;
+&lt;/th&gt;  
+相当于占了一列的位置  </code></pre><p>在遍历数据的地方加上：  </p>
+<pre><code>&lt;td&gt;
+    &lt;input type=&quot;checkbox&quot; th:value=&quot;${task.id}&quot; name=&quot;allTask&quot; &gt;
+&lt;/td&gt;  
+这样就可以显示出checkbox那一列了  </code></pre><h3 id="checkbox的全选以及全部取消"><a href="#checkbox的全选以及全部取消" class="headerlink" title="checkbox的全选以及全部取消"></a>checkbox的全选以及全部取消</h3></li>
+<li><p>问题：checkbox显示出来了，但是彼此之间没有联系，比如，在点击列名的checkbox时，应该所有的checkbox都被选中，再点，全部取消  </p>
+</li>
+<li><p>解决方法：  添加了一个function，思路是先判断点列名的checkbox时，是true还是false，如果是true，全选，如果是false，全部取消，代码如下：  </p>
+<p>function checkOrCancelAll() {</p>
+<pre><code>//1.获取checkbo的元素对象
+var selall = document.getElementById(&quot;selall&quot;);
+//2.获取选中状态
+var checkedSelall = selall.checked;
+//console.log(checkedSelall)
+//3.若checked=true,将所有的复选框选中,checked=false,将所有的复选框取消
+var allCheck = document.getElementsByName(&quot;allTask&quot;);
+//4.循环遍历取出每一个复选框中的元素
+if (checkedSelall) {
+    list=[];
+    //全选
+    for (var i = 0; i &lt; allCheck.length; i++) {
+
+        //设置复选框的选中状态
+        allCheck[i].click();</code></pre><p>//                console.log(list);</p>
+<pre><code>        allCheck[i].checked = true;
     }
-}</code></pre>  }<br>  使用了迭代器遍历，但是在删除时，调用了map的删除方法，我忘记了一点：map在进行遍历操作的时候，是不能做修改操作的，如果做了，就会报错  </li>
-<li>解决方法：调用迭代器的删除方法，代码如下：<br>  while(iterator.hasNext()){<pre><code>    Integer key = iterator.next();
-    if(key.equals(k)){
-        iterator.remove(); //注意这里的不同
-    }
-}</code></pre>  }  </li>
+    //mySpan.innerHTML=&quot;取消全选&quot;;
+} else {
+    //取消全选
+    for (var i = 0; i &lt; allCheck.length; i++) {
+        allCheck[i].checked = false;
+        list=[];</code></pre><p>//                console.log(list);</p>
+<pre><code>    }
+}</code></pre><p> }  </p>
+<h3 id="点击普通的checkbox时，获取相应的id"><a href="#点击普通的checkbox时，获取相应的id" class="headerlink" title="点击普通的checkbox时，获取相应的id"></a>点击普通的checkbox时，获取相应的id</h3></li>
+<li><p>问题： 我们选中checkbox，是为了方法服务，我们需要把选中行的数据的id放到集合里，传到后端进行操作，一开始，并不能直接得到id  </p>
+</li>
+<li><p>解决方法： 我们创建一个全局的list集合，之后通过thymeleaf中的方法(name=”allTask” th:onclick=”‘javascript:checkOrCancelOne(‘+${task.id}+’);’”)，拿到每一个对应的id，然后把他们传到全局变量的集合中，这样，就完成了对id的集中<br>代码如下：<br> function checkOrCancelOne(id) {</p>
+<pre><code>//第一次进来，id一定是不存在的，就push进去，第二次一定是取消操作，
+//这个时候调用list的splice方法，将对应的id删除
+var num = list.indexOf(id);
+if(num &gt; -1){
+    console.log(num);
+    list.splice(num,1);
+}else{
+    list.push(id);
+}
+console.log(list);</code></pre><p> }  </p>
+</li>
 </ul>
-<h3 id="注解报错"><a href="#注解报错" class="headerlink" title="注解报错"></a>注解报错</h3><ul>
-<li>报错：Unable to close ApplicationContext；org.springframework.beans.factory.BeanCreationException: Error creating bean with name ‘org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration’  </li>
-<li>问题：Mapper层没有添加@Mapper注解，以为一个简单的@Repository就可以了  </li>
-<li>原因：@Mapper是Mybatis的注解，是用来说明这个是一个Mapper，对应的xxxMapper.xml就是来实现这个Mapper,如果是改成了@repository，使用的是Spring的Bean注解，当然是不可以的</li>
-<li>解决方法：在类前面添加@Mapper注解  </li>
-</ul>
-<h3 id="导入SSL证书到JDK里"><a href="#导入SSL证书到JDK里" class="headerlink" title="导入SSL证书到JDK里"></a>导入SSL证书到JDK里</h3><ul>
-<li>以阿里云镜像库举例子：  </li>
-</ul>
-<p>1.首先去下载证书到本地<br>2.cmd 输入：keytool -import -alias xxx -keystore <JAVA_HOME>/jre/lib/security/cacerts -file xxx.cer<br>3.如果有确认提示，y就好了，很多人做完上面第一步就好了<br>4.如果还未好：将下面的内容加入sts.ini 或者是 eclipse.ini 中<br>-Djavax.net.ssl.trustStore=<JAVA_HOME>\jre\lib\security\cacerts -Djava.net.ssl.trustStorePassword=changeit</p>
 
             </div>
             <hr/>
@@ -458,7 +489,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Kobe-Liu1.github.io/p/4fef6a30.html">http://Kobe-Liu1.github.io/p/4fef6a30.html</a>
+                    <a href="http://Kobe-Liu1.github.io/p/e2102844.html">http://Kobe-Liu1.github.io/p/e2102844.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -495,11 +526,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/work/">
-                                    <span class="chip bg-color">work</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -685,9 +712,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/p/e2102844.html">
                     <div class="card-image">
@@ -707,9 +735,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -718,6 +746,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -728,24 +757,26 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/p/e9ddbaa9.html">
+                <a href="/p/4fef6a30.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="注册域名之后踩的坑">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="工作中遇到的问题(第四弹)">
                         
-                        <span class="card-title">注册域名之后踩的坑</span>
+                        <span class="card-title">工作中遇到的问题(第四弹)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            注册域名之后踩的坑由于静态网页托管在github上，服务器在国外，访问速度实在是感人，所以为了速度，将代码托管到了国内的coding上，于是新的问题又来了，coding托管后，gages服务开启后，发现网址的前一段时随机的，简直low爆了，
+                            记5.22号工作中遇到的问题集合迭代器使用报错
+报错：Exception in thread “main” java.util.ConcurrentModificationException  
+问题：代码如下：while(iterator
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-21
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-22
                             </span>
                         <span class="publish-author">
                             
@@ -758,8 +789,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/blog/">
-                        <span class="chip bg-color">blog</span>
+                    <a href="/tags/work/">
+                        <span class="chip bg-color">work</span>
                     </a>
                     
                 </div>
