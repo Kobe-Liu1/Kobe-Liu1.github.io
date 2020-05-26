@@ -387,7 +387,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    605
+                    596
                 </div>
                 
 
@@ -425,7 +425,7 @@
 这样就可以显示出checkbox那一列了  </code></pre><h3 id="checkbox的全选以及全部取消"><a href="#checkbox的全选以及全部取消" class="headerlink" title="checkbox的全选以及全部取消"></a>checkbox的全选以及全部取消</h3></li>
 <li><p>问题：checkbox显示出来了，但是彼此之间没有联系，比如，在点击列名的checkbox时，应该所有的checkbox都被选中，再点，全部取消  </p>
 </li>
-<li><p>解决方法：  添加了一个function，思路是先判断点列名的checkbox时，是true还是false，如果是true，全选，如果是false，全部取消，代码如下:<br>function checkOrCancelAll() {<br> //1.获取checkbo的元素对象</p>
+<li><p>解决方法：  添加了一个function，思路是先判断点列名的checkbox时，是true还是false，如果是true，全选，如果是false，全部取消，代码如下:<br> function checkOrCancelAll() {</p>
 <pre><code>var selall = document.getElementById(&quot;selall&quot;);
 //2.获取选中状态
 var checkedSelall = selall.checked;
