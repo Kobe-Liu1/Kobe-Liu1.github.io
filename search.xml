@@ -4,24 +4,11 @@
   
     
     <entry>
-      <title>英语二(第一弹)</title>
-      <link href="/p/168c94bb.html"/>
-      <url>/p/168c94bb.html</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>高数二(第一弹)</title>
       <link href="/p/cc9932e.html"/>
       <url>/p/cc9932e.html</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="第一章：函数，极限，连续"><a href="#第一章：函数，极限，连续" class="headerlink" title="第一章：函数，极限，连续"></a>第一章：函数，极限，连续</h2><h3 id="函数："><a href="#函数：" class="headerlink" title="函数："></a>函数：</h3><p>  1.函数的几种特性：  </p><ul><li><p>函数的有界性：在定义域D中如果任意x都使得f(x)&lt;=K,则函数有上界，K是函数的一个上界，如果任意x使得f(x) &lt;= N，则函数有下届，N是函数的一个下届</p></li><li><p>函数的单调性：在定义域的一个区间中，单调递增或单调递减</p></li><li><p>函数的奇偶性：f(-x) = f(x)为偶函数，f(-x) = -f(x) 为奇函数</p></li><li><p>函数的周期性：在函数定义域D中，如果存在 l 使得 f(x+l) = f(x) 则函数是周期函数，l是函数f(x)的周期</p></li><li><p>反函数：D-&gt;f(D)是单射，则存在逆映射f^-1：f(D) -&gt; D,则称该逆映射是f的反函数</p></li><li><p>复合函数：多个函数复合例如y=f[g(x)]<br>2.基本初等函数的分类：<br>基本初等函数包括：<br>概念：由常数和基本初等函数经过有限次四则运算和有限次的函数复合步骤所构成并可用一个式子表示的函数，称为初等函数。 </p></li><li><p>幂函数：y=xμ.y=xμ. (μ∈Rμ∈R是常数) </p></li><li><p>指数函数：y=ax(a&gt;0y=ax(a&gt;0且a≠1)a≠1)  </p></li><li><p>对数函数：y=logaxy=loga⁡x（a&gt;0a&gt;0且a≠1a≠1，特别当a=ea=e时，记为y=lnxy=ln⁡x） </p></li><li><p>三角函数：如y=sinxy=sin⁡x，y=cosxy=cos⁡x，y=tanxy=tan⁡x等。 </p></li><li><p>反三角函数：如y=arcsinxy=arcsin⁡x，y=arccosxy=arccos⁡x，y=arctanxy=arctan⁡x等</p><h3 id="数列的极限"><a href="#数列的极限" class="headerlink" title="数列的极限"></a>数列的极限</h3><p>1.数列的定义：按照某一个法则，对于每一个n包含与N+，对应着一个确定的实数xn,这些实数按照下标从小到大排列构成一个序列</p></li><li><p>定义： 设{xn}为一个数列，如果存在常数a，对于任意给定的ε（不论它多么小），总存在正整数N，是得当n&gt;N时，不等式 |xn-a| &lt; ε成立，则称常数a时数列{xn}的极限，或该数列收敛于a。<br>该定义的目的是判断一个数列是极限是否是a<br>2.主要应用：我们根据上面的定义，任意给定一个数ε（这个数是个变量，代表无穷小），然后根据定义求出N（如果存在的话），使得当n&gt;N时上面的不等式 |xn-a| &lt; ε成立，我们的主要目标是求得这个N，<br>3.收敛数列的性质：</p></li><li><p>定理1（极限的唯一性）：如果数列{xn}收敛，那么它的极限唯一</p></li><li><p>定理2（收敛数列的有界性）：如果数列{xn}收敛，那么这个数列一定有界</p></li><li><p>定理3（收敛数列的保号性）：如果数列收敛于a，且a&gt;0(或a&lt;0)，那么存在正整数N，当n&gt;N时，都有xn&gt;0（或xn&lt;0）</p></li><li><p>定理4（收敛数列与其子数列间的关系）：如果数列{xn}收敛于a，那么它的任一子数列也收敛，且极限也是a。</p><h3 id="函数的极限"><a href="#函数的极限" class="headerlink" title="函数的极限"></a>函数的极限</h3></li></ul>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="第一章：函数，极限，连续"><a href="#第一章：函数，极限，连续" class="headerlink" title="第一章：函数，极限，连续"></a>第一章：函数，极限，连续</h2><h3 id="函数："><a href="#函数：" class="headerlink" title="函数："></a>函数：</h3><p>  1.函数的几种特性：  </p><ul><li>函数的有界性：在定义域D中如果任意x都使得f(x)&lt;=K,则函数有上界，K是函数的一个上界，如果任意x使得f(x) &lt;= N，则函数有下届，N是函数的一个下届</li><li>函数的单调性：在定义域的一个区间中，单调递增或单调递减</li><li>函数的奇偶性：f(-x) = f(x)为偶函数，f(-x) = -f(x) 为奇函数</li><li>函数的周期性：在函数定义域D中，如果存在 l 使得 f(x+l) = f(x) 则函数是周期函数，l是函数f(x)的周期</li><li>反函数：D-&gt;f(D)是单射，则存在逆映射f^-1：f(D) -&gt; D,则称该逆映射是f的反函数</li><li>复合函数：多个函数复合例如y=f[g(x)]  </li></ul><p>2.基本初等函数的分类：<br>  基本初等函数包括：<br>  概念：由常数和基本初等函数经过有限次四则运算和有限次的函数复合步骤所构成并可用一个式子表示的函数，称为初等函数。 </p><ul><li>幂函数：y=xμ.y=xμ. (μ∈Rμ∈R是常数) </li><li>指数函数：y=ax(a&gt;0y=ax(a&gt;0且a≠1)a≠1)  </li><li>对数函数：y=logaxy=loga⁡x（a&gt;0a&gt;0且a≠1a≠1，特别当a=ea=e时，记为y=lnxy=ln⁡x） </li><li>三角函数：如y=sinxy=sin⁡x，y=cosxy=cos⁡x，y=tanxy=tan⁡x等。 </li><li>反三角函数：如y=arcsinxy=arcsin⁡x，y=arccosxy=arccos⁡x，y=arctanxy=arctan⁡x等</li></ul><h3 id="数列的极限"><a href="#数列的极限" class="headerlink" title="数列的极限"></a>数列的极限</h3><p>1.数列的定义：按照某一个法则，对于每一个n包含与N+，对应着一个确定的实数xn,这些实数按照下标从小到大排列构成一个序列</p><ul><li>定义： 设{xn}为一个数列，如果存在常数a，对于任意给定的ε（不论它多么小），总存在正整数N，是得当n&gt;N时，不等式 |xn-a| &lt; ε成立，则称常数a时数列{xn}的极限，或该数列收敛于a。<br>该定义的目的是判断一个数列是极限是否是a  </li></ul><p>2.主要应用：我们根据上面的定义，任意给定一个数ε（这个数是个变量，代表无穷小），然后根据定义求出N（如果存在的话），使得当n&gt;N时上面的不等式 |xn-a| &lt; ε成立，我们的主要目标是求得这个N，<br>3.收敛数列的性质：</p><ul><li>定理1（极限的唯一性）：如果数列{xn}收敛，那么它的极限唯一</li><li>定理2（收敛数列的有界性）：如果数列{xn}收敛，那么这个数列一定有界</li><li>定理3（收敛数列的保号性）：如果数列收敛于a，且a&gt;0(或a&lt;0)，那么存在正整数N，当n&gt;N时，都有xn&gt;0（或xn&lt;0）</li><li>定理4（收敛数列与其子数列间的关系）：如果数列{xn}收敛于a，那么它的任一子数列也收敛，且极限也是a。</li></ul>]]></content>
       
       
       
