@@ -4,12 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="工作中遇到的问题-第六弹, Kobe-Liu">
-    <meta name="description" content="
-title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
+    <meta name="keywords" content="高数二(第一弹), Kobe-Liu">
+    <meta name="description" content="第一章：函数，极限，连续函数：  1.函数的几种特性：  
 
-记5.26日工作遇到的问题idea maven工程生成wsdl文件
-问题：由于我的server文件放在了test里面，所以第">
+函数的有界性：在定义域D中如果任意x都使得f(x)&amp;lt;=K,则函数有上界，K是函数的一个上界，如果任意x使得f(x) &amp;lt;= N，则函数有下届，N是函数的一个下届
+
+函数">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +18,7 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="baidu-site-verification" content="GK8E8w3tFS">
-    <title>工作中遇到的问题-第六弹 | Kobe-Liu</title>
+    <title>高数二(第一弹) | Kobe-Liu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,13 +246,13 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        工作中遇到的问题-第六弹
+                        高数二(第一弹)
                     </div>
                 </div>
             </div>
@@ -362,9 +362,13 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E8%80%83%E7%A0%94/">
+                                <span class="chip bg-color">考研</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -376,7 +380,7 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-26
+                    2020-05-27
                 </div>
                 
 
@@ -385,14 +389,14 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    461
+                    775
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 				
@@ -408,19 +412,41 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<p>title: 工作中遇到的问题(第六弹)<br>date: 2020-05-26 11:46:49<br>tags: work</p>
-<hr>
-<h2 id="记5-26日工作遇到的问题"><a href="#记5-26日工作遇到的问题" class="headerlink" title="记5.26日工作遇到的问题"></a>记5.26日工作遇到的问题</h2><h3 id="idea-maven工程生成wsdl文件"><a href="#idea-maven工程生成wsdl文件" class="headerlink" title="idea maven工程生成wsdl文件"></a>idea maven工程生成wsdl文件</h3><ul>
-<li>问题：由于我的server文件放在了test里面，所以第一次生成的时候报了ClassNotFoundException的异常  </li>
-<li>解决方法：构建路径的时候并不是走test，所以找不到对应的路径，在java文件夹里给上固定的路径就可以拿到wsdl文件了  </li>
-</ul>
-<h3 id="使用CXF时因缺少对应jar包而报错问题汇总"><a href="#使用CXF时因缺少对应jar包而报错问题汇总" class="headerlink" title="使用CXF时因缺少对应jar包而报错问题汇总"></a>使用CXF时因缺少对应jar包而报错问题汇总</h3><p>  1.org.apache.catalina.LifecycleException: A child Container failed during start<br>    缺少：cxf-core-x.x.x.jar（最核心的包）<br>  2.Java.lang.ClassNotFoundException: org.apache.cxf.binding.soap.SoapBindingConfiguration<br>    缺少：cxf-rt-bindings-soap-x.x.x.jar       （soap协议）<br>  3.org.apache.cxf.jaxb.JAXBDataBinding：<br>    缺少：cxf-rt-databinding-jaxb-x.x.x.jar<br>  4.加载Application文件时出现Unable to locate Spring NamespaceHandler for XML schema namespace (<a href="http://cxf.apache.org/jaxws" target="_blank" rel="noopener">http://cxf.apache.org/jaxws</a>)<br>    缺少：cxf-rt-frontend-jaxws-x.x.x.jar<br>  5.org/apache/cxf/frontend/spring/ClientProxyFactoryBeanDefinitionParser错误：<br>    缺少：cxf-rt-frontend-simple-x.x.x.jar<br>  6.class path resource [META-INF/cxf/cxf-servlet.xml] cannot be opened because it does not exist<br>    缺少：cxf-rt-transports-http-x.x.x.jar<br>  7.org.apache.cxf.BusException: No DestinationFactory was found for the namespace <a href="http://cxf.apache.org/transports/udp" target="_blank" rel="noopener">http://cxf.apache.org/transports/udp</a>.<br>    缺少：cxf-rt-transports-udp-x.x.x.jar<br>  8.org.apache.cxf.ws.discovery.internal.WSDiscoveryServiceImpl startup 警告: Could not start WS-Discovery Service.javax.xml.ws.WebServiceException: java.lang.NullPointerException 不能初始化配置的bean服务，也就是运行到时出错<br>    缺少：cxf-rt-ws-addr-x.x.x.jar<br>  9.java.lang.ClassNotFoundException: org.apache.cxf.ws.policy.AssertionInfoMap<br>    缺少：cxf-rt-ws-policy-x.x.x.jar<br>  10.java.lang.ClassNotFoundException: org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean<br>    缺少：cxf-rt-wsdl-x.x.x.jar<br>  11.java.lang.ClassNotFoundException: org.apache.neethi.AssertionBuilderFactory<br>    缺少：neethi-x.x.x.jar<br>  12.java.lang.ClassNotFoundException: org.slf4j.LoggerFactory<br>    缺少：slf4j-api-x.x.x.jar<br>  13.java.lang.ClassNotFoundException: org.apache.ws.commons.schema.resolver.URIResolver<br>    缺少：xmlschema-core-x.x.x.jar </p>
-<h3 id="何鸿燊"><a href="#何鸿燊" class="headerlink" title="何鸿燊"></a>何鸿燊</h3><ul>
-<li>这个字读shen </li>
-</ul>
-<h3 id="何猷君"><a href="#何猷君" class="headerlink" title="何猷君"></a>何猷君</h3><ul>
-<li>这个字读you</li>
+                <h2 id="第一章：函数，极限，连续"><a href="#第一章：函数，极限，连续" class="headerlink" title="第一章：函数，极限，连续"></a>第一章：函数，极限，连续</h2><h3 id="函数："><a href="#函数：" class="headerlink" title="函数："></a>函数：</h3><p>  1.函数的几种特性：  </p>
+<ul>
+<li><p>函数的有界性：在定义域D中如果任意x都使得f(x)&lt;=K,则函数有上界，K是函数的一个上界，如果任意x使得f(x) &lt;= N，则函数有下届，N是函数的一个下届</p>
+</li>
+<li><p>函数的单调性：在定义域的一个区间中，单调递增或单调递减</p>
+</li>
+<li><p>函数的奇偶性：f(-x) = f(x)为偶函数，f(-x) = -f(x) 为奇函数</p>
+</li>
+<li><p>函数的周期性：在函数定义域D中，如果存在 l 使得 f(x+l) = f(x) 则函数是周期函数，l是函数f(x)的周期</p>
+</li>
+<li><p>反函数：D-&gt;f(D)是单射，则存在逆映射f^-1：f(D) -&gt; D,则称该逆映射是f的反函数</p>
+</li>
+<li><p>复合函数：多个函数复合例如y=f[g(x)]<br>2.基本初等函数的分类：<br>基本初等函数包括：<br>概念：由常数和基本初等函数经过有限次四则运算和有限次的函数复合步骤所构成并可用一个式子表示的函数，称为初等函数。 </p>
+</li>
+<li><p>幂函数：y=xμ.y=xμ. (μ∈Rμ∈R是常数) </p>
+</li>
+<li><p>指数函数：y=ax(a&gt;0y=ax(a&gt;0且a≠1)a≠1)  </p>
+</li>
+<li><p>对数函数：y=logaxy=loga⁡x（a&gt;0a&gt;0且a≠1a≠1，特别当a=ea=e时，记为y=lnxy=ln⁡x） </p>
+</li>
+<li><p>三角函数：如y=sinxy=sin⁡x，y=cosxy=cos⁡x，y=tanxy=tan⁡x等。 </p>
+</li>
+<li><p>反三角函数：如y=arcsinxy=arcsin⁡x，y=arccosxy=arccos⁡x，y=arctanxy=arctan⁡x等</p>
+<h3 id="数列的极限"><a href="#数列的极限" class="headerlink" title="数列的极限"></a>数列的极限</h3><p>1.数列的定义：按照某一个法则，对于每一个n包含与N+，对应着一个确定的实数xn,这些实数按照下标从小到大排列构成一个序列</p>
+</li>
+<li><p>定义： 设{xn}为一个数列，如果存在常数a，对于任意给定的ε（不论它多么小），总存在正整数N，是得当n&gt;N时，不等式 |xn-a| &lt; ε成立，则称常数a时数列{xn}的极限，或该数列收敛于a。<br>该定义的目的是判断一个数列是极限是否是a<br>2.主要应用：我们根据上面的定义，任意给定一个数ε（这个数是个变量，代表无穷小），然后根据定义求出N（如果存在的话），使得当n&gt;N时上面的不等式 |xn-a| &lt; ε成立，我们的主要目标是求得这个N，<br>3.收敛数列的性质：</p>
+</li>
+<li><p>定理1（极限的唯一性）：如果数列{xn}收敛，那么它的极限唯一</p>
+</li>
+<li><p>定理2（收敛数列的有界性）：如果数列{xn}收敛，那么这个数列一定有界</p>
+</li>
+<li><p>定理3（收敛数列的保号性）：如果数列收敛于a，且a&gt;0(或a&lt;0)，那么存在正整数N，当n&gt;N时，都有xn&gt;0（或xn&lt;0）</p>
+</li>
+<li><p>定理4（收敛数列与其子数列间的关系）：如果数列{xn}收敛于a，那么它的任一子数列也收敛，且极限也是a。</p>
+<h3 id="函数的极限"><a href="#函数的极限" class="headerlink" title="函数的极限"></a>函数的极限</h3></li>
 </ul>
 
             </div>
@@ -447,7 +473,7 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Kobe-Liu1.github.io/p/d34b5776.html">http://Kobe-Liu1.github.io/p/d34b5776.html</a>
+                    <a href="http://Kobe-Liu1.github.io/p/cc9932e.html">http://Kobe-Liu1.github.io/p/cc9932e.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -484,7 +510,11 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E8%80%83%E7%A0%94/">
+                                    <span class="chip bg-color">考研</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -674,23 +704,19 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/p/cc9932e.html">
+                <a href="/p/168c94bb.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="高数二(第一弹)">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="英语二(第一弹)">
                         
-                        <span class="card-title">高数二(第一弹)</span>
+                        <span class="card-title">英语二(第一弹)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            第一章：函数，极限，连续函数：  1.函数的几种特性：  
-
-函数的有界性：在定义域D中如果任意x都使得f(x)&lt;=K,则函数有上界，K是函数的一个上界，如果任意x使得f(x) &lt;= N，则函数有下届，N是函数的一个下届
-
-函数
+                            
                         
                     </div>
                     <div class="publish-info">
@@ -706,14 +732,6 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
                     </div>
                 </div>
                 
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E8%80%83%E7%A0%94/">
-                        <span class="chip bg-color">考研</span>
-                    </a>
-                    
-                </div>
-                
             </div>
         </div>
         
@@ -723,26 +741,28 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/p/e2102844.html">
+                <a href="/p/d34b5776.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="工作中遇到的问题(第五弹))">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="工作中遇到的问题-第六弹">
                         
-                        <span class="card-title">工作中遇到的问题(第五弹))</span>
+                        <span class="card-title">工作中遇到的问题-第六弹</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            记5.25好工作中遇到的问题 今天主要是前端相关，用springboot里面的thymeleaf以及bootstrap遇到的一些问题  
-如何在表格中显示checkbox
-问题：从bootStrap上弄下来的组件不显示checkbox，导致
+                            
+title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
+
+记5.26日工作遇到的问题idea maven工程生成wsdl文件
+问题：由于我的server文件放在了test里面，所以第
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-26
                             </span>
                         <span class="publish-author">
                             
@@ -751,14 +771,6 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/work/">
-                        <span class="chip bg-color">work</span>
-                    </a>
-                    
                 </div>
                 
             </div>

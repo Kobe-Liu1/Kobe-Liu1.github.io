@@ -4,12 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="工作中遇到的问题-第六弹, Kobe-Liu">
-    <meta name="description" content="
-title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
-
-记5.26日工作遇到的问题idea maven工程生成wsdl文件
-问题：由于我的server文件放在了test里面，所以第">
+    <meta name="keywords" content="英语二(第一弹), Kobe-Liu">
+    <meta name="description" content="英语二(第一弹) | Kobe-Liu">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +14,7 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="baidu-site-verification" content="GK8E8w3tFS">
-    <title>工作中遇到的问题-第六弹 | Kobe-Liu</title>
+    <title>英语二(第一弹) | Kobe-Liu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -246,13 +242,13 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        工作中遇到的问题-第六弹
+                        英语二(第一弹)
                     </div>
                 </div>
             </div>
@@ -376,7 +372,7 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-05-26
+                    2020-05-27
                 </div>
                 
 
@@ -385,14 +381,14 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    461
+                    0
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 				
@@ -408,21 +404,7 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<p>title: 工作中遇到的问题(第六弹)<br>date: 2020-05-26 11:46:49<br>tags: work</p>
-<hr>
-<h2 id="记5-26日工作遇到的问题"><a href="#记5-26日工作遇到的问题" class="headerlink" title="记5.26日工作遇到的问题"></a>记5.26日工作遇到的问题</h2><h3 id="idea-maven工程生成wsdl文件"><a href="#idea-maven工程生成wsdl文件" class="headerlink" title="idea maven工程生成wsdl文件"></a>idea maven工程生成wsdl文件</h3><ul>
-<li>问题：由于我的server文件放在了test里面，所以第一次生成的时候报了ClassNotFoundException的异常  </li>
-<li>解决方法：构建路径的时候并不是走test，所以找不到对应的路径，在java文件夹里给上固定的路径就可以拿到wsdl文件了  </li>
-</ul>
-<h3 id="使用CXF时因缺少对应jar包而报错问题汇总"><a href="#使用CXF时因缺少对应jar包而报错问题汇总" class="headerlink" title="使用CXF时因缺少对应jar包而报错问题汇总"></a>使用CXF时因缺少对应jar包而报错问题汇总</h3><p>  1.org.apache.catalina.LifecycleException: A child Container failed during start<br>    缺少：cxf-core-x.x.x.jar（最核心的包）<br>  2.Java.lang.ClassNotFoundException: org.apache.cxf.binding.soap.SoapBindingConfiguration<br>    缺少：cxf-rt-bindings-soap-x.x.x.jar       （soap协议）<br>  3.org.apache.cxf.jaxb.JAXBDataBinding：<br>    缺少：cxf-rt-databinding-jaxb-x.x.x.jar<br>  4.加载Application文件时出现Unable to locate Spring NamespaceHandler for XML schema namespace (<a href="http://cxf.apache.org/jaxws" target="_blank" rel="noopener">http://cxf.apache.org/jaxws</a>)<br>    缺少：cxf-rt-frontend-jaxws-x.x.x.jar<br>  5.org/apache/cxf/frontend/spring/ClientProxyFactoryBeanDefinitionParser错误：<br>    缺少：cxf-rt-frontend-simple-x.x.x.jar<br>  6.class path resource [META-INF/cxf/cxf-servlet.xml] cannot be opened because it does not exist<br>    缺少：cxf-rt-transports-http-x.x.x.jar<br>  7.org.apache.cxf.BusException: No DestinationFactory was found for the namespace <a href="http://cxf.apache.org/transports/udp" target="_blank" rel="noopener">http://cxf.apache.org/transports/udp</a>.<br>    缺少：cxf-rt-transports-udp-x.x.x.jar<br>  8.org.apache.cxf.ws.discovery.internal.WSDiscoveryServiceImpl startup 警告: Could not start WS-Discovery Service.javax.xml.ws.WebServiceException: java.lang.NullPointerException 不能初始化配置的bean服务，也就是运行到时出错<br>    缺少：cxf-rt-ws-addr-x.x.x.jar<br>  9.java.lang.ClassNotFoundException: org.apache.cxf.ws.policy.AssertionInfoMap<br>    缺少：cxf-rt-ws-policy-x.x.x.jar<br>  10.java.lang.ClassNotFoundException: org.apache.cxf.wsdl.service.factory.ReflectionServiceFactoryBean<br>    缺少：cxf-rt-wsdl-x.x.x.jar<br>  11.java.lang.ClassNotFoundException: org.apache.neethi.AssertionBuilderFactory<br>    缺少：neethi-x.x.x.jar<br>  12.java.lang.ClassNotFoundException: org.slf4j.LoggerFactory<br>    缺少：slf4j-api-x.x.x.jar<br>  13.java.lang.ClassNotFoundException: org.apache.ws.commons.schema.resolver.URIResolver<br>    缺少：xmlschema-core-x.x.x.jar </p>
-<h3 id="何鸿燊"><a href="#何鸿燊" class="headerlink" title="何鸿燊"></a>何鸿燊</h3><ul>
-<li>这个字读shen </li>
-</ul>
-<h3 id="何猷君"><a href="#何猷君" class="headerlink" title="何猷君"></a>何猷君</h3><ul>
-<li>这个字读you</li>
-</ul>
-
+                
             </div>
             <hr/>
 
@@ -447,7 +429,7 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Kobe-Liu1.github.io/p/d34b5776.html">http://Kobe-Liu1.github.io/p/d34b5776.html</a>
+                    <a href="http://Kobe-Liu1.github.io/p/168c94bb.html">http://Kobe-Liu1.github.io/p/168c94bb.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -670,9 +652,48 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/p/168c94bb.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="英语二(第一弹)">
+                        
+                        <span class="card-title">英语二(第一弹)</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Kobe-Liu1
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/p/cc9932e.html">
                     <div class="card-image">
@@ -694,9 +715,9 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-27
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -710,53 +731,6 @@ title: 工作中遇到的问题(第六弹)date: 2020-05-26 11:46:49tags: work
                     
                     <a href="/tags/%E8%80%83%E7%A0%94/">
                         <span class="chip bg-color">考研</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/p/e2102844.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="工作中遇到的问题(第五弹))">
-                        
-                        <span class="card-title">工作中遇到的问题(第五弹))</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            记5.25好工作中遇到的问题 今天主要是前端相关，用springboot里面的thymeleaf以及bootstrap遇到的一些问题  
-如何在表格中显示checkbox
-问题：从bootStrap上弄下来的组件不显示checkbox，导致
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-25
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Kobe-Liu1
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/work/">
-                        <span class="chip bg-color">work</span>
                     </a>
                     
                 </div>
