@@ -30,7 +30,7 @@
     <script src="/libs/jquery/jquery.min.js"></script>
     
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Kobe-Liu" type="application/atom+xml">
-</head>
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -412,16 +412,16 @@
             <div id="articleContent">
                 <h2 id="记5-22号工作中遇到的问题"><a href="#记5-22号工作中遇到的问题" class="headerlink" title="记5.22号工作中遇到的问题"></a>记5.22号工作中遇到的问题</h2><h3 id="集合迭代器使用报错"><a href="#集合迭代器使用报错" class="headerlink" title="集合迭代器使用报错"></a>集合迭代器使用报错</h3><ul>
 <li>报错：Exception in thread “main” java.util.ConcurrentModificationException  </li>
-<li>问题：代码如下：<br>while(iterator.hasNext()){<pre><code>    Integer key = iterator.next();
-    if(key.equals(k)){
-        map.remove(key);
-    }
-}</code></pre>  }<br>  使用了迭代器遍历，但是在删除时，调用了map的删除方法，我忘记了一点：map在进行遍历操作的时候，是不能做修改操作的，如果做了，就会报错  </li>
-<li>解决方法：调用迭代器的删除方法，代码如下：<br>  while(iterator.hasNext()){<pre><code>    Integer key = iterator.next();
-    if(key.equals(k)){
-        iterator.remove(); //注意这里的不同
-    }
-}</code></pre>  }  </li>
+<li>问题：代码如下：<br>while(iterator.hasNext()){<pre><code>      Integer key = iterator.next();
+      if(key.equals(k)){
+          map.remove(key);
+      }
+  }</code></pre>  }<br>  使用了迭代器遍历，但是在删除时，调用了map的删除方法，我忘记了一点：map在进行遍历操作的时候，是不能做修改操作的，如果做了，就会报错  </li>
+<li>解决方法：调用迭代器的删除方法，代码如下：<br>  while(iterator.hasNext()){<pre><code>      Integer key = iterator.next();
+      if(key.equals(k)){
+          iterator.remove(); //注意这里的不同
+      }
+  }</code></pre>  }  </li>
 </ul>
 <h3 id="注解报错"><a href="#注解报错" class="headerlink" title="注解报错"></a>注解报错</h3><ul>
 <li>报错：Unable to close ApplicationContext；org.springframework.beans.factory.BeanCreationException: Error creating bean with name ‘org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration’  </li>
