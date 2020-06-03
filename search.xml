@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>高数二(第二弹)</title>
+      <link href="/p/84f1df24.html"/>
+      <url>/p/84f1df24.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="第一章知识点总结"><a href="#第一章知识点总结" class="headerlink" title="第一章知识点总结"></a>第一章知识点总结</h2><h3 id="断点相关"><a href="#断点相关" class="headerlink" title="断点相关"></a>断点相关</h3><ul><li><p>需要分左右的情形：<br>  1.arctan 1/(x-a)  (x-&gt;0)<br>  2.1/x-a (x-&gt;a)<br>  3.x-a的绝对值<br>  这些需要分左右进行讨论  </p></li><li><p>题目中如果有f(x)/x (x-&gt;0) = 一个常数<br>  那么 f(0) = 0;  </p></li><li><p>2^x-1 不等价于x<br> 首先需要把底换成e，原式等于e^xln2-1 等价于xln2  </p></li><li><p>麦克劳林公式整理<br>  1.使用麦克劳林公式时，x要趋于零<br>  2.常用分为以下几种：  </p><pre><code>  1.sinx = x-x^3/3!+x^5/5!-x^7/7!+...+(-1)^n x^2n+1/(2n+1)! + 0(x^2n+1)    2.e^x = 1+x+x^2/2!+x^3/3!+...+x^n/n! + 0(x^n)    3.cosx = 1-x^2/2!+x^4/4!-x^6/6!+...+(-1)^n x^2n/2n! + 0(x^2n)    4.ln(1+x) = x-x^2/2!+x^3/3!+...+(-1)^(n-1) x^n/(n)! + 0(x^n)    5.(1+x)^a = 1+ax+a(a-1).x^2/2!+...+a(a-1)(a-2)...(a-n+1)x^n/n! + 0(x^n)  </code></pre></li><li><p>ln^nx = nlnx  </p></li><li><p>1-cos^ax =ax^2/x  </p></li><li><p>证明极限存在，证明有界和单调  </p></li><li><p>cos2x = 1- 2sin^2x  </p></li><li><p>f(x)为奇函数，那么f’(x)为偶函数  </p></li><li><p>遇到  (ax+b)/(x-1)(x-2) 这种题目求f^(n)(x)<br>  要把原式化成A/(x-1)+B/(x-2) 求出AB，再求导数  </p></li></ul><h2 id="总结常用初等函数的求导"><a href="#总结常用初等函数的求导" class="headerlink" title="总结常用初等函数的求导"></a>总结常用初等函数的求导</h2><ul><li>(tanx)’ = 1/cosx^2 = sec^2x </li><li>(arctanx)’ = 1/(1+x^2)  </li><li>(arcsinx)’ = 1/(1+x^2)^(1/2)</li><li>(arccosx)’ = -1/(1+x^2)^(1/2)</li><li>tanx^2 = sec=1/cosx^2-1</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 考研 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>高数二(第一弹)</title>
       <link href="/p/cc9932e.html"/>
       <url>/p/cc9932e.html</url>
