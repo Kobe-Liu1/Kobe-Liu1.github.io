@@ -4,11 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="高数二(第二弹), Kobe-Liu">
-    <meta name="description" content="第一章知识点总结断点相关
-需要分左右的情形：  1.arctan 1/(x-a)  (x-&amp;gt;0)  2.1/x-a (x-&amp;gt;a)  3.x-a的绝对值  这些需要分左右进行讨论  
+    <meta name="keywords" content="高数二(第三弹), Kobe-Liu">
+    <meta name="description" content=" ##中值定理的整理  
+罗尔中值定理  (Rolle)
+三个条件：  
 
-题目中如果有f(x)/x (x-&amp;gt;0)">
+   1.f(x)∈c[a,b]   2.(a,b)上可导   3.f(a)=f(b)   由此可以得到:        在(a,b)之间一定存在一个值ξ,使得[f">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +18,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="baidu-site-verification" content="GK8E8w3tFS">
-    <title>高数二(第二弹) | Kobe-Liu</title>
+    <title>高数二(第三弹) | Kobe-Liu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -245,13 +246,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        高数二(第二弹)
+                        高数二(第三弹)
                     </div>
                 </div>
             </div>
@@ -379,7 +380,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-03
+                    2020-06-08
                 </div>
                 
 
@@ -388,14 +389,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    427
+                    300
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 				
@@ -411,47 +412,35 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="第一章知识点总结"><a href="#第一章知识点总结" class="headerlink" title="第一章知识点总结"></a>第一章知识点总结</h2><h3 id="断点相关"><a href="#断点相关" class="headerlink" title="断点相关"></a>断点相关</h3><ul>
-<li><p>需要分左右的情形：<br>  1.arctan 1/(x-a)  (x-&gt;0)<br>  2.1/x-a (x-&gt;a)<br>  3.x-a的绝对值<br>  这些需要分左右进行讨论  </p>
-</li>
-<li><p>题目中如果有f(x)/x (x-&gt;0) = 一个常数<br>  那么 f(0) = 0;  </p>
-</li>
-<li><p>2^x-1 不等价于x<br> 首先需要把底换成e，原式等于e^xln2-1 等价于xln2  </p>
-</li>
-<li><p>麦克劳林公式整理<br>  1.使用麦克劳林公式时，x要趋于零<br>  2.常用分为以下几种：  </p>
-<pre><code>  1.sinx = x-x^3/3!+x^5/5!-x^7/7!+...+(-1)^n x^2n+1/(2n+1)! + 0(x^2n+1)  
-  2.e^x = 1+x+x^2/2!+x^3/3!+...+x^n/n! + 0(x^n)  
-  3.cosx = 1-x^2/2!+x^4/4!-x^6/6!+...+(-1)^n x^2n/2n! + 0(x^2n)  
-  4.ln(1+x) = x-x^2/2!+x^3/3!+...+(-1)^(n-1) x^n/(n)! + 0(x^n)  
-  5.(1+x)^a = 1+ax+a(a-1).x^2/2!+...+a(a-1)(a-2)...(a-n+1)x^n/n! + 0(x^n)  </code></pre></li>
-<li><p>ln^nx = nlnx  </p>
-</li>
-<li><p>1-cos^ax =ax^2/x  </p>
-</li>
-<li><p>证明极限存在，证明有界和单调  </p>
-</li>
-<li><p>cos2x = 1- 2sin^2x  </p>
-</li>
-<li><p>f(x)为奇函数，那么f’(x)为偶函数  </p>
-</li>
-<li><p>遇到  (ax+b)/(x-1)(x-2) 这种题目求f^(n)(x)<br>  要把原式化成A/(x-1)+B/(x-2) 求出AB，再求导数  </p>
-</li>
+                <p> ##中值定理的整理  </p>
+<h3 id="罗尔中值定理-Rolle"><a href="#罗尔中值定理-Rolle" class="headerlink" title="罗尔中值定理  (Rolle)"></a>罗尔中值定理  (Rolle)</h3><ul>
+<li>三个条件：  </li>
 </ul>
-<h2 id="总结常用初等函数的求导"><a href="#总结常用初等函数的求导" class="headerlink" title="总结常用初等函数的求导"></a>总结常用初等函数的求导</h2><ul>
-<li>(tanx)’ = 1/cosx^2 = sec^2x </li>
-<li>(arctanx)’ = 1/(1+x^2)  </li>
-<li>(arcsinx)’ = 1/(1+x^2)^(1/2)</li>
-<li>(arccosx)’ = -1/(1+x^2)^(1/2)</li>
-<li>tanx^2 = sec^2x-1</li>
+<p>   1.f(x)∈c[a,b]<br>   2.(a,b)上可导<br>   3.f(a)=f(b)<br>   由此可以得到:<br>        在(a,b)之间一定存在一个值ξ,使得[f(b)-f(a)]/[b-a]=f’(ξ)=0  </p>
+<h3 id="拉格朗日中值定理-（Lagrange）"><a href="#拉格朗日中值定理-（Lagrange）" class="headerlink" title="拉格朗日中值定理 （Lagrange）"></a>拉格朗日中值定理 （Lagrange）</h3><ul>
+<li>两个条件：其实就是罗尔中值定理，就是L的一个特殊情况：</li>
 </ul>
-<h2 id="立方和"><a href="#立方和" class="headerlink" title="立方和"></a>立方和</h2><ul>
-<li>x^3+y^3 = (x+y)(x^2-xy+y^2)  </li>
-</ul>
-<h2 id="立方差"><a href="#立方差" class="headerlink" title="立方差"></a>立方差</h2><ul>
-<li>x^3-y^3 = (x-y)(x^2+xy+y^2)</li>
-</ul>
-<h2 id="f-x-可导"><a href="#f-x-可导" class="headerlink" title="f(x)可导"></a>f(x)可导</h2><pre><code>代表f(x)可微，Δy = dy + 0(Δx);  
-即 Δy-dy是Δx 的高阶无穷小</code></pre><h2 id="拆的原则"><a href="#拆的原则" class="headerlink" title="拆的原则"></a>拆的原则</h2><pre><code>分子的精确度不低于分母的精确度</code></pre>
+<p>   1.f(x)∈c[a,b]<br>   2.(a,b)上可导<br>   由此可以得到：<br>        在(a,b)之间一定存在一个值ξ,使得[f(b)-f(a)]=f’(ξ)[b-a]</p>
+<pre><code>### 柯西中值定理  
+- 三个条件：
+1.f(x),g(x)∈c[a,b]  
+2.(a,b)上可导  
+3.g&#39;(x)!=0  
+由此可以得出：
+    在(a,b)之间一定存在一个值ξ,使得[f(b)-f(a)]/[g(b)-g(a)] = f&#39;(ξ)/g&#39;(ξ)  
+
+### 基本的题型  
+- f(x)的n级导数=0  
+- 只有ξ一个字母，没有其他字母：
+    1.还原法,还原法有三个条件：
+        1.仅有ξ  
+        2.两项(一般一个复杂，一个简单)
+        3.导数差一阶,例如f&#39;&#39;(ξ) 和 f&#39;(ξ)
+        方法就是凑：
+        工具是：f&#39;(x)/f(x) = {ln[f(x)]}&#39;
+
+    2.分组法：
+        想不起来了</code></pre>
             </div>
             <hr/>
 
@@ -476,7 +465,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Kobe-Liu1.github.io/p/84f1df24.html">http://Kobe-Liu1.github.io/p/84f1df24.html</a>
+                    <a href="http://Kobe-Liu1.github.io/p/1d9f15f.html">http://Kobe-Liu1.github.io/p/1d9f15f.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -703,9 +692,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/p/1d9f15f.html">
                     <div class="card-image">
@@ -727,9 +717,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-08
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-08
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -738,6 +728,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -756,27 +747,27 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/p/cc9932e.html">
+                <a href="/p/84f1df24.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="高数二(第一弹)">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="高数二(第二弹)">
                         
-                        <span class="card-title">高数二(第一弹)</span>
+                        <span class="card-title">高数二(第二弹)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            第一章：函数，极限，连续函数：  1.函数的几种特性：  
+                            第一章知识点总结断点相关
+需要分左右的情形：  1.arctan 1/(x-a)  (x-&gt;0)  2.1/x-a (x-&gt;a)  3.x-a的绝对值  这些需要分左右进行讨论  
 
-函数的有界性：在定义域D中如果任意x都使得f(x)&lt;=K,则函数有上界，K是函数的一个上界，如果任意x使得f(x) &lt;= N，则函数有下届，N是函数的一个下届
-函数的
+题目中如果有f(x)/x (x-&gt;0)
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-03
                             </span>
                         <span class="publish-author">
                             
