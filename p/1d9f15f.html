@@ -30,8 +30,8 @@
     
     <script src="/libs/jquery/jquery.min.js"></script>
     
-<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Kobe-Liu" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="Kobe-Liu" type="application/atom+xml">
+</head>
 
 
 <body>
@@ -388,14 +388,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    300
+                    548
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 				
@@ -434,7 +434,24 @@
         工具是：f&#39;(x)/f(x) = {ln[f(x)]}&#39;
 
     2.分组法：
-        想不起来了</code></pre>
+        1.三项，各差一阶  (把f&#39;(x)当中间项来凑)
+        2.差二阶
+        例子：你这写的啥
+
+- 结论中含ξ，含a,b  
+    1.ab和ξ可以分离  
+    方法：1.ab和ξ分离  
+          2.从a,b入手：f(b)-f(a)/b-a 用拉格朗日；f(b)-f(a)/g(b)-g(a) 用柯西  
+    2.ab和ξ不可以分离 ：凑微法  
+
+- 结论中含有两个或者两个以上中值  
+    1.结论中只含f&#39;(ξ)和f&#39;(η)  
+        方法：找出第三个点,用两次拉格朗日中值定理  
+    2.结论中只含两个中值ξ,η ,但是关于两个中值的项复杂度不同  
+        方法：把ξ,η分开，方法必留复杂
+        ()&#39; 用两次拉格朗日中值定理 ()&#39;/()&#39; 用柯西  
+    3.结论中只含ξ,η，不仅仅只包含f&#39;(ξ)和f&#39;(η)两者对应的项完全对等  
+        方法：先就ξ构造一个辅助函数（还原法），在两次使用拉格朗日中值定理</code></pre>
             </div>
             <hr/>
 
