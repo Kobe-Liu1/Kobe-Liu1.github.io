@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>高数二(第四弹)</title>
+      <link href="/p/3cb64991.html"/>
+      <url>/p/3cb64991.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="单调性与极值方面的整理"><a href="#单调性与极值方面的整理" class="headerlink" title="单调性与极值方面的整理"></a>单调性与极值方面的整理</h2><h3 id="极值点的充分条件"><a href="#极值点的充分条件" class="headerlink" title="极值点的充分条件"></a>极值点的充分条件</h3><pre><code>1.第一充分条件：    - [f&#39;(x)&gt;0,x&lt;x0] &amp;&amp; [f&#39;(x)&lt;0,x&gt;x0]  ==&gt; x=x0是f(x)的极大点    - [f&#39;(x)&lt;0,x&lt;x0] &amp;&amp; [f&#39;(x)&gt;0,x&gt;x0]  ==&gt; x=x0是f(x)的极小点  2.第二充分条件:    当f&#39;(x0)=0时，    - f&#39;&#39;(x0)&gt;0, x=x0是f(x)的极小点      - f&#39;&#39;(x0)&lt;0, x=x0是f(x)的极大点</code></pre><h3 id="凹凸函数的定义"><a href="#凹凸函数的定义" class="headerlink" title="凹凸函数的定义"></a>凹凸函数的定义</h3><pre><code>1.凹函数        在f(x)∈c[a,b] (a,b)内可导,有 [(f(b)-f(a)]/2 &gt; f[(a+b)/2],则称f(x)在[a,b]为凹2.凸函数        在f(x)∈c[a,b] (a,b)内可导,有 [(f(b)-f(a)]/2 &lt; f[(a+b)/2],则称f(x)在[a,b]为凸  3.判别法      在f(x)∈c[a,b] (a,b)内二阶可导：          - f&#39;&#39;(x)&gt;0,在[a,b]上为凹函数        - f&#39;&#39;(x)&lt;0,在[a,b]上为凸函数  4.拐点      定义：x=x0两侧的凹凸性不相同,(x0,f(x0))成为f(x)的拐点  ### 渐近线  1.水平渐近线      f(x)&gt;A (x-&gt;无穷) y=A 就是f(x)的水平渐近线  2.铅直渐近线      铅直渐近线都是在f(x)的断点处,如果：        f(x)=无穷 (x-&gt;x0) 或者 f(xo+0)=无穷 或者 f(x0-0)=无穷 那么, x=x0就是f(x)的铅直渐近线  3.斜渐近线      如果 [f(x)/x]=a (x-&gt;无穷),[f(x)-ax]=b (x-&gt;无穷),则称y=ax+b 为f(x)的斜渐近线</code></pre>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 考研 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>高数二(第三弹)</title>
       <link href="/p/1d9f15f.html"/>
       <url>/p/1d9f15f.html</url>
