@@ -4,8 +4,11 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="高数二(不定积分), Kobe-Liu">
-    <meta name="description" content="不定积分相关整理概念相关  1.F(x)的导数是f(x)，那么就称F(x)是f(x)的原函数  需要明确：  &amp;emsp;连续函数一定有原函数  &amp;emsp;且原函数有无数个 ，及F(x)+C, C为常数  2.第一类换元积分法：    &amp;">
+    <meta name="keywords" content="算法篇一-分治思想下的快速排序, Kobe-Liu">
+    <meta name="description" content="
+title: 算法篇一(分治思想下的快速排序)date: 2020-06-17 10:19:29tags: 算法
+
+分治思想下的快速排序分治思想&amp;emsp;1.分治法的设计思想：把一个难以解决的大问题，分割成几个规模较小的相同问题，然后处">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +17,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="baidu-site-verification" content="Fd4kCdtjga" />
-    <title>高数二(不定积分) | Kobe-Liu</title>
+    <title>算法篇一-分治思想下的快速排序 | Kobe-Liu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -242,13 +245,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        高数二(不定积分)
+                        算法篇一-分治思想下的快速排序
                     </div>
                 </div>
             </div>
@@ -358,13 +361,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E8%80%83%E7%A0%94/">
-                                <span class="chip bg-color">考研</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -376,7 +375,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-16
+                    2020-06-17
                 </div>
                 
 
@@ -385,14 +384,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    469
+                    542
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 				
@@ -408,10 +407,10 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="不定积分相关整理"><a href="#不定积分相关整理" class="headerlink" title="不定积分相关整理"></a>不定积分相关整理</h2><h3 id="概念相关"><a href="#概念相关" class="headerlink" title="概念相关"></a>概念相关</h3><p>  1.F(x)的导数是f(x)，那么就称F(x)是f(x)的原函数<br>  需要明确：<br>  &emsp;连续函数一定有原函数<br>  &emsp;且原函数有无数个 ，及F(x)+C, C为常数<br>  2.第一类换元积分法：<br>    &emsp;∫f[g(x)].g’(x)dx = ∫[f(g(x)]d[g(x)] =(令g(x)=t)=&gt; ∫f(t)dt = F(t)+C = F[g(x)]+C<br>  3.第二类换元积分法；<br>    &emsp;∫f(x)dx =(x=g(t))=&gt; ∫f[g(t)]d[g(t)] = ∫h(t)dt = H(t)+C<br>  4.分布积分法<br>    &emsp;概念：∫udv = uv-∫vdu<br>    &emsp;1.∫幂函数<em>指数函数 dx (∫X^2.e^x dx)<br>    &emsp;2.∫幂函数</em>对数函数 dx (∫X^2.lnx dx)<br>    &emsp;3.∫幂函数<em>三角函数 dx (∫X^2.cosx dx)<br>    &emsp;4.∫幂函数</em>反三角函数 dx (∫X^2.arccosx dx)<br>    &emsp;5.∫e^ax.①cosbx ②sinbx dx (∫e^2x.cos2x dx)<br>      &emsp;&emsp;注意：第五种的备注:记得 （i=∫e^ax.①cosbx ②sinbx dx） 因为在后面一定会得到一个相同的式子，要进行计算，得出答案<br>    &emsp;6.∫①sec^n x dx<br>       &emsp;&emsp;②csc^n x dx<br>       &emsp;&emsp;注意：第六类备注：n一定是奇数次，如果是偶数次的话，用半角或其他公式进行降次<br>    5.有理函数不定积分<br>        &emsp;1.假分式：（分子次数比分母大）<br>          &emsp;注意：要把假分式化成：多项式+真分式<br>          &emsp;2.真分式：<br>          &emsp;&emsp;①分母可以因式分解进行因式分解<br>          &emsp;&emsp;&emsp;1.1/(x-1)(x-2) ==&gt; A/(x-1) + B/(x-2)<br>          &emsp;&emsp;&emsp;2.(2x-1)/(x-1)(x^2+1) =&gt; A/(x-1) + (Bx+C)/(x^2+1)<br>          &emsp;&emsp;&emsp;…<br>          &emsp;&emsp;②分母不可以因式分解<br>          &emsp;&emsp;&emsp;忘了，全凭悟性了嘛 </p>
-<h3 id="第二类积分法的相关类型"><a href="#第二类积分法的相关类型" class="headerlink" title="第二类积分法的相关类型"></a>第二类积分法的相关类型</h3><pre><code> 1.无理转化成有理  
-  注意；通常是开根号的  
- 2.平方和和平方差  </code></pre><h3 id="一些需要记的工具"><a href="#一些需要记的工具" class="headerlink" title="一些需要记的工具"></a>一些需要记的工具</h3><p><img src="https://i.loli.net/2020/06/16/rVguiCR84JXhep5.jpg" alt="基本公式"><br><img src="https://i.loli.net/2020/06/16/bDMVCRwgAzXJfeP.jpg" alt="平方和平方差"><br><img src="https://i.loli.net/2020/06/16/yBigDPCUpmq9nu8.jpg" alt="习题中遇到的"></p>
+                <hr>
+<p>title: 算法篇一(分治思想下的快速排序)<br>date: 2020-06-17 10:19:29<br>tags: 算法</p>
+<hr>
+<h2 id="分治思想下的快速排序"><a href="#分治思想下的快速排序" class="headerlink" title="分治思想下的快速排序"></a>分治思想下的快速排序</h2><h3 id="分治思想"><a href="#分治思想" class="headerlink" title="分治思想"></a>分治思想</h3><p>&emsp;1.分治法的设计思想：把一个难以解决的大问题，分割成几个规模较小的相同问题，然后处理这些小问题，最终解决这个大问题。<br>&emsp;2.分治策略:对于一个规模为n的问题，若该问题可以容易地解决（比如说规模n较小）则直接解决，否则将其分解为k个规模较小的子问题，这些子问题互相独立且与原问题形式相同，递归地解这些子问题，然后将各子问题的解合并得到原问题的解。这种算法设计策略叫做分治法。<br>&emsp;3.如果原问题可以分割成k个子问题（1&lt;k&lt;=n），而且这些小问题都可解，并且可以根据这些小问题的解求出原问题的解，那么就可以使用分治法，由分治法产生的子问题往往是原问题的较小模式，这就为使用递归技术提供了方便。在这种情况下，反复应用分治手段，可以使子问题与原问题类型一致而其规模却不断缩小，最终使子问题缩小到很容易直接求出其解。这自然导致递归过程的产生。分治与递归像一对孪生兄弟，经常同时应用在算法设计之中，并由此产生许多高效算法。<br>&emsp;4.分治适用的情况：<br>&emsp;&emsp;1.该问题的规模缩小到一定的程度就可以容易地解决<br>&emsp;&emsp;2.该问题可以分解为若干个规模较小的相同问题，即该问题具有最优子结构性质<br>&emsp;&emsp;3.利用该问题分解出的子问题的解可以合并为该问题的解<br>&emsp;&emsp;4.该问题所分解出的各个子问题是相互独立的，即子问题之间不包含公共的子子问题</p>
 
             </div>
             <hr/>
@@ -437,7 +436,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Kobe-Liu1.github.io/p/b01bbb31.html">http://Kobe-Liu1.github.io/p/b01bbb31.html</a>
+                    <a href="http://Kobe-Liu1.github.io/p/a7dadbec.html">http://Kobe-Liu1.github.io/p/a7dadbec.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -474,11 +473,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E8%80%83%E7%A0%94/">
-                                    <span class="chip bg-color">考研</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -664,9 +659,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/p/a7dadbec.html">
                     <div class="card-image">
@@ -687,9 +683,9 @@ title: 算法篇一(分治思想下的快速排序)date: 2020-06-17 10:19:29tags
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -698,6 +694,7 @@ title: 算法篇一(分治思想下的快速排序)date: 2020-06-17 10:19:29tags
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -708,26 +705,24 @@ title: 算法篇一(分治思想下的快速排序)date: 2020-06-17 10:19:29tags
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/p/3cb64991.html">
+                <a href="/p/b01bbb31.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="高数二(第四弹)">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="高数二(不定积分)">
                         
-                        <span class="card-title">高数二(第四弹)</span>
+                        <span class="card-title">高数二(不定积分)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            单调性与极值方面的整理极值点的充分条件1.第一充分条件：
-    - [f&#39;(x)&gt;0,x&lt;x0] &amp;&amp; [f&#39;(x)&lt;0,x&gt;x0]  ==&gt; x=x0是f(x)的极大点
-  
+                            不定积分相关整理概念相关  1.F(x)的导数是f(x)，那么就称F(x)是f(x)的原函数  需要明确：  &emsp;连续函数一定有原函数  &emsp;且原函数有无数个 ，及F(x)+C, C为常数  2.第一类换元积分法：    &
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-16
                             </span>
                         <span class="publish-author">
                             
