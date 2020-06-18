@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="算法篇一(分治思想下的快速排序), Kobe-Liu">
-    <meta name="description" content="分治思想下的快速排序分治思想&amp;emsp;1.分治法的设计思想：把一个难以解决的大问题，分割成几个规模较小的相同问题，然后处理这些小问题，最终解决这个大问题。&amp;emsp;2.分治策略:对于一个规模为n的问题，若该问题可以容易地解决（比如说规模">
+    <meta name="keywords" content="算法篇二(分治思想下的归并排序), Kobe-Liu">
+    <meta name="description" content="分治思想下的归并排序归并排序&amp;emsp;1.归并思想：首先把一个数组中的元素，按照某一方法，先拆分了之后，按照一定的顺序各自排列，然后再归并到一起，使得归并后依然是有一定顺序的 。&amp;emsp;2.归并排序算法可以利用递归的思想或者迭代的思想">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="baidu-site-verification" content="Fd4kCdtjga" />
-    <title>算法篇一(分治思想下的快速排序) | Kobe-Liu</title>
+    <title>算法篇二(分治思想下的归并排序) | Kobe-Liu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -242,13 +242,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        算法篇一(分治思想下的快速排序)
+                        算法篇二(分治思想下的归并排序)
                     </div>
                 </div>
             </div>
@@ -376,7 +376,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-17
+                    2020-06-18
                 </div>
                 
 
@@ -385,14 +385,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    737
+                    734
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 				
@@ -408,42 +408,97 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="分治思想下的快速排序"><a href="#分治思想下的快速排序" class="headerlink" title="分治思想下的快速排序"></a>分治思想下的快速排序</h2><h3 id="分治思想"><a href="#分治思想" class="headerlink" title="分治思想"></a>分治思想</h3><p>&emsp;1.分治法的设计思想：把一个难以解决的大问题，分割成几个规模较小的相同问题，然后处理这些小问题，最终解决这个大问题。<br>&emsp;2.分治策略:对于一个规模为n的问题，若该问题可以容易地解决（比如说规模n较小）则直接解决，否则将其分解为k个规模较小的子问题，这些子问题互相独立且与原问题形式相同，递归地解这些子问题，然后将各子问题的解合并得到原问题的解。这种算法设计策略叫做分治法。<br>&emsp;3.如果原问题可以分割成k个子问题（1&lt;k&lt;=n），而且这些小问题都可解，并且可以根据这些小问题的解求出原问题的解，那么就可以使用分治法，由分治法产生的子问题往往是原问题的较小模式，这就为使用递归技术提供了方便。在这种情况下，反复应用分治手段，可以使子问题与原问题类型一致而其规模却不断缩小，最终使子问题缩小到很容易直接求出其解。这自然导致递归过程的产生。分治与递归像一对孪生兄弟，经常同时应用在算法设计之中，并由此产生许多高效算法。<br>&emsp;4.分治适用的情况：<br>&emsp;&emsp;1.该问题的规模缩小到一定的程度就可以容易地解决<br>&emsp;&emsp;2.该问题可以分解为若干个规模较小的相同问题，即该问题具有最优子结构性质<br>&emsp;&emsp;3.利用该问题分解出的子问题的解可以合并为该问题的解<br>&emsp;&emsp;4.该问题所分解出的各个子问题是相互独立的，即子问题之间不包含公共的子子问题  </p>
-<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>&emsp;1.基本思想：<br>&emsp;&emsp;1.先从数组中选取一个基准数，通常是a[0]<br>&emsp;&emsp;2.对数组进行分区，比基准数大的放到右边，比基准数小的放到左边<br>&emsp;&emsp;3.对两个分区再次进行1.2步的操作，重复下去，知道数组排序完成<br>&emsp;2.代码实现(java):    </p>
-<pre><code>public static void main(String[] args) {
-    int[] arr = {32,12,53,25,64,62,41,33,7};
-    new demo2().quickSort(arr, 0, arr.length - 1);
-    System.out.println(Arrays.toString(arr));
+                <h2 id="分治思想下的归并排序"><a href="#分治思想下的归并排序" class="headerlink" title="分治思想下的归并排序"></a>分治思想下的归并排序</h2><h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><p>&emsp;1.归并思想：首先把一个数组中的元素，按照某一方法，先拆分了之后，按照一定的顺序各自排列，然后再归并到一起，使得归并后依然是有一定顺序的 。<br>&emsp;2.归并排序算法可以利用递归的思想或者迭代的思想去实现。首先我们先把一个无序的数组去拆分，然后利用一定的规则，去合并。类似于二叉树的结构。其总的时间复杂度为O( n log n)。空间复杂度为 S（nlogn）</p>
+<h3 id="题目-Leetcode-面试51"><a href="#题目-Leetcode-面试51" class="headerlink" title="题目(Leetcode-面试51)"></a>题目(Leetcode-面试51)</h3><p>&emsp;题目：在数组中的两个数字，如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。输入一个数组，求出这个数组中的逆序对的总数。<br>&emsp;&emsp;例子：输入[7,5,6,4] 输出 5 </p>
+<h3 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h3><pre><code>1.暴力求解法：一开始我使用的是暴力法，就是直接遍历，用前值去比较后值，如果前值大就加1 ，这样，这个程序的时间复杂度为o(n的平方)，短的数组可能并不会有什么大的问题，但是数组长度太长的话，他的效率会非常的低。、
+&amp;emsp;代码如下：  
 
-}
-
-private void quickSort(int[] arr, int start, int end) {
-
-    if(start&gt;=end){
-        return;
-    }
-    int k=arr[start];
-    int i=start,j=end;
-    while (i!=j){
-        while(i&lt;j&amp;&amp;arr[j]&gt;=k) {
-            --j;
+    class Solution {
+        public int reversePairs(int[] nums) {
+            int count = 0;
+            for(int i=0;i&lt;nums.length-1;i++){
+                for(int j=i+1;j&lt;nums.length;j++){
+                    if(nums[i]&gt;nums[j]){
+                        count++;
+                    }
+                }
+            }
+            return count;
         }
-        swap(arr,i,j);
-        while(i&lt;j&amp;&amp;arr[i]&lt;=k) {
-            ++i;
-        }
-        swap(arr, i, j);
     }
-    //分治思想
-    quickSort(arr,start,i-1);
-    quickSort(arr,i+1,end);
-}
 
-private void swap(int[] arr, int i, int j) {
-    int temp;
-    temp = arr[i];
-    arr[i]=arr[j];
-    arr[j]=temp;
+2.归并排序：  
+&amp;emsp;所有的逆序对来自于3个地方
+&amp;emsp;&amp;emsp;1.左边区间的逆序对，
+&amp;emsp;&amp;emsp;2.右边区间的逆序对，
+&amp;emsp;&amp;emsp;3.横跨两个区间的逆序对
+&amp;emsp;所以我们选择在第二个子区间归并回去的时候，计算逆序对的个数：
+&amp;emsp;&amp;emsp;代码如下：
+
+class Solution {
+    public int reversePairs(int[] nums) {
+        int len = nums.length;
+        int[] copy new int[len];
+
+        if(len &lt;2){
+            return 0;
+        }
+
+        for(int i=0;i&lt;len;i++){
+            copy[i] = nums[i];
+        }
+        int[] temp = new int[len];
+
+        return reversePairs(copy,0,len-1,temp)；
+
+    }
+
+
+    private int reversePairs(int[] copy,int start,int end,int[] temp){
+        if(start == end){
+            return 0;
+        }
+        int mid = start + (end-start)/2;
+        int leftPairs = reversePairs(copy,start,mid,temp);
+        int rightPairs = reversePairs(copy,mid+1,end,temp);
+        if(copy[mid]&lt;copy[mid+1]){
+            return leftPairs+rightPairs;
+        }
+
+        int crossPairs = mergeAndCount(nums, start, mid, end, temp);
+        return leftPairs + rightPairs + crossPairs;
+    }
+
+    private int mergeAndCount(int[] copy,int start,int mid,int end,int[] temp){
+        for(int i=start;i&lt;end+1;i++){
+            temp[i] = copy[i];
+        }
+        int i = start;
+        int j = mid+1;
+        for(int k=start;k&lt;end+1;k++){
+
+            // 有下标访问，得先判断是否越界
+            if (i == mid + 1) {
+                copy[k] = temp[j];
+                j++;
+            } else if (j == right + 1) {
+                copy[k] = temp[i];
+                i++;
+            } else if (temp[i] &lt;= temp[j]) {
+                // 注意：这里是 &lt;= ，写成 &lt; 就不对，因为只有&gt;时才是逆序对
+                copy[k] = temp[i];
+                i++;
+            } else {
+                copy[k] = temp[j];
+                j++;
+
+                // 在 j 指向的元素归并回去的时候，计算逆序对的个数，只多了这一行代码
+                count += (mid - i + 1);
+            }
+        }
+        return count;
+        }
+    }
 }</code></pre>
             </div>
             <hr/>
@@ -469,7 +524,7 @@ private void swap(int[] arr, int i, int j) {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Kobe-Liu1.github.io/p/a7dadbec.html">http://Kobe-Liu1.github.io/p/a7dadbec.html</a>
+                    <a href="http://Kobe-Liu1.github.io/p/865b78ec.html">http://Kobe-Liu1.github.io/p/865b78ec.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -696,9 +751,10 @@ private void swap(int[] arr, int i, int j) {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/p/865b78ec.html">
                     <div class="card-image">
@@ -716,9 +772,9 @@ private void swap(int[] arr, int i, int j) {
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -727,6 +783,7 @@ private void swap(int[] arr, int i, int j) {
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -745,24 +802,24 @@ private void swap(int[] arr, int i, int j) {
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/p/b01bbb31.html">
+                <a href="/p/a7dadbec.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="高数二(不定积分)">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="算法篇一(分治思想下的快速排序)">
                         
-                        <span class="card-title">高数二(不定积分)</span>
+                        <span class="card-title">算法篇一(分治思想下的快速排序)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            不定积分相关整理概念相关  1.F(x)的导数是f(x)，那么就称F(x)是f(x)的原函数  需要明确：  &emsp;连续函数一定有原函数  &emsp;且原函数有无数个 ，及F(x)+C, C为常数  2.第一类换元积分法：    &
+                            分治思想下的快速排序分治思想&emsp;1.分治法的设计思想：把一个难以解决的大问题，分割成几个规模较小的相同问题，然后处理这些小问题，最终解决这个大问题。&emsp;2.分治策略:对于一个规模为n的问题，若该问题可以容易地解决（比如说规模
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-17
                             </span>
                         <span class="publish-author">
                             
@@ -775,8 +832,8 @@ private void swap(int[] arr, int i, int j) {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%80%83%E7%A0%94/">
-                        <span class="chip bg-color">考研</span>
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
                     </a>
                     
                 </div>
