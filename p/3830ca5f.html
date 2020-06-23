@@ -522,7 +522,7 @@ Class.forName(DRIVER_CLASS);
 Connection conn = DriverManager.getConnection(JDBC_URL, USER, PASSWORD);</code></pre><p>&emsp;5.简单使用：<br>&emsp;现在我们就可以根据前面创建的连接，进行各种操作了，H2数据库基本类似于Mysql，所以语句也基本相同，另外H2添加自定义函数也很简单，创建一个类，类里定义一个静态的公共方法，然后执行下面的语句就可以添加一个函数了  </p>
 <pre><code>// functionName 为H2中使用的名字，不能重名，package.className.functionName则是方法的路径，从包名到方法名都需要加上
 CREATE ALIAS IF NOT EXISTS  functionName FOR &quot;package.className.functionName&quot;  </code></pre><p>&emsp;6.注意：H2的视图并不是随原表更新的  </p>
-<p>3.H2的本地使用<br>&emsp;1.下载jar包<br>&emsp;这一步参考前面的导入依赖，将jar包下载到本地<br>&emsp;2、运行<br>&emsp;打开cmd.exe（window，linux未测试），然后使用java -jar jar包路径，就可以运行H2数据库了，他会自动打开网页的客户端，默认使用的是持久化模式，可以用来测试语句等。</p>
+<h3 id="3-H2的本地使用"><a href="#3-H2的本地使用" class="headerlink" title="3.H2的本地使用"></a>3.H2的本地使用</h3><p>&emsp;1.下载jar包<br>&emsp;这一步参考前面的导入依赖，将jar包下载到本地<br>&emsp;2、运行<br>&emsp;打开cmd.exe（window，linux未测试），然后使用java -jar jar包路径，就可以运行H2数据库了，他会自动打开网页的客户端，默认使用的是持久化模式，可以用来测试语句等。</p>
 
             </div>
             <hr/>
