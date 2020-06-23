@@ -408,7 +408,9 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="遇到的有意思的jar包"><a href="#遇到的有意思的jar包" class="headerlink" title="遇到的有意思的jar包"></a>遇到的有意思的jar包</h1><h2 id="lombok"><a href="#lombok" class="headerlink" title="lombok"></a>lombok</h2><h3 id="1-概念："><a href="#1-概念：" class="headerlink" title="1.概念："></a>1.概念：</h3><pre><code>lombok是一个可以通过简单的注解的形式来帮助我们简化消除一些必须有但显得很臃肿的Java代码的工具，简单来说，比如我们新建了一个类，然后在其中写了几个字段，然后通常情况下我们需要手动去建立getter和setter方法啊，构造函数啊之类的，lombok的作用就是为了省去我们手动创建这些代码的麻烦，它能够在我们编译源码的时候自动帮我们生成这些方法。</code></pre><h3 id="2-好处："><a href="#2-好处：" class="headerlink" title="2.好处："></a>2.好处：</h3><pre><code>减少冗余代码，使代码更加简洁精炼  </code></pre><h3 id="3-如何用："><a href="#3-如何用：" class="headerlink" title="3.如何用："></a>3.如何用：</h3><p>&emsp;1.lombok是一个IDE插件，首先在maven的pom文件中引进jar包：</p>
+                <h1 id="遇到的有意思的jar包"><a href="#遇到的有意思的jar包" class="headerlink" title="遇到的有意思的jar包"></a>遇到的有意思的jar包</h1><h2 id="lombok"><a href="#lombok" class="headerlink" title="lombok"></a>lombok</h2><h3 id="1-概念："><a href="#1-概念：" class="headerlink" title="1.概念："></a>1.概念：</h3><p>lombok是一个可以通过简单的注解的形式来帮助我们简化消除一些必须有但显得很臃肿的Java代码的工具，简单来说，比如我们新建了一个类，然后在其中写了几个字段，然后通常情况下我们需要手动去建立getter和setter方法啊，构造函数啊之类的，lombok的作用就是为了省去我们手动创建这些代码的麻烦，它能够在我们编译源码的时候自动帮我们生成这些方法。</p>
+<h3 id="2-好处："><a href="#2-好处：" class="headerlink" title="2.好处："></a>2.好处：</h3><p>减少冗余代码，使代码更加简洁精炼  </p>
+<h3 id="3-如何用："><a href="#3-如何用：" class="headerlink" title="3.如何用："></a>3.如何用：</h3><p>&emsp;1.lombok是一个IDE插件，首先在maven的pom文件中引进jar包：</p>
 <pre><code>    &lt;dependency&gt; 
         &lt;groupId&gt;org.projectlombok&lt;/groupId&gt; 
         &lt;artifactId&gt;lombok&lt;/artifactId&gt; 
@@ -487,19 +489,16 @@ public class CleanupExample {
     protected void setName(String name) { 
         this.name = name; 
     } 
-}  
-
-
-使用lombok：  
-
-import lombok.AccessLevel; 
+}  </code></pre><p>&emsp;&emsp;使用lombok：  </p>
+<pre><code>import lombok.AccessLevel; 
 import lombok.Getter; 
 import lombok.Setter; 
 public class GetterSetterExample { 
     @Getter @Setter private int age = 10; 
     @Setter(AccessLevel.PROTECTED) private String name; 
 }  </code></pre><p>&emsp;4.@NoArgsConstructor: 自动生成无参数构造函数。<br>&emsp;5.@AllArgsConstructor: 自动生成全参数构造函数。<br>&emsp;6.@Data: 自动为所有字段添加@ToString, @EqualsAndHashCode, @Getter方法，为非final字段添加@Setter,和@RequiredArgsConstructor!  </p>
-<h2 id="h2database"><a href="#h2database" class="headerlink" title="h2database"></a>h2database</h2><h3 id="1-简介：这个数据库是开源的非常快，并且可以使用jdbc-api来操作，有内嵌式和服务两种运行模式，并且是基于内存的数据库，还可以基于浏览器的客户端进行操作，jar包非常小，只需要2mb的jar包就可以运行，所以有些需要数据比较小的缓存的时候，可以考虑一下H2，毕竟搭建redis相对还是比较麻烦的，而且成本也较高。"><a href="#1-简介：这个数据库是开源的非常快，并且可以使用jdbc-api来操作，有内嵌式和服务两种运行模式，并且是基于内存的数据库，还可以基于浏览器的客户端进行操作，jar包非常小，只需要2mb的jar包就可以运行，所以有些需要数据比较小的缓存的时候，可以考虑一下H2，毕竟搭建redis相对还是比较麻烦的，而且成本也较高。" class="headerlink" title="1.简介：这个数据库是开源的非常快，并且可以使用jdbc api来操作，有内嵌式和服务两种运行模式，并且是基于内存的数据库，还可以基于浏览器的客户端进行操作，jar包非常小，只需要2mb的jar包就可以运行，所以有些需要数据比较小的缓存的时候，可以考虑一下H2，毕竟搭建redis相对还是比较麻烦的，而且成本也较高。"></a>1.简介：这个数据库是开源的非常快，并且可以使用jdbc api来操作，有内嵌式和服务两种运行模式，并且是基于内存的数据库，还可以基于浏览器的客户端进行操作，jar包非常小，只需要2mb的jar包就可以运行，所以有些需要数据比较小的缓存的时候，可以考虑一下H2，毕竟搭建redis相对还是比较麻烦的，而且成本也较高。</h3><h3 id="2-使用流程："><a href="#2-使用流程：" class="headerlink" title="2.使用流程："></a>2.使用流程：</h3><p>&emsp;1.导入依赖：  </p>
+<h2 id="h2database"><a href="#h2database" class="headerlink" title="h2database"></a>h2database</h2><h3 id="1-简介："><a href="#1-简介：" class="headerlink" title="1.简介："></a>1.简介：</h3><p>这个数据库是开源的非常快，并且可以使用jdbc api来操作，有内嵌式和服务两种运行模式，并且是基于内存的数据库，还可以基于浏览器的客户端进行操作，jar包非常小，只需要2mb的jar包就可以运行，所以有些需要数据比较小的缓存的时候，可以考虑一下H2，毕竟搭建redis相对还是比较麻烦的，而且成本也较高。</p>
+<h3 id="2-使用流程："><a href="#2-使用流程：" class="headerlink" title="2.使用流程："></a>2.使用流程：</h3><p>&emsp;1.导入依赖：  </p>
 <pre><code>&lt;!-- https://mvnrepository.com/artifact/com.h2database/h2 --&gt;
 &lt;dependency&gt;
     &lt;groupId&gt;com.h2database&lt;/groupId&gt;
