@@ -415,7 +415,8 @@
         &lt;groupId&gt;org.projectlombok&lt;/groupId&gt; 
         &lt;artifactId&gt;lombok&lt;/artifactId&gt; 
         &lt;version&gt;1.16.10&lt;/version&gt; 
-    &lt;/dependency&gt;</code></pre><p>&emsp;2.以我用的idea举例，在setting-&gt;plugins 中下载lombok插件，重启IDE<br>&emsp;之后你就会发现在项目中只要在pojo类中添加@Data关键字，就可以不用写getter，setter方法了<br>4.lombok相关注解：<br>&emsp;1.@NonNull：可以帮我们避免空指针<br>&emsp;&emsp;不使用lombok：  </p>
+    &lt;/dependency&gt;</code></pre><p>&emsp;2.以我用的idea举例，在setting-&gt;plugins 中下载lombok插件，重启IDE<br>&emsp;之后你就会发现在项目中只要在pojo类中添加@Data关键字，就可以不用写getter，setter方法了  </p>
+<h3 id="4-lombok相关注解："><a href="#4-lombok相关注解：" class="headerlink" title="4.lombok相关注解："></a>4.lombok相关注解：</h3><p>&emsp;1.@NonNull：可以帮我们避免空指针<br>&emsp;&emsp;不使用lombok：  </p>
 <pre><code>public class NonNullExample extends Something { 
     private String name; 
     public NonNullExample(@NonNull Person person) { 
