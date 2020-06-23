@@ -4,10 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="算法篇三(查询数组中第二大的数), Kobe-Liu">
-    <meta name="description" content="查询数组中第二大的数冒泡排序  一开始的想法是冒泡排序，就是遍历两遍，重新排列数组，然后取第二大的数  代码如下：
-private int func1(int[] arr) {
-    for (int i = 0; i &amp;lt;arr.l">
+    <meta name="keywords" content="工作中遇到的问题(第七弹), Kobe-Liu">
+    <meta name="description" content="遇到的有意思的jar包lombok1.概念：mbok是一个可以通过简单的注解的形式来帮助我们简化消除一些必须有但显得很臃肿的Java代码的工具，简单来说，比如我们新建了一个类，然后在其中写了几个字段，然后通常情况下我们需要手动去建立gett">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +14,7 @@ private int func1(int[] arr) {
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="baidu-site-verification" content="Fd4kCdtjga" />
-    <title>算法篇三(查询数组中第二大的数) | Kobe-Liu</title>
+    <title>工作中遇到的问题(第七弹) | Kobe-Liu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -244,13 +242,13 @@ private int func1(int[] arr) {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        算法篇三(查询数组中第二大的数)
+                        工作中遇到的问题(第七弹)
                     </div>
                 </div>
             </div>
@@ -362,8 +360,8 @@ private int func1(int[] arr) {
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%AE%97%E6%B3%95/">
-                                <span class="chip bg-color">算法</span>
+                            <a href="/tags/work/">
+                                <span class="chip bg-color">work</span>
                             </a>
                         
                     </div>
@@ -378,7 +376,7 @@ private int func1(int[] arr) {
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-22
+                    2020-06-23
                 </div>
                 
 
@@ -387,14 +385,14 @@ private int func1(int[] arr) {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    198
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 				
@@ -410,34 +408,109 @@ private int func1(int[] arr) {
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="查询数组中第二大的数"><a href="#查询数组中第二大的数" class="headerlink" title="查询数组中第二大的数"></a>查询数组中第二大的数</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>  一开始的想法是冒泡排序，就是遍历两遍，重新排列数组，然后取第二大的数<br>  代码如下：</p>
-<pre><code>private int func1(int[] arr) {
-    for (int i = 0; i &lt;arr.length-1 ; i++) {
-        for (int j = i+1; j &lt;arr.length; j++) {
-            if (arr[i] &gt;= arr[j]) {
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
-            }
-        }
-    }
-    return arr[arr.length-2];
-}
-但是它的时间复杂度是O(n平方)，有没有其他的方法  </code></pre><h3 id="其他方法"><a href="#其他方法" class="headerlink" title="其他方法"></a>其他方法</h3><pre><code>只需要一次遍历，因为我们并不需要将数组进行重排，只需要取数就好了，所以我们把数记下来，代码如下：
+                <h2 id="遇到的有意思的jar包"><a href="#遇到的有意思的jar包" class="headerlink" title="遇到的有意思的jar包"></a>遇到的有意思的jar包</h2><h3 id="lombok"><a href="#lombok" class="headerlink" title="lombok"></a>lombok</h3><p>1.概念：mbok是一个可以通过简单的注解的形式来帮助我们简化消除一些必须有但显得很臃肿的Java代码的工具，简单来说，比如我们新建了一个类，然后在其中写了几个字段，然后通常情况下我们需要手动去建立getter和setter方法啊，构造函数啊之类的，lombok的作用就是为了省去我们手动创建这些代码的麻烦，它能够在我们编译源码的时候自动帮我们生成这些方法。<br>2.好处：减少冗余代码，使代码更加简洁精炼<br>3.如何用：<br>&emsp;1.lombok是一个IDE插件，首先在maven的pom文件中引进jar包：<br>        <dependency><br>            <groupId>org.projectlombok</groupId><br>            <artifactId>lombok</artifactId><br>            <version>1.16.10</version><br>        </dependency></p>
+<p>&emsp;2.以我用的idea举例，在setting-&gt;plugins 中下载lombok插件，重启IDE<br>&emsp;之后你就会发现在项目中只要在pojo类中添加@Data关键字，就可以不用写getter，setter方法了<br>4.lombok相关注解：<br>&emsp;1.@NonNull：可以帮我们避免空指针<br>&emsp;&emsp;不使用lombok：  </p>
+<pre><code>public class NonNullExample extends Something { 
+    private String name; 
+    public NonNullExample(@NonNull Person person) { 
+        super(&quot;Hello&quot;); 
+        if (person == null) { 
+            throw new NullPointerException(&quot;person&quot;); 
+        } 
+        this.name = person.getName(); 
+    } 
+}  </code></pre><p>&emsp;&emsp;使用lombok：  </p>
+<pre><code>import lombok.NonNull; 
+public class NonNullExample extends Something { 
+    private String name; 
+    public NonNullExample(@NonNull Person person) { 
+        super(&quot;Hello&quot;); 
+        this.name = person.getName(); 
+    } 
+}  </code></pre><p>&emsp;2.@Cleanup: 自动帮我们调用close()方法<br>&emsp;&emsp;不使用lombok：  </p>
+<pre><code>import java.io.*; 
+public class CleanupExample { 
+    public static void main(String[] args) throws IOException { 
+        InputStream in = new FileInputStream(args[0]); 
+        try { 
+            OutputStream out = new FileOutputStream(args[1]); 
+            try { 
+                byte[] b = new byte[10000]; 
+                while (true) { 
+                    int r = in.read(b); 
+                    if (r == -1) break; 
+                    out.write(b, 0, r); 
+                } 
+            } 
+            finally { 
+                if (out != null) { 
+                    out.close(); 
+                } 
+            } 
+        } 
+        finally { 
+            if (in != null) { 
+                in.close(); 
+            } 
+        } 
+    } 
+}  </code></pre><p>&emsp;&emsp;使用lombok：  </p>
+<pre><code>import lombok.Cleanup; 
+import java.io.*; 
+public class CleanupExample { 
+    public static void main(String[] args) throws IOException { 
+        @Cleanup InputStream in = new FileInputStream(args[0]); 
+        @Cleanup OutputStream out = new FileOutputStream(args[1]); 
+        byte[] b = new byte[10000]; 
+        while (true) { 
+            int r = in.read(b); 
+            if (r == -1) {
+            break; 
+            out.write(b, 0, r); 
+        } 
+    } 
+}   </code></pre><p>&emsp;3.@Getter/@Setter:自动生成Getter/Setter方法<br>&emsp;&emsp;不使用lombok：</p>
+<pre><code>public class GetterSetterExample { 
+    private int age = 10; 
+    private String name; 
 
-private int func(int[] arr) {
-    int a = 0;
-    int b = 0;
-    for(int i = 0;i&lt;arr.length-1;i++){
-        if(arr[i]&gt;a){
-            b=a;
-            a = arr[i];
-        }
-    }
-    return b;
+    public int getAge() { 
+        return age; 
+    } 
+    public void setAge(int age) { 
+        this.age = age; 
+    } 
+    protected void setName(String name) { 
+        this.name = name; 
+    } 
+}  
 
+使用lombok：  
 
-}</code></pre>
+import lombok.AccessLevel; 
+import lombok.Getter; 
+import lombok.Setter; 
+public class GetterSetterExample { 
+    @Getter @Setter private int age = 10; 
+    @Setter(AccessLevel.PROTECTED) private String name; 
+}  </code></pre><p>&emsp;4.@NoArgsConstructor: 自动生成无参数构造函数。<br>&emsp;5.@AllArgsConstructor: 自动生成全参数构造函数。<br>&emsp;6.@Data: 自动为所有字段添加@ToString, @EqualsAndHashCode, @Getter方法，为非final字段添加@Setter,和@RequiredArgsConstructor!  </p>
+<h3 id="h2database"><a href="#h2database" class="headerlink" title="h2database"></a>h2database</h3><p>1.简介：这个数据库是开源的非常快，并且可以使用jdbc api来操作，有内嵌式和服务两种运行模式，并且是基于内存的数据库，还可以基于浏览器的客户端进行操作，jar包非常小，只需要2mb的jar包就可以运行，所以有些需要数据比较小的缓存的时候，可以考虑一下H2，毕竟搭建redis相对还是比较麻烦的，而且成本也较高。<br>2.使用流程：<br>&emsp;1.导入依赖：<br>    <!-- https://mvnrepository.com/artifact/com.h2database/h2 --><br>    <dependency><br>        <groupId>com.h2database</groupId><br>        <artifactId>h2</artifactId><br>        <version>1.4.197</version><br>        <scope>test</scope><br>    </dependency>  </p>
+<p>&emsp;2.配置运行模式：<br>&emsp;&emsp;2.1 内嵌式(一)：主要有两种，一种是内存模式，这种模式不会落地持久化，比较适合测试，关闭连接后数据库就清空<br>    private static final String JDBC_URL = “jdbc:h2:mem:DBName;DB_CLOSE_DELAY=-1”;<br>&emsp;&emsp;2.2 内嵌式(二)：持久化模式，这种模式会将数据落地持久化到指定的目录，生成与数据库同名的.mv.db文件<br>    private static final String JDBC_URL = “jdbc:h2:./test”;<br>&emsp;&emsp;2.3 服务式：服务式就是指定一个tcp的远程目录<br>    private static final String JDBC_URL = “jdbc:h2:tcp://localhost/~/test”；</p>
+<p>&emsp;3.配置连接参数：</p>
+<pre><code>//用户名
+private static final String USER = &quot;sa&quot;;
+//连接数据库时使用的密码，默认为空
+private static final String PASSWORD = &quot;&quot;;
+//连接H2数据库时使用的驱动类，org.h2.Driver这个类是由H2数据库自己提供的，在H2数据库的jar包中可以找到
+private static final String DRIVER_CLASS = &quot;org.h2.Driver&quot;;  </code></pre><p>&emsp;4.创建连接：  </p>
+<pre><code>// 加载H2数据库驱动
+Class.forName(DRIVER_CLASS);
+// 根据连接URL，用户名，密码获取数据库连接
+Connection conn = DriverManager.getConnection(JDBC_URL, USER, PASSWORD);</code></pre><p>&emsp;5.简单使用：<br>&emsp;现在我们就可以根据前面创建的连接，进行各种操作了，H2数据库基本类似于Mysql，所以语句也基本相同，另外H2添加自定义函数也很简单，创建一个类，类里定义一个静态的公共方法，然后执行下面的语句就可以添加一个函数了  </p>
+<pre><code>// functionName 为H2中使用的名字，不能重名，package.className.functionName则是方法的路径，从包名到方法名都需要加上
+CREATE ALIAS IF NOT EXISTS  functionName FOR &quot;package.className.functionName&quot;  </code></pre><p>&emsp;6.注意：H2的视图并不是随原表更新的  </p>
+<p>3.H2的本地使用<br>&emsp;1.下载jar包<br>&emsp;这一步参考前面的导入依赖，将jar包下载到本地<br>&emsp;2、运行<br>&emsp;打开cmd.exe（window，linux未测试），然后使用java -jar jar包路径，就可以运行H2数据库了，他会自动打开网页的客户端，默认使用的是持久化模式，可以用来测试语句等。</p>
+
             </div>
             <hr/>
 
@@ -462,7 +535,7 @@ private int func(int[] arr) {
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Kobe-Liu1.github.io/p/76991e03.html">http://Kobe-Liu1.github.io/p/76991e03.html</a>
+                    <a href="http://Kobe-Liu1.github.io/p/3830ca5f.html">http://Kobe-Liu1.github.io/p/3830ca5f.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -500,8 +573,8 @@ private int func(int[] arr) {
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%AE%97%E6%B3%95/">
-                                    <span class="chip bg-color">算法</span>
+                                <a href="/tags/work/">
+                                    <span class="chip bg-color">work</span>
                                 </a>
                             
                         </div>
@@ -689,9 +762,10 @@ private int func(int[] arr) {
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/p/3830ca5f.html">
                     <div class="card-image">
@@ -709,9 +783,9 @@ private int func(int[] arr) {
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-23
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-23
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -720,6 +794,7 @@ private int func(int[] arr) {
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -738,24 +813,26 @@ private int func(int[] arr) {
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/p/865b78ec.html">
+                <a href="/p/76991e03.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="算法篇二(分治思想下的归并排序)">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="算法篇三(查询数组中第二大的数)">
                         
-                        <span class="card-title">算法篇二(分治思想下的归并排序)</span>
+                        <span class="card-title">算法篇三(查询数组中第二大的数)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            分治思想下的归并排序归并排序&emsp;1.归并思想：首先把一个数组中的元素，按照某一方法，先拆分了之后，按照一定的顺序各自排列，然后再归并到一起，使得归并后依然是有一定顺序的 。&emsp;2.归并排序算法可以利用递归的思想或者迭代的思想
+                            查询数组中第二大的数冒泡排序  一开始的想法是冒泡排序，就是遍历两遍，重新排列数组，然后取第二大的数  代码如下：
+private int func1(int[] arr) {
+    for (int i = 0; i &lt;arr.l
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-22
                             </span>
                         <span class="publish-author">
                             
