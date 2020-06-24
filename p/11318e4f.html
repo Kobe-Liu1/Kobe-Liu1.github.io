@@ -428,8 +428,22 @@
         res = Math.max(res,dp[i]);
     }
     return res;
-}</code></pre><p>&emsp;2.动态规划+二分法解题<br>&emsp;&emsp;思路：主要问题是如何降低时间复杂度：<br>&emsp;&emsp;&emsp;1.动态规划中，通过线性遍历来计算dp的复杂度O(n)无法降低<br>&emsp;&emsp;&emsp;2.需要通过线性遍历[0,k)区间元素来得到，我们可以通过重新定义状态，使整个列表变成一个顺序列表，这样在计算每个 dp[k]dp[k]dp[k] 时，就可以通过二分法遍历[0,k)区间元素，将此部分复杂度由O(N)降至 O(logN)<br>&emsp;代码：<br>    private int lengthOfLIS1(int[] nums) {<br>        int[] tails = new int[nums.length];<br>        int res = 0;<br>        for(int num : nums) {<br>            int i = 0, j = res;<br>            while(i &lt; j) {<br>                int m = (i + j) / 2;<br>                if(tails[m] &lt; num) i = m + 1;<br>                else j = m;<br>            }<br>            tails[i] = num;<br>            if(res == j) res++;<br>        }<br>        return res;<br>    }</p>
-
+}</code></pre><p>&emsp;2.动态规划+二分法解题<br>&emsp;&emsp;思路：主要问题是如何降低时间复杂度：<br>&emsp;&emsp;&emsp;1.动态规划中，通过线性遍历来计算dp的复杂度O(n)无法降低<br>&emsp;&emsp;&emsp;2.需要通过线性遍历[0,k)区间元素来得到，我们可以通过重新定义状态，使整个列表变成一个顺序列表，这样在计算每个 dp[k]dp[k]dp[k] 时，就可以通过二分法遍历[0,k)区间元素，将此部分复杂度由O(N)降至 O(logN)<br>&emsp;代码：  </p>
+<pre><code>private int lengthOfLIS1(int[] nums) {
+    int[] tails = new int[nums.length];
+    int res = 0;
+    for(int num : nums) {
+        int i = 0, j = res;
+        while(i &lt; j) {
+            int m = (i + j) / 2;
+            if(tails[m] &lt; num) i = m + 1;
+            else j = m;
+        }
+        tails[i] = num;
+        if(res == j) res++;
+    }
+    return res;
+}</code></pre>
             </div>
             <hr/>
 
