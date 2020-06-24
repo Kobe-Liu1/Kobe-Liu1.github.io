@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kobe-liu1.github.io/"/>
-  <updated>2020-06-23T03:08:47.591Z</updated>
+  <updated>2020-06-24T03:18:46.199Z</updated>
   <id>http://kobe-liu1.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>算法篇四(二分法和动态规划)</title>
+    <link href="http://kobe-liu1.github.io/p/11318e4f.html"/>
+    <id>http://kobe-liu1.github.io/p/11318e4f.html</id>
+    <published>2020-06-24T01:26:03.000Z</published>
+    <updated>2020-06-24T03:18:46.199Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="算法" scheme="http://Kobe-Liu1.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>工作中遇到的问题(第七弹)</title>

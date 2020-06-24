@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="工作中遇到的问题(第七弹), Kobe-Liu">
-    <meta name="description" content="遇到的有意思的jar包lombok1.概念：lombok是一个可以通过简单的注解的形式来帮助我们简化消除一些必须有但显得很臃肿的Java代码的工具，简单来说，比如我们新建了一个类，然后在其中写了几个字段，然后通常情况下我们需要手动去建立ge">
+    <meta name="keywords" content="算法篇四(二分法和动态规划), Kobe-Liu">
+    <meta name="description" content="二分法和动态规划题目&amp;emsp;给定一个无序的整数数组，找到其中最长上升子序列的长度。&amp;emsp;&amp;emsp;输入: [10,9,2,5,3,7,101,18]&amp;emsp;&amp;emsp;输出: 4&amp;emsp;&amp;emsp;解释: 最长的上升子序">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="baidu-site-verification" content="Fd4kCdtjga" />
-    <title>工作中遇到的问题(第七弹) | Kobe-Liu</title>
+    <title>算法篇四(二分法和动态规划) | Kobe-Liu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -242,13 +242,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        工作中遇到的问题(第七弹)
+                        算法篇四(二分法和动态规划)
                     </div>
                 </div>
             </div>
@@ -360,8 +360,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/work/">
-                                <span class="chip bg-color">work</span>
+                            <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">算法</span>
                             </a>
                         
                     </div>
@@ -376,7 +376,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-23
+                    2020-06-24
                 </div>
                 
 
@@ -385,14 +385,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    4 分
                 </div>
                 
 				
@@ -408,121 +408,10 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="遇到的有意思的jar包"><a href="#遇到的有意思的jar包" class="headerlink" title="遇到的有意思的jar包"></a>遇到的有意思的jar包</h1><h2 id="lombok"><a href="#lombok" class="headerlink" title="lombok"></a>lombok</h2><h3 id="1-概念："><a href="#1-概念：" class="headerlink" title="1.概念："></a>1.概念：</h3><p>lombok是一个可以通过简单的注解的形式来帮助我们简化消除一些必须有但显得很臃肿的Java代码的工具，简单来说，比如我们新建了一个类，然后在其中写了几个字段，然后通常情况下我们需要手动去建立getter和setter方法啊，构造函数啊之类的，lombok的作用就是为了省去我们手动创建这些代码的麻烦，它能够在我们编译源码的时候自动帮我们生成这些方法。</p>
-<h3 id="2-好处："><a href="#2-好处：" class="headerlink" title="2.好处："></a>2.好处：</h3><p>减少冗余代码，使代码更加简洁精炼  </p>
-<h3 id="3-如何用："><a href="#3-如何用：" class="headerlink" title="3.如何用："></a>3.如何用：</h3><p>&emsp;1.lombok是一个IDE插件，首先在maven的pom文件中引进jar包：</p>
-<pre><code>    &lt;dependency&gt; 
-        &lt;groupId&gt;org.projectlombok&lt;/groupId&gt; 
-        &lt;artifactId&gt;lombok&lt;/artifactId&gt; 
-        &lt;version&gt;1.16.10&lt;/version&gt; 
-    &lt;/dependency&gt;</code></pre><p>&emsp;2.以我用的idea举例，在setting-&gt;plugins 中下载lombok插件，重启IDE<br>&emsp;之后你就会发现在项目中只要在pojo类中添加@Data关键字，就可以不用写getter，setter方法了  </p>
-<h3 id="4-lombok相关注解："><a href="#4-lombok相关注解：" class="headerlink" title="4.lombok相关注解："></a>4.lombok相关注解：</h3><p>&emsp;1.@NonNull：可以帮我们避免空指针<br>&emsp;&emsp;不使用lombok：  </p>
-<pre><code>public class NonNullExample extends Something { 
-    private String name; 
-    public NonNullExample(@NonNull Person person) { 
-        super(&quot;Hello&quot;); 
-        if (person == null) { 
-            throw new NullPointerException(&quot;person&quot;); 
-        } 
-        this.name = person.getName(); 
-    } 
-}  </code></pre><p>&emsp;&emsp;使用lombok：  </p>
-<pre><code>import lombok.NonNull; 
-public class NonNullExample extends Something { 
-    private String name; 
-    public NonNullExample(@NonNull Person person) { 
-        super(&quot;Hello&quot;); 
-        this.name = person.getName(); 
-    } 
-}  </code></pre><p>&emsp;2.@Cleanup: 自动帮我们调用close()方法<br>&emsp;&emsp;不使用lombok：  </p>
-<pre><code>import java.io.*; 
-public class CleanupExample { 
-    public static void main(String[] args) throws IOException { 
-        InputStream in = new FileInputStream(args[0]); 
-        try { 
-            OutputStream out = new FileOutputStream(args[1]); 
-            try { 
-                byte[] b = new byte[10000]; 
-                while (true) { 
-                    int r = in.read(b); 
-                    if (r == -1) break; 
-                    out.write(b, 0, r); 
-                } 
-            } 
-            finally { 
-                if (out != null) { 
-                    out.close(); 
-                } 
-            } 
-        } 
-        finally { 
-            if (in != null) { 
-                in.close(); 
-            } 
-        } 
-    } 
-} </code></pre><p>&emsp;&emsp;使用lombok：  </p>
-<pre><code>import lombok.Cleanup; 
-import java.io.*; 
-public class CleanupExample { 
-    public static void main(String[] args) throws IOException { 
-        @Cleanup InputStream in = new FileInputStream(args[0]); 
-        @Cleanup OutputStream out = new FileOutputStream(args[1]); 
-        byte[] b = new byte[10000]; 
-        while (true) { 
-            int r = in.read(b); 
-            if (r == -1) {
-            break; 
-            out.write(b, 0, r); 
-        } 
-    } 
-}  </code></pre><p>&emsp;3.@Getter/@Setter:自动生成Getter/Setter方法<br>&emsp;&emsp;不使用lombok：</p>
-<pre><code>public class GetterSetterExample { 
-    private int age = 10; 
-    private String name; 
-
-    public int getAge() { 
-        return age; 
-    } 
-    public void setAge(int age) { 
-        this.age = age; 
-    } 
-    protected void setName(String name) { 
-        this.name = name; 
-    } 
-}  </code></pre><p>&emsp;&emsp;使用lombok：  </p>
-<pre><code>import lombok.AccessLevel; 
-import lombok.Getter; 
-import lombok.Setter; 
-public class GetterSetterExample { 
-    @Getter @Setter private int age = 10; 
-    @Setter(AccessLevel.PROTECTED) private String name; 
-}  </code></pre><p>&emsp;4.@NoArgsConstructor: 自动生成无参数构造函数。<br>&emsp;5.@AllArgsConstructor: 自动生成全参数构造函数。<br>&emsp;6.@Data: 自动为所有字段添加@ToString, @EqualsAndHashCode, @Getter方法，为非final字段添加@Setter,和@RequiredArgsConstructor!  </p>
-<h2 id="h2database"><a href="#h2database" class="headerlink" title="h2database"></a>h2database</h2><h3 id="1-简介："><a href="#1-简介：" class="headerlink" title="1.简介："></a>1.简介：</h3><p>这个数据库是开源的非常快，并且可以使用jdbc api来操作，有内嵌式和服务两种运行模式，并且是基于内存的数据库，还可以基于浏览器的客户端进行操作，jar包非常小，只需要2mb的jar包就可以运行，所以有些需要数据比较小的缓存的时候，可以考虑一下H2，毕竟搭建redis相对还是比较麻烦的，而且成本也较高。</p>
-<h3 id="2-使用流程："><a href="#2-使用流程：" class="headerlink" title="2.使用流程："></a>2.使用流程：</h3><p>&emsp;1.导入依赖：  </p>
-<pre><code>&lt;!-- https://mvnrepository.com/artifact/com.h2database/h2 --&gt;
-&lt;dependency&gt;
-    &lt;groupId&gt;com.h2database&lt;/groupId&gt;
-    &lt;artifactId&gt;h2&lt;/artifactId&gt;
-    &lt;version&gt;1.4.197&lt;/version&gt;
-    &lt;scope&gt;test&lt;/scope&gt;
-&lt;/dependency&gt;  </code></pre><p>&emsp;2.配置运行模式：<br>&emsp;&emsp;2.1 内嵌式(一)：主要有两种，一种是内存模式，这种模式不会落地持久化，比较适合测试，关闭连接后数据库就清空  </p>
-<pre><code>private static final String JDBC_URL = &quot;jdbc:h2:mem:DBName;DB_CLOSE_DELAY=-1&quot;;</code></pre><p>&emsp;&emsp;2.2 内嵌式(二)：持久化模式，这种模式会将数据落地持久化到指定的目录，生成与数据库同名的.mv.db文件</p>
-<pre><code>private static final String JDBC_URL = &quot;jdbc:h2:./test&quot;;  </code></pre><p>&emsp;&emsp;2.3 服务式：服务式就是指定一个tcp的远程目录</p>
-<pre><code>private static final String JDBC_URL = &quot;jdbc:h2:tcp://localhost/~/test”；</code></pre><p>&emsp;3.配置连接参数：</p>
-<pre><code>//用户名
-private static final String USER = &quot;sa&quot;;
-//连接数据库时使用的密码，默认为空
-private static final String PASSWORD = &quot;&quot;;
-//连接H2数据库时使用的驱动类，org.h2.Driver这个类是由H2数据库自己提供的，在H2数据库的jar包中可以找到
-private static final String DRIVER_CLASS = &quot;org.h2.Driver&quot;;  </code></pre><p>&emsp;4.创建连接：  </p>
-<pre><code>// 加载H2数据库驱动
-Class.forName(DRIVER_CLASS);
-// 根据连接URL，用户名，密码获取数据库连接
-Connection conn = DriverManager.getConnection(JDBC_URL, USER, PASSWORD);</code></pre><p>&emsp;5.简单使用：<br>&emsp;现在我们就可以根据前面创建的连接，进行各种操作了，H2数据库基本类似于Mysql，所以语句也基本相同，另外H2添加自定义函数也很简单，创建一个类，类里定义一个静态的公共方法，然后执行下面的语句就可以添加一个函数了  </p>
-<pre><code>// functionName 为H2中使用的名字，不能重名，package.className.functionName则是方法的路径，从包名到方法名都需要加上
-CREATE ALIAS IF NOT EXISTS  functionName FOR &quot;package.className.functionName&quot;  </code></pre><p>&emsp;6.注意：H2的视图并不是随原表更新的  </p>
-<h3 id="3-H2的本地使用"><a href="#3-H2的本地使用" class="headerlink" title="3.H2的本地使用"></a>3.H2的本地使用</h3><p>&emsp;1.下载jar包<br>&emsp;这一步参考前面的导入依赖，将jar包下载到本地<br>&emsp;2、运行<br>&emsp;打开cmd.exe（window，linux未测试），然后使用java -jar jar包路径，就可以运行H2数据库了，他会自动打开网页的客户端，默认使用的是持久化模式，可以用来测试语句等。</p>
+                <h1 id="二分法和动态规划"><a href="#二分法和动态规划" class="headerlink" title="二分法和动态规划"></a>二分法和动态规划</h1><h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>&emsp;给定一个无序的整数数组，找到其中最长上升子序列的长度。<br>&emsp;&emsp;输入: [10,9,2,5,3,7,101,18]<br>&emsp;&emsp;输出: 4<br>&emsp;&emsp;解释: 最长的上升子序列是 [2,3,7,101]，它的长度是 4。  </p>
+<h2 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h2><p>&emsp;1.概念：动态规划就是把一个大问题拆成一个个小问题(分治思想)，但是动态规划的核心并不在此，而是那些小问题会不会被复用。<br>&emsp;&emsp;1.举个简单的例子：在纸上写上1+1+1，问它的和是多少，都知道是1+1+1=3，之后在1+1+1之前再写上一个1+，问它的和，这时候有两种计算方法，第一种是1+1+1+1=4,而另一种方法是1+3=4，因为之前我们已经计算了1+1+1了，就无需再次计算了，这就是动态规划。<br>&emsp;&emsp;2.走楼梯的例子：有n级台阶，人只能一次走1级或者2级，问这个人有多少种走法？<br>&emsp;&emsp;&emsp;f(1)=1,第一次只能跳一级；f(2)=2,第二次可以跳一级或者两级；第三次f(3)=f(2)+f(1),即如果第一次跳一格，那么有f(2)种跳法，第一次跳两格，那么就f(1)次跳法，由此类推f(n)=f(n-1)+f(n-2);</p>
+<h2 id="二分法"><a href="#二分法" class="headerlink" title="二分法"></a>二分法</h2><p>&emsp;1.概念：在用二分法进行查找时，查找对象的数组必须是有序的，即各数组元素的次序是按其值的大小顺序存储的。其基本思想是先确定待查数据的范围（可用 [left,right] 区间表示），然后逐步缩小范围直到找到或找不到该记录为止。具体做法是：先取数组中间位置（mid=(left+right)/2）的数据元素与给定值比较。若相等，则查找成功；否则，若给定值比该数据元素的值小（或大），则给定值必在数组的前半部分[left,mid-1]（或后半部分[mid+1,right]），然后在新的查找范围内进行同样的查找。如此反复进行，直到找到数组元素值与给定值相等的元素或确定数组中没有待查找的数据为止。因此，二分查找每查找一次，或成功，或使查找数组中元素的个数减少一半，当查找数组中不再有数据元素时，查找失败。<br>&emsp;2.例子：编写一个计算x的平方根的程序，x保证为正数，求：5的平方根：<br>&emsp;&emsp;思路：设f(x)=x2,f(x)随x的增大而增大，所以我们采取二分法，首先，我们令mid = (left+right)/2,用mid的平方与5比较:<br>&emsp;&emsp;1) f(mid)&gt;5,令right=mid；<br>&emsp;&emsp;2) f(mid)&lt;5,令left=mid;</p>
+<h2 id="题目解析"><a href="#题目解析" class="headerlink" title="题目解析"></a>题目解析</h2><p>&emsp;1.动态规划解题<br>&emsp;&emsp;解题思路：<br>&emsp;&emsp;状态定义：dp[i]代表前i个数字的最长序列长度<br>&emsp;&emsp;转移思想：设j∈[0,i)，考虑每轮计算新 dp[i]时，遍历[0,i)列表区间，做以下判断:<br>&emsp;&emsp;&emsp;1) num[i]&gt;num[j]时，num[i]可以接在num[j]之后，此情况下最长上升子串dp[i]=dp[j]+1<br>&emsp;&emsp;&emsp;2) num[i]&lt;num[j]时，num[i]不可以接在num[j]之后，跳过<br>&emsp;&emsp;执行方程：dp[i]=max(dp[i],dp[j]+1)<br>&emsp;&emsp;代码如下：<br>    private int lengthOfLIS(int[] nums) {<br>        if(nums.length == 0){<br>            return 0;<br>        }<br>        int[] dp = new int[nums.length];<br>        int res = 0;<br>        Arrays.fill(dp,1);<br>        for(int i=0;i&lt;nums.length;i++){<br>            for(int j=0;j&lt;i;j++){<br>                if(nums[j]&lt;nums[i]){<br>                    dp[i] = Math.max(dp[i],dp[j]+1);<br>                }<br>            }<br>            res = Math.max(res,dp[i]);<br>        }<br>        return res;<br>    }<br>&emsp;2.动态规划+二分法解题<br>&emsp;&emsp;思路：主要问题是如何降低时间复杂度：<br>&emsp;&emsp;&emsp;1.动态规划中，通过线性遍历来计算dp的复杂度O(n)无法降低<br>&emsp;&emsp;&emsp;2.需要通过线性遍历 [0,k) 区间元素来得到 dp[k]，我们可以通过重新定义状态，使整个列表变成一个顺序列表，这样在计算每个 dp[k]dp[k]dp[k] 时，就可以通过二分法遍历[0,k)区间元素，将此部分复杂度由O(N)降至 O(logN)。<br>&emsp;&emsp;代码：<br>    private int lengthOfLIS1(int[] nums) {<br>        int[] tails = new int[nums.length];<br>        int res = 0;<br>        for(int num : nums) {<br>            int i = 0, j = res;<br>            while(i &lt; j) {<br>                int m = (i + j) / 2;<br>                if(tails[m] &lt; num) i = m + 1;<br>                else j = m;<br>            }<br>            tails[i] = num;<br>            if(res == j) res++;<br>        }<br>        return res;<br>    }</p>
 
             </div>
             <hr/>
@@ -548,7 +437,7 @@ CREATE ALIAS IF NOT EXISTS  functionName FOR &quot;package.className.functionNam
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Kobe-Liu1.github.io/p/3830ca5f.html">http://Kobe-Liu1.github.io/p/3830ca5f.html</a>
+                    <a href="http://Kobe-Liu1.github.io/p/11318e4f.html">http://Kobe-Liu1.github.io/p/11318e4f.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -586,8 +475,8 @@ CREATE ALIAS IF NOT EXISTS  functionName FOR &quot;package.className.functionNam
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/work/">
-                                    <span class="chip bg-color">work</span>
+                                <a href="/tags/%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">算法</span>
                                 </a>
                             
                         </div>
@@ -775,9 +664,10 @@ CREATE ALIAS IF NOT EXISTS  functionName FOR &quot;package.className.functionNam
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/p/11318e4f.html">
                     <div class="card-image">
@@ -795,9 +685,9 @@ CREATE ALIAS IF NOT EXISTS  functionName FOR &quot;package.className.functionNam
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -806,6 +696,7 @@ CREATE ALIAS IF NOT EXISTS  functionName FOR &quot;package.className.functionNam
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -824,26 +715,24 @@ CREATE ALIAS IF NOT EXISTS  functionName FOR &quot;package.className.functionNam
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/p/76991e03.html">
+                <a href="/p/3830ca5f.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="算法篇三(查询数组中第二大的数)">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="工作中遇到的问题(第七弹)">
                         
-                        <span class="card-title">算法篇三(查询数组中第二大的数)</span>
+                        <span class="card-title">工作中遇到的问题(第七弹)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            查询数组中第二大的数冒泡排序  一开始的想法是冒泡排序，就是遍历两遍，重新排列数组，然后取第二大的数  代码如下：
-private int func1(int[] arr) {
-    for (int i = 0; i &lt;arr.l
+                            遇到的有意思的jar包lombok1.概念：lombok是一个可以通过简单的注解的形式来帮助我们简化消除一些必须有但显得很臃肿的Java代码的工具，简单来说，比如我们新建了一个类，然后在其中写了几个字段，然后通常情况下我们需要手动去建立ge
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-22
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-23
                             </span>
                         <span class="publish-author">
                             
@@ -856,8 +745,8 @@ private int func1(int[] arr) {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
+                    <a href="/tags/work/">
+                        <span class="chip bg-color">work</span>
                     </a>
                     
                 </div>
