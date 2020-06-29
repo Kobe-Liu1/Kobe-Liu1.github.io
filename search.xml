@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>高数二(定积分)</title>
+      <link href="/p/9e2d4419.html"/>
+      <url>/p/9e2d4419.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="定积分的相关整理"><a href="#定积分的相关整理" class="headerlink" title="定积分的相关整理"></a>定积分的相关整理</h1><h2 id="概念相关"><a href="#概念相关" class="headerlink" title="概念相关"></a>概念相关</h2><h3 id="定积分的定义"><a href="#定积分的定义" class="headerlink" title="定积分的定义"></a>定积分的定义</h3><p>&emsp;y=f(x)在 [a,b]上有界:<br>&emsp;&emsp;1.将[a,b]分为无数个点：a=x0&lt;x1&lt;x2&lt;…&lt;xn=b,得 Δx=xi-x(i-1)  i∈[1,n]<br>&emsp;&emsp;2.任意取 ζi∈[x(i-1),xi],做 ζ1Δx1+ζ2Δx2+…+ζiΔxi (其实就是f(x)在[a,b]上得面积)<br>&emsp;&emsp;3.令λ =max{Δx1,Δx2,…,Δxn},若λ-&gt;0时，面积存在，就称f(x)在[a,b]上可积，极限值称为f(x)得定积分，记作：∫(a,b)f(x)dx  </p><h3 id="定积分的说明"><a href="#定积分的说明" class="headerlink" title="定积分的说明"></a>定积分的说明</h3><p>&emsp;1.f(x)在[a,b]上有界时可积的必要条件，即  有界不一定可积，可积一定有界 (证明相关的不整理)<br>&emsp;2.定积分的一般性质：<br>&emsp;&emsp;1.加减乘除不写了<br>&emsp;&emsp;2.若f(x),|f(x)| 在[a,b]上可积，则有：∫(a,b)f(x)dx &lt;= ∫(a,b)|f(x)|dx (有一些面积为负，会抵消)<br>&emsp;&emsp;3.f(x)&gt;0，则∫(a,b)f(x)dx&gt;0<br>&emsp;&emsp;4.f(x)&gt;=g(x),则∫(a,b)f(x)dx &gt;= ∫(a,b)g(x)dx<br>&emsp;&emsp;5.(重要的一塌糊涂，经常想不到)积分中值定理：f(x)∈c[a,b],则 存在ζ∈[a,b],有∫(a,b)f(x)dx = f(ζ)(b-a)<br>&emsp;&emsp;&emsp;&emsp;@注意：2∫(0,1/2)f(x)dx 要想到积分中值定理  </p><h3 id="积分的基本定理"><a href="#积分的基本定理" class="headerlink" title="积分的基本定理"></a>积分的基本定理</h3><p>&emsp;1.不定积分的本质是函数，定积分的本质是数<br>&emsp;2.定积分与函数关系和上下限有关，与使用的积分变量无关<br>&emsp;3.牛顿.莱布尼兹公式的证明，要会证明，  即F(b)- F(a) = ∫(a,b)f(x)dx<br>&emsp;4.几种基本的转换:<br>&emsp;&emsp;1.∫(-a,0) -&gt; ∫(0,a) [x=-t];<br>&emsp;&emsp;2.∫(a,b) -&gt; ∫(0,1) [x=a+(a-b)t]<br>&emsp;&emsp;3.∫(a,b) -&gt; ∫(a,b) [x+t=b+a]<br>&emsp;&emsp;4.∫(π/2,π) -&gt; ∫(0,π/2) [x-π/2=t]<br>&emsp;5.重要定理：∫(0,π/2)(sinx)^ndx = ∫(0,π/2)(cosx)^ndx = In，有公式：<br>&emsp;&emsp;1.In = [(n-1)/n]I(n-2)<br>&emsp;&emsp;2.I1=1;I0=π/2<br>&emsp;6.∫(0,π)f(sinx)dx = 2∫(0,π/2)f(sinx)dx<br>&emsp;7.∫(0,π)f(|cosx|)dx = 2∫(0,π/2)f(cosx)dx<br>&emsp;8.f(x)是以T为周期的连续函数，则：<br>&emsp;&emsp;1.∫(a,a+T)f(x)dx = ∫(0,T)f(x)dx<br>&emsp;&emsp;2.∫(0,nT)f(x)dx = n∫(0,T)f(x)dx </p><h2 id="反常积分-广义积分"><a href="#反常积分-广义积分" class="headerlink" title="反常积分(广义积分)"></a>反常积分(广义积分)</h2><p>&emsp;1.正常积分：1.闭区间，区间有限；2.f(x)连续或者存在有限个第一间断点(可去，跳跃)<br>&emsp;2.定义法不写了，判别法整理：<br>&emsp;&emsp;1.x^αf(x) (x-&gt;+∞) 若α&gt;1 ,则收敛，反之 发散，即不存在<br>&emsp;&emsp;2.(x-a)^αf(x) (x-&gt;a+) 若α&lt;1 ,则收敛，反之 发散，即不存在<br>&emsp;&emsp;3.(b-x)^αf(x) (x-&gt;b-) 若α&lt;1 ,则收敛，反之 发散，即不存在<br>&emsp;3.Γ(n) = ∫(0,+∞)x^(n-1) e^(-x)dx,则有：<br>&emsp;&emsp;1.Γ(n+1)=nΓ(n)<br>&emsp;&emsp;2.Γ(n+1)=n!<br>&emsp;&emsp;3.Γ(1/2)=根号π  </p><h2 id="定积分的几何意义"><a href="#定积分的几何意义" class="headerlink" title="定积分的几何意义"></a>定积分的几何意义</h2><h3 id="相关公式"><a href="#相关公式" class="headerlink" title="相关公式"></a>相关公式</h3><p>&emsp;1.(dx范围内曲线的长度)ds=√(1+[f’(x)]^2) dx<br>&emsp;2.x=f(t);y=g(t);则：ds=√([f’(t)]^2+[g’(t)]^2) dt<br>&emsp;3.d表面积=2πyds = 2πy√(1+[f’(t)]^2) dx<br>&emsp;4.体积：<br>&emsp;&emsp;1.(绕x轴)dVx=π[f(x)]^2 dx<br>&emsp;&emsp;1.(绕y轴)dVy=2πx[f(x)] dx  </p><h3 id="几种常用的图形"><a href="#几种常用的图形" class="headerlink" title="几种常用的图形"></a>几种常用的图形</h3><p>&emsp;1.x^(2/3)+y^(2/3)=a^(2/3) 星形线，则有：<br>&emsp;&emsp;x=a(cost)^3;y=a(sint)^3<br>&emsp;2.(x^2+y^2)^2 = a^2(x^2-y^2) 双纽线，则有：<br>&emsp;&emsp;r^2=a^2 cos2t  补充：极坐标表面积=(1/2)∫(0,π/4)r^2dθ<br>&emsp;3.摆线，方程为：<br>&emsp;&emsp;x=a(t-sint);y=1-cost<br>&emsp;4.♥形线，方程为：r=a(1+cosθ)<br>&emsp;相关的体积面积，都需要会写</p><h2 id="练习中碰到的知识点整理"><a href="#练习中碰到的知识点整理" class="headerlink" title="练习中碰到的知识点整理"></a>练习中碰到的知识点整理</h2><p><img src="https://i.loli.net/2020/06/29/2PFRbCMNwSvxBgq.jpg" alt="知识点整理"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 考研 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>算法篇四(二分法和动态规划)</title>
       <link href="/p/11318e4f.html"/>
       <url>/p/11318e4f.html</url>
