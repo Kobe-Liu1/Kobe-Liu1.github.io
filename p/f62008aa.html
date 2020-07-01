@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="高数二(定积分), Kobe-Liu">
-    <meta name="description" content="定积分的相关整理概念相关定积分的定义&amp;emsp;y=f(x)在 [a,b]上有界:&amp;emsp;&amp;emsp;1.将[a,b]分为无数个点：a=x0&amp;lt;x1&amp;lt;x2&amp;lt;…&amp;lt;xn=b,得 Δx=xi-x(i-1)  i∈[1,n">
+    <meta name="keywords" content="工作中遇到的问题-第八弹, Kobe-Liu">
+    <meta name="description" content="springboot整合TCP遇到的相关问题整合过程：心跳概念：&amp;emsp;维护任何一个长连接都需要心跳机制，客户端发送一个心跳给服务器，服务器给客户端一个心跳应答，这样就形成客户端服务器的一次完整的握手，这个握手是让双方都知道他们之间的连">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -14,7 +14,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="baidu-site-verification" content="Fd4kCdtjga" />
-    <title>高数二(定积分) | Kobe-Liu</title>
+    <title>工作中遇到的问题-第八弹 | Kobe-Liu</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -248,7 +248,7 @@
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        高数二(定积分)
+                        工作中遇到的问题-第八弹
                     </div>
                 </div>
             </div>
@@ -360,8 +360,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%80%83%E7%A0%94/">
-                                <span class="chip bg-color">考研</span>
+                            <a href="/tags/work/">
+                                <span class="chip bg-color">work</span>
                             </a>
                         
                     </div>
@@ -376,7 +376,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-24
+                    2020-07-01
                 </div>
                 
 
@@ -385,14 +385,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    959
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    8 分
                 </div>
                 
 				
@@ -408,13 +408,195 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="定积分的相关整理"><a href="#定积分的相关整理" class="headerlink" title="定积分的相关整理"></a>定积分的相关整理</h1><h2 id="概念相关"><a href="#概念相关" class="headerlink" title="概念相关"></a>概念相关</h2><h3 id="定积分的定义"><a href="#定积分的定义" class="headerlink" title="定积分的定义"></a>定积分的定义</h3><p>&emsp;y=f(x)在 [a,b]上有界:<br>&emsp;&emsp;1.将[a,b]分为无数个点：a=x0&lt;x1&lt;x2&lt;…&lt;xn=b,得 Δx=xi-x(i-1)  i∈[1,n]<br>&emsp;&emsp;2.任意取 ζi∈[x(i-1),xi],做 ζ1Δx1+ζ2Δx2+…+ζiΔxi (其实就是f(x)在[a,b]上得面积)<br>&emsp;&emsp;3.令λ =max{Δx1,Δx2,…,Δxn},若λ-&gt;0时，面积存在，就称f(x)在[a,b]上可积，极限值称为f(x)得定积分，记作：∫(a,b)f(x)dx  </p>
-<h3 id="定积分的说明"><a href="#定积分的说明" class="headerlink" title="定积分的说明"></a>定积分的说明</h3><p>&emsp;1.f(x)在[a,b]上有界时可积的必要条件，即  有界不一定可积，可积一定有界 (证明相关的不整理)<br>&emsp;2.定积分的一般性质：<br>&emsp;&emsp;1.加减乘除不写了<br>&emsp;&emsp;2.若f(x),|f(x)| 在[a,b]上可积，则有：∫(a,b)f(x)dx &lt;= ∫(a,b)|f(x)|dx (有一些面积为负，会抵消)<br>&emsp;&emsp;3.f(x)&gt;0，则∫(a,b)f(x)dx&gt;0<br>&emsp;&emsp;4.f(x)&gt;=g(x),则∫(a,b)f(x)dx &gt;= ∫(a,b)g(x)dx<br>&emsp;&emsp;5.(重要的一塌糊涂，经常想不到)积分中值定理：f(x)∈c[a,b],则 存在ζ∈[a,b],有∫(a,b)f(x)dx = f(ζ)(b-a)<br>&emsp;&emsp;&emsp;&emsp;@注意：2∫(0,1/2)f(x)dx 要想到积分中值定理  </p>
-<h3 id="积分的基本定理"><a href="#积分的基本定理" class="headerlink" title="积分的基本定理"></a>积分的基本定理</h3><p>&emsp;1.不定积分的本质是函数，定积分的本质是数<br>&emsp;2.定积分与函数关系和上下限有关，与使用的积分变量无关<br>&emsp;3.牛顿.莱布尼兹公式的证明，要会证明，  即F(b)- F(a) = ∫(a,b)f(x)dx<br>&emsp;4.几种基本的转换:<br>&emsp;&emsp;1.∫(-a,0) -&gt; ∫(0,a) [x=-t];<br>&emsp;&emsp;2.∫(a,b) -&gt; ∫(0,1) [x=a+(a-b)t]<br>&emsp;&emsp;3.∫(a,b) -&gt; ∫(a,b) [x+t=b+a]<br>&emsp;&emsp;4.∫(π/2,π) -&gt; ∫(0,π/2) [x-π/2=t]<br>&emsp;5.重要定理：∫(0,π/2)(sinx)^ndx = ∫(0,π/2)(cosx)^ndx = In，有公式：<br>&emsp;&emsp;1.In = [(n-1)/n]I(n-2)<br>&emsp;&emsp;2.I1=1;I0=π/2<br>&emsp;6.∫(0,π)f(sinx)dx = 2∫(0,π/2)f(sinx)dx<br>&emsp;7.∫(0,π)f(|cosx|)dx = 2∫(0,π/2)f(cosx)dx<br>&emsp;8.f(x)是以T为周期的连续函数，则：<br>&emsp;&emsp;1.∫(a,a+T)f(x)dx = ∫(0,T)f(x)dx<br>&emsp;&emsp;2.∫(0,nT)f(x)dx = n∫(0,T)f(x)dx </p>
-<h2 id="反常积分-广义积分"><a href="#反常积分-广义积分" class="headerlink" title="反常积分(广义积分)"></a>反常积分(广义积分)</h2><p>&emsp;1.正常积分：1.闭区间，区间有限；2.f(x)连续或者存在有限个第一间断点(可去，跳跃)<br>&emsp;2.定义法不写了，判别法整理：<br>&emsp;&emsp;1.x^αf(x) (x-&gt;+∞) 若α&gt;1 ,则收敛，反之 发散，即不存在<br>&emsp;&emsp;2.(x-a)^αf(x) (x-&gt;a+) 若α&lt;1 ,则收敛，反之 发散，即不存在<br>&emsp;&emsp;3.(b-x)^αf(x) (x-&gt;b-) 若α&lt;1 ,则收敛，反之 发散，即不存在<br>&emsp;3.Γ(n) = ∫(0,+∞)x^(n-1) e^(-x)dx,则有：<br>&emsp;&emsp;1.Γ(n+1)=nΓ(n)<br>&emsp;&emsp;2.Γ(n+1)=n!<br>&emsp;&emsp;3.Γ(1/2)=根号π  </p>
-<h2 id="定积分的几何意义"><a href="#定积分的几何意义" class="headerlink" title="定积分的几何意义"></a>定积分的几何意义</h2><h3 id="相关公式"><a href="#相关公式" class="headerlink" title="相关公式"></a>相关公式</h3><p>&emsp;1.(dx范围内曲线的长度)ds=√(1+[f’(x)]^2) dx<br>&emsp;2.x=f(t);y=g(t);则：ds=√([f’(t)]^2+[g’(t)]^2) dt<br>&emsp;3.d表面积=2πyds = 2πy√(1+[f’(t)]^2) dx<br>&emsp;4.体积：<br>&emsp;&emsp;1.(绕x轴)dVx=π[f(x)]^2 dx<br>&emsp;&emsp;1.(绕y轴)dVy=2πx[f(x)] dx  </p>
-<h3 id="几种常用的图形"><a href="#几种常用的图形" class="headerlink" title="几种常用的图形"></a>几种常用的图形</h3><p>&emsp;1.x^(2/3)+y^(2/3)=a^(2/3) 星形线，则有：<br>&emsp;&emsp;x=a(cost)^3;y=a(sint)^3<br>&emsp;2.(x^2+y^2)^2 = a^2(x^2-y^2) 双纽线，则有：<br>&emsp;&emsp;r^2=a^2 cos2t  补充：极坐标表面积=(1/2)∫(0,π/4)r^2dθ<br>&emsp;3.摆线，方程为：<br>&emsp;&emsp;x=a(t-sint);y=1-cost<br>&emsp;4.♥形线，方程为：r=a(1+cosθ)<br>&emsp;相关的体积面积，都需要会写</p>
-<h2 id="练习中碰到的知识点整理"><a href="#练习中碰到的知识点整理" class="headerlink" title="练习中碰到的知识点整理"></a>练习中碰到的知识点整理</h2><p><img src="https://i.loli.net/2020/06/29/2PFRbCMNwSvxBgq.jpg" alt="知识点整理"></p>
+                <h1 id="springboot整合TCP遇到的相关问题"><a href="#springboot整合TCP遇到的相关问题" class="headerlink" title="springboot整合TCP遇到的相关问题"></a>springboot整合TCP遇到的相关问题</h1><h2 id="整合过程："><a href="#整合过程：" class="headerlink" title="整合过程："></a>整合过程：</h2><h3 id="心跳概念："><a href="#心跳概念：" class="headerlink" title="心跳概念："></a>心跳概念：</h3><p>&emsp;维护任何一个长连接都需要心跳机制，客户端发送一个心跳给服务器，服务器给客户端一个心跳应答，这样就形成客户端服务器的一次完整的握手，这个握手是让双方都知道他们之间的连接是没有断开，客户端是在线的。如果超过一个时间的阈值，客户端没有收到服务器的应答，或者服务器没有收到客户端的心跳，那么对客户端来说则断开与服务器的连接重新建立一个连接，对服务器来说只要断开这个连接即可。  </p>
+<h3 id="整合："><a href="#整合：" class="headerlink" title="整合："></a>整合：</h3><p>&emsp;socket的bean代码<br>    @Data<br>    @Component<br>    @PropertySource(“classpath:application.properties”)<br>    public class DelongServerSocket {<br>        @Value(“${socket.port}”)<br>        private Integer port;<br>        private boolean started;<br>        private ServerSocket ss;<br>        public static ConcurrentHashMap&lt;String, ClientSocket&gt; clientsMap = new ConcurrentHashMap&lt;&gt;();<br>        private ExecutorService executorService = Executors.newCachedThreadPool();<br>        @Autowired<br>        private ShelfDao shelfDao;</p>
+<pre><code>    public static void main(String[] args) {
+        new DelongServerSocket().start(10086);
+    }
+    public void start() {
+        start(null);
+    }
+    public void start(Integer port) {
+        ShelfDomain sd = shelfDao.findAll().get(0);
+        sd.setLoadStatus(2);
+        shelfDao.save(sd);
+
+        System.out.println(sd.getLoadStatus());
+        try {
+            ss = new ServerSocket(port == null ? this.port : port);
+            started = true;
+            System.out.println(&quot;端口已开启,占用10086端口号....&quot;);
+        } catch (Exception e) {
+            System.out.println(&quot;端口使用中....&quot;);
+            System.out.println(&quot;请关掉相关程序并重新运行服务器！&quot;);
+            e.printStackTrace();
+            System.exit(0);
+        }
+        try {
+            while (started) {
+                Socket socket = ss.accept();
+                socket.setKeepAlive(true);
+                ClientSocket register = ClientSocket.register(socket);
+                System.out.println(&quot;a client connected!&quot;);
+                if (register != null) {
+                    executorService.submit(register);
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                ss.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    @PostConstruct
+    public void initDeepface() {
+        /*这里是关键步骤,通过 ==@PostConstruct== 注解,在service初始化时注入到线程类里面*/
+        ClientSocket.setShelfDao(shelfDao);
+    }
+}    </code></pre><p>&emsp;    下面是具体处理socket的类<br>    @Data<br>    @Slf4j<br>    public class ClientSocket implements Runnable {<br>        private Socket socket;<br>        private DataInputStream inputStream;<br>        private DataOutputStream outputStream;<br>        private String key;<br>        private String message;<br>        private static ShelfDao shelfDao;</p>
+<pre><code>    /**
+    * 注册socket到map里
+    * @param socket
+    * @return
+    * */
+    public static ClientSocket register(Socket socket) {
+        ClientSocket client = new ClientSocket();
+        try {
+            int[] list = new int[8];
+            client.setSocket(socket);
+            client.setInputStream(new DataInputStream(socket.getInputStream()));
+            client.setOutputStream(new DataOutputStream(socket.getOutputStream()));
+            byte[] bytes = new byte[1024];
+            int read = client.getInputStream().read(bytes);
+            System.out.println(read);
+            client.setKey(new String(bytes, &quot;utf-8&quot;));
+            DelongServerSocket.clientsMap.put(client.getKey(), client);
+            System.out.println(DelongServerSocket.clientsMap);
+            return client;
+        } catch (IOException e) {
+            client.logout();
+        }
+        return null;
+    }
+
+    public static void setShelfDao(ShelfDao shelfDao) {
+        ClientSocket.shelfDao = shelfDao;
+    }
+
+    public static ShelfDao getShelfDao() {
+        return shelfDao;
+    }
+
+    /**
+    * 发送数据
+    * */
+    public void send() {
+        try {
+            byte[] data = new byte[5];
+            data[0] = 2;
+            data[1] = 8;
+            data[2] = 71;
+            data[3] = 33;
+            data[4] = 3;
+            outputStream.write(data);
+            System.out.println(&quot;发送：&quot;+ data[0]);
+        } catch (IOException e) {
+            logout();
+        }
+    }
+    /**
+    * 接收数据
+    * @return
+    * @throws IOException
+    * */
+    public void receive()  {
+        try {
+            ShelfDomain sd;
+            byte[] bytes = new byte[5];
+            inputStream.read(bytes);
+
+            int num = bytes[3];
+            for(int i=0;i&lt;8;i++){
+                int count = (num&gt;&gt;i)&amp;0x1;
+                if(count == 1){
+                    sd=shelfDao.findAll().get(i);
+                    if(sd.getLoadStatus() != 2){
+                        sd.setLoadStatus(2);
+                        shelfDao.save(sd);
+                    }
+                }else{
+                    sd=shelfDao.findAll().get(i);
+                    if(sd.getLoadStatus() != 0){
+                        sd.setLoadStatus(0);
+                        shelfDao.save(sd);
+                    }
+                }
+            }
+            System.out.println(&quot;收到数据: &quot;+ bytes);
+        } catch (Exception e) {
+            logout();
+        }
+    }
+    /**
+    * 登出操作, 关闭各种流
+    */
+    public void logout() {
+        if (DelongServerSocket.clientsMap.containsKey(key)) {
+            DelongServerSocket.clientsMap.remove(key);
+        }
+        System.out.println(DelongServerSocket.clientsMap);
+        try {
+            if(!socket.isClosed()) {
+                socket.shutdownOutput();
+                socket.shutdownInput();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                socket.close();
+                System.out.println(&quot;关闭&quot;);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+    @Override
+    public void run() {
+        // 每过5秒连接一次客户端
+        while (true) {
+            try {
+                TimeUnit.SECONDS.sleep(5);
+                receive();
+                if(socket.isClosed()){
+                    break;
+                }
+                System.out.println(&quot;------------------------------------&quot;);
+                send();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    @Override
+    public String toString() {
+        return &quot;Client{&quot; +
+                &quot;socket=&quot; + socket +
+                &quot;, inputStream=&quot; + inputStream +
+                &quot;, outputStream=&quot; + outputStream +
+                &quot;, key=&#39;&quot; + key + &#39;\&#39;&#39; +
+                &#39;}&#39;;
+    }
+}    </code></pre><p>&emsp;放到springboot启动类的main方法里即可<br>    public static void main(String[] args) {<br>        ApplicationContext context = SpringApplication.run(SmeltApplication.class, args);<br>        context.getBean(DelongServerSocket.class).start();<br>    } </p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><h3 id="线程中注入DAO无效"><a href="#线程中注入DAO无效" class="headerlink" title="线程中注入DAO无效"></a>线程中注入DAO无效</h3><p>&emsp;1.过程：我需要在服务端线程中完成对数据库的修改，但是我使用@Autowired和@Resource注解想要注入DAO对象时，发现对象为null<br>&emsp;2.解决方法：在bean里使用@PostConstruct注解，这样在service初始化时注入到线程类里面，这样就可以在线程类中使用DAO对象了，代码在上面的代码里面有  </p>
+<h3 id="socket-sendUrgentData-0"><a href="#socket-sendUrgentData-0" class="headerlink" title="socket.sendUrgentData(0)"></a>socket.sendUrgentData(0)</h3><p>&emsp;1.概念：TCP的紧急指针，一般都不建议使用，而且不同的TCP/IP实现，也不同，一般说如果你有紧急数据宁愿再建立一个新的TCP/IP连接发送数据，让对方紧急处理，我们可以用来判断远端的客户端是否断连<br>&emsp;2.问题：windows系统不允许某一台主机总在发送紧急数据包，这样会导致信道堵塞，所以当主机发送一定数量的紧急数据包后，该主机就再不允许发送数据包了，即报错。报错类型为： Software caused connection abort: socket write error<br>&emsp;3.解决方法：不使用该方法，解决方法在代码中，不好表达 。。。  </p>
+<h2 id="spring注解整理"><a href="#spring注解整理" class="headerlink" title="spring注解整理"></a>spring注解整理</h2><p>&emsp;1.@Autowired和@Resource的异同点：推荐使用@Resource注解在字段上，这样就不用写setter方法了.并且这个注解是属于J2EE的，减少了与Spring的耦合,这样代码看起就比较优雅 。<br>&emsp;&emsp;相同点：<br>&emsp;&emsp;&emsp;(1)@Resource的作用相当于@Autowired，均可标注在字段或属性的setter方法上。<br>&emsp;&emsp;不同点：<br>&emsp;&emsp;&emsp;(1)提供方：@Autowired是由org.springframework.beans.factory.annotation.Autowired提供，换句话说就是由Spring提供；@Resource是由javax.annotation.Resource提供，即J2EE提供，需要JDK1.6及以上。<br>&emsp;&emsp;&emsp;(2)注入方式：@Autowired只按照byType 注入；@Resource默认按byName自动注入，也提供按照byType 注入；<br>&emsp;&emsp;&emsp;(3)属性：@Autowired按类型装配依赖对象，默认情况下它要求依赖对象必须存在，如果允许null值，可以设置它required属性为false。如果我们想使用按名称装配，可以结合@Qualifier注解一起使用。@Resource有两个中重要的属性：name和type。name属性指定byName，如果没有指定name属性，当注解标注在字段上，即默认取字段的名称作为bean名称寻找依赖对象，当注解标注在属性的setter方法上，即默认取属性名作为bean名称寻找依赖对象。需要注意的是，@Resource如果没有指定name属性，并且按照默认的名称仍然找不到依赖对象时， @Resource注解会回退到按类型装配。但一旦指定了name属性，就只能按名称装配了。<br>&emsp;&emsp;@Resource装配顺序:<br>&emsp;&emsp;&emsp;(1)如果同时指定了name和type，则从Spring上下文中找到唯一匹配的bean进行装配，找不到则抛出异常<br>&emsp;&emsp;&emsp;(2)如果指定了name，则从上下文中查找名称（id）匹配的bean进行装配，找不到则抛出异常<br>&emsp;&emsp;&emsp;(3)如果指定了type，则从上下文中找到类型匹配的唯一bean进行装配，找不到或者找到多个，都会抛出异常<br>&emsp;&emsp;&emsp;(4)如果既没有指定name，又没有指定type，则自动按照byName方式进行装配；如果没有匹配，则回退为一个原始类型进行匹配，如果匹配则自动装配；<br>&emsp;2.@Component：定义bean，不好归类时使用（Service，Controller，Repository）<br>&emsp;3.@Scope(“prototype”)：定义Bean的作用域和生命过程，值有(singleton,prototype,session,request,session,globalSession)<br>&emsp;4.@PostConstruct: 相当于init-method,使用在方法上，当Bean初始化时执行。<br>&emsp;5.@PreDestroy：相当于destory-method，使用在方法上，当Bean销毁时执行。<br>&emsp;6.@Transactional：声明式事务<br>&emsp;7.@Autowired 和 @Qualifier 结合使用时，自动注入的策略就从 byType 转变成 byName 了。<br>&emsp;7.@Resource的作用相当于@Autowired，只不过@Autowired按byType自动注入，而@Resource默认按 byName自动注入罢了。</p>
 
             </div>
             <hr/>
@@ -440,7 +622,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://Kobe-Liu1.github.io/p/9e2d4419.html">http://Kobe-Liu1.github.io/p/9e2d4419.html</a>
+                    <a href="http://Kobe-Liu1.github.io/p/f62008aa.html">http://Kobe-Liu1.github.io/p/f62008aa.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -478,8 +660,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%80%83%E7%A0%94/">
-                                    <span class="chip bg-color">考研</span>
+                                <a href="/tags/work/">
+                                    <span class="chip bg-color">work</span>
                                 </a>
                             
                         </div>
@@ -667,9 +849,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/p/f62008aa.html">
                     <div class="card-image">
@@ -687,9 +870,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-07-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -698,6 +881,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -716,19 +900,19 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/p/11318e4f.html">
+                <a href="/p/9e2d4419.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="算法篇四(二分法和动态规划)">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="高数二(定积分)">
                         
-                        <span class="card-title">算法篇四(二分法和动态规划)</span>
+                        <span class="card-title">高数二(定积分)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            二分法和动态规划题目&emsp;给定一个无序的整数数组，找到其中最长上升子序列的长度。&emsp;&emsp;输入: [10,9,2,5,3,7,101,18]&emsp;&emsp;输出: 4&emsp;&emsp;解释: 最长的上升子序
+                            定积分的相关整理概念相关定积分的定义&emsp;y=f(x)在 [a,b]上有界:&emsp;&emsp;1.将[a,b]分为无数个点：a=x0&lt;x1&lt;x2&lt;…&lt;xn=b,得 Δx=xi-x(i-1)  i∈[1,n
                         
                     </div>
                     <div class="publish-info">
@@ -746,8 +930,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
+                    <a href="/tags/%E8%80%83%E7%A0%94/">
+                        <span class="chip bg-color">考研</span>
                     </a>
                     
                 </div>
