@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>高数二(多元函数微分学)</title>
+      <link href="/p/ba35350a.html"/>
+      <url>/p/ba35350a.html</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="多元函数微分学"><a href="#多元函数微分学" class="headerlink" title="多元函数微分学"></a>多元函数微分学</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><h3 id="极限"><a href="#极限" class="headerlink" title="极限"></a>极限</h3><p>&emsp;1.一元函数的极限：如果∀ε&gt;0，∃δ&gt;0,当0&lt;|x-x0|&lt;δ时，有|f(x)-A|&lt;ε时，称f(x)[x-&gt;x0]的极限为A<br>&emsp;2.二元函数的极限：如果∀ε&gt;0，∃δ&gt;0,当0&lt;√[(x-xo)^2+(y-y0)^2]&lt;δ时，有|f(x,y)-A|&lt;ε时，称f(x,y)[x-&gt;x0,y-&gt;y0]的极限为A</p><h3 id="连续"><a href="#连续" class="headerlink" title="连续"></a>连续</h3><p>&emsp;1.一元函数的连续性：y=y(x) [x∈D] x0∈D; 有lim(x-&gt;x0)f(x)=f(x0)，称f(x)在x=x0处连续<br>&emsp;2.二元函数的连续性：z=f(x,y) [(x,y)∈D] (x0,y0)∈D; 有lim(x-&gt;x0,y-&gt;y0)f(x,y)=f(x0,y0)，称f(x,y)在(x0,y0)处连续</p><h3 id="偏导数"><a href="#偏导数" class="headerlink" title="偏导数"></a>偏导数</h3><p>&emsp;二元函数的偏导数：Z=f(x,y) [(x,y)∈D] (x0,y0)∈D<br>&emsp;&emsp;1.ΔZx=f(x0+Δx,yo)-f(x0,y0)[=f(x,y0)-f(x0,y0)] =&gt; f(x,y)在M0(x0,y0)处关于x的偏增量<br>&emsp;&emsp;2.ΔZy=f(x0,y0+Δy)-f(x0,y0)[=f(x0,y)-f(x0,y0)] =&gt; f(x,y)在M0(x0,y0)处关于y的偏增量<br>&emsp;&emsp;3.ΔZy=f(x0+Δx,y0+Δy)-f(x0,y0)[=f(x,y)-f(x0,y0)] =&gt; f(x,y)在M0(x0,y0)处的全增量</p><ul><li>可偏导是很差的条件，可微 ==&gt; 可偏导，连续，反之都不成立  </li></ul><h3 id="可全微"><a href="#可全微" class="headerlink" title="可全微"></a>可全微</h3><p>&emsp;1.一元函数的可微性：y=y(x) [x∈D] x0∈D; Δy=f(x0+Δx)-f(x0)[=f(x)-f(x0)]<br>&emsp;&emsp;如果 Δy = AΔx+0(Δx)[=A(x-Δx)+0(x-x0)],称f(x)在x=x0处可微，AΔx=Adx = dy|x=x0<br>&emsp;&emsp;一元函数的注意点：<br>&emsp;&emsp;&emsp;1.可导是可微的充分必要条件<br>&emsp;&emsp;&emsp;2.Δy=AΔx+0(Δx) ==&gt; A=f’(x0)<br>&emsp;&emsp;&emsp;3.y=f(x)可导，dy = d f(x) = f’(x)dx   ======<br>&emsp;2.二元函数的可微性：Z=f(x,y) [x∈D] x0∈D; Δy=f(x0+Δx,y0+Δy)-f(x0,y0)[=f(x,y)-f(x0,y0)]<br>&emsp;&emsp;设p=√[(Δx)^2+(Δy)^2]如果 ΔZx = AΔx+BΔy+0(p),称f(x,y)在M0(x0,y0)处可微，AΔx+BΔy = Adx+Bdy = dZ|(x0,y0)<br>&emsp;&emsp;二元函数的注意点：<br>&emsp;&emsp;&emsp;1.可偏导是很差的条件，可微 ==&gt; 可偏导，连续，反之都不成立<br>&emsp;&emsp;&emsp;2.ΔZx = AΔx+BΔy+0(p)，A=Z’x(x0,yo) B=Z’y(x0,y0)<br>&emsp;&emsp;&emsp;3.记住几个反例 (连续不可偏导)：√[x^2+y^4]  (可偏导不连续)：f(x,y)=[xy/(x)^2+(y)^2:(x,y)!=(0,0); 0:(x,y)=(0,0)]</p><h2 id="求导"><a href="#求导" class="headerlink" title="求导"></a>求导</h2><p>&emsp;1.显函数求偏导：直接求，例子:Z=arctan(x+y)<br>&emsp;2.复合函数求偏导：Z=f(x^2+y^2),方法，求就完事了<br>&emsp;3.隐函数求偏导，分情况列举：<br>&emsp;&emsp;1.F(x,y)=0  ==&gt; y=f(x)<br>&emsp;&emsp;2.F(x,y,z)=0  ==&gt; z=z(x,y)<br>&emsp;&emsp;3.F(x,y,z)=0;G(x,y,z)=0 ==&gt; y=f(x);z=z(x)<br>&emsp;&emsp;4.F(x,y,u,v)=0;G(x,y,,u,v)=0 ==&gt; u=u(x,y);v=v(x,y)</p><h2 id="多元函数微分学代数运用"><a href="#多元函数微分学代数运用" class="headerlink" title="多元函数微分学代数运用"></a>多元函数微分学代数运用</h2><h3 id="一元函数的极值点"><a href="#一元函数的极值点" class="headerlink" title="一元函数的极值点"></a>一元函数的极值点</h3><p>&emsp;条件：y=f(x) x∈D<br>&emsp;1.第一充分条件：<br>&emsp;&emsp;①[x&lt;x0时，f’(x)&lt;0] &amp;&amp; [x&gt;x0时，f’(x)&gt;0]  ==&gt; x=x0为极小点<br>&emsp;&emsp;②[x&lt;x0时，f’(x)&gt;0] &amp;&amp; [x&gt;x0时，f’(x)&lt;0]  ==&gt; x=x0为极大点<br>&emsp;2.第二充分条件；(前提:f’(x0)=0）<br>&emsp;&emsp;①f’’(x0)&gt;0 ==&gt; x=x0 为极小点<br>&emsp;&emsp;②f’’(x0)&lt;0 ==&gt; x=x0 为极大点</p><h3 id="无条件极值（二元）"><a href="#无条件极值（二元）" class="headerlink" title="无条件极值（二元）"></a>无条件极值（二元）</h3><p>&emsp;条件：Z=f(x,y) (x,y)∈D D是开区间<br>&emsp;&emsp;1.分别求出əZ/əx和əZ/əy，令它们等于0；<br>&emsp;&emsp;2.分别求A=fxx’’,B=fxy’’,C=fyy’’;<br>&emsp;&emsp;3.求AC-B^2：①若&lt;0,不存在 ②若&gt;0,且A&gt;0,极小点，若A&lt;0,极大点</p><h3 id="条件极值（二元）"><a href="#条件极值（二元）" class="headerlink" title="条件极值（二元）"></a>条件极值（二元）</h3><p>&emsp;条件：Z=f(x,y)，受g(x,y)=0 制约：<br>&emsp;&emsp;1.令F(x,y,λ)=f(x,y)+λg(x,y)<br>&emsp;&emsp;2.分别求出F’x，F’y-，F’λ</p><h3 id="题目中的总结"><a href="#题目中的总结" class="headerlink" title="题目中的总结"></a>题目中的总结</h3><p>&emsp;1.∫(-a,a)偶dx = 2f(0,a)dx<br>&emsp;2.∫(-a,a)奇dx = 0<br>&emsp;3.∫(0,x)f(t)dt ===&gt; F(x)-F(0) (经常想不到)<br>&emsp;4.x^2/a+y^2/b=1;z=0 如果绕x轴旋转一圈 ==&gt; x^2/a+y^2/b+z^2/b=1</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 考研 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>工作中遇到的问题-第八弹</title>
       <link href="/p/f62008aa.html"/>
       <url>/p/f62008aa.html</url>
