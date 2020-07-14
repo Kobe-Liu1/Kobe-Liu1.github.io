@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://kobe-liu1.github.io/"/>
-  <updated>2020-07-07T04:02:01.366Z</updated>
+  <updated>2020-07-14T06:38:35.209Z</updated>
   <id>http://kobe-liu1.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>高数二(微分方程)</title>
+    <link href="http://kobe-liu1.github.io/p/e62abc77.html"/>
+    <id>http://kobe-liu1.github.io/p/e62abc77.html</id>
+    <published>2020-07-14T03:32:18.000Z</published>
+    <updated>2020-07-14T06:38:35.209Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="考研" scheme="http://Kobe-Liu1.github.io/tags/%E8%80%83%E7%A0%94/"/>
+    
+  </entry>
   
   <entry>
     <title>高数二(多元函数微分学)</title>
@@ -488,31 +513,6 @@
     
     
       <category term="work" scheme="http://Kobe-Liu1.github.io/tags/work/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一些自己用的软件整理</title>
-    <link href="http://kobe-liu1.github.io/p/45bed6e9.html"/>
-    <id>http://kobe-liu1.github.io/p/45bed6e9.html</id>
-    <published>2020-05-18T01:53:48.000Z</published>
-    <updated>2020-05-18T02:46:35.217Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="software" scheme="http://Kobe-Liu1.github.io/tags/software/"/>
     
   </entry>
   
