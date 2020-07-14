@@ -391,7 +391,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    860
+                    886
                 </div>
                 
 
@@ -420,8 +420,8 @@
 <h3 id="一阶齐次线性微分方程"><a href="#一阶齐次线性微分方程" class="headerlink" title="一阶齐次线性微分方程"></a>一阶齐次线性微分方程</h3><p>&emsp;1.定义：dy/dx+P(x)y=o ,这一类称为一阶齐次线性微分方程<br>&emsp;2.解法：记住通解的公式 y=Ce^(-∫P(x)dx) [C为任意常数]  </p>
 <h3 id="一阶非齐次线性微分方程"><a href="#一阶非齐次线性微分方程" class="headerlink" title="一阶非齐次线性微分方程"></a>一阶非齐次线性微分方程</h3><p>&emsp;1.定义：dy/dx+P(x)y=Q(x) ,这一类称为一阶齐次线性微分方程<br>&emsp;2.解法：记住通解的公式 y=[∫Q(x)e^(∫P(x)dx)dx+C]e^(-∫P(x)dx) [C为任意常数]  </p>
 <h2 id="可降阶的高阶微分方程"><a href="#可降阶的高阶微分方程" class="headerlink" title="可降阶的高阶微分方程"></a>可降阶的高阶微分方程</h2><p>&emsp;1.第一种情况：f(x)的n阶导数=f(x) (n&gt;2)<br>&emsp;2.第二种情况：f(x,y’,y’’)=0 (缺少y)<br>&emsp;&emsp;解法：令y’=p,有y’’=dp/dx, 就变成了f(x,p,dp/dx)=0,之后就回归到了可分离变量的微分方程  </p>
-<h2 id="高阶线性微分方程"><a href="#高阶线性微分方程" class="headerlink" title="高阶线性微分方程"></a>高阶线性微分方程</h2><p>&emsp;1.定义：<br>&emsp;&emsp;1.y’’+a(x)y’+b(x)y=0 (<em>),称为二阶齐次线性方程<br>&emsp;&emsp;2.y’’+a(x)y’+b(x)y=f(x) (<strong>),称为二阶非齐次线性方程<br>&emsp;&emsp;若f(x)=f1(x)+f2(x);<br>&emsp;&emsp;3.y’’+a(x)y’+b(x)y=f1(x) (</strong>)’<br>&emsp;&emsp;4.y’’+a(x)y’+b(x)y=f2(x) (**)’’<br>&emsp;2.解的结构：<br>&emsp;&emsp;1.若g1(x),g2(x),…,gn(x)为(</em>)的解，那么k1g1(x)+k2g2(x)+…+kngn(x) 为(<em>)的解<br>&emsp;&emsp;2.若g1(x),g2(x),…,gn(x)为(**)的解，则<br>&emsp;&emsp;&emsp;1.k1g1(x)+k2g2(x)+…+kngn(x) 为(</em>)的解 ==&gt; k1+k2+…+kn=0;<br>&emsp;&emsp;&emsp;2.k1g1(x)+k2g2(x)+…+kngn(x) 为(<strong>)的解 ==&gt; k1+k2+…+kn=1;<br>&emsp;&emsp;3.g1(x),g2(x)为(*),(</strong>)的解，g1(x)+g2(x)为(<strong>)的解<br>&emsp;&emsp;4.g1(x),g2(x)为(</strong>)的解，g1(x)-g2(x)为(<em>)的解<br>&emsp;&emsp;5.g1(x),g2(x)为(*</em>)’,(<strong>)’’的解，g1(x)+g2(x)为(</strong>)的解</p>
-<h3 id="二阶常系数齐次线性方程-特例"><a href="#二阶常系数齐次线性方程-特例" class="headerlink" title="二阶常系数齐次线性方程(特例)"></a>二阶常系数齐次线性方程(特例)</h3><p>&emsp;1.定义：y’’+py’+qy=0 (<em>)<br>&emsp;2.解法：特征方程化为：λ^2+pλ+q=0<br>&emsp;&emsp;1.若Δ&gt;0,即λ1!=λ2，通解为：y=C1e^λ1x+C2e^λ2x<br>&emsp;&emsp;2.若Δ=0,即λ1=λ2，通解为：y=(C1+C2x)e^λ2x<br>&emsp;&emsp;2.若Δ&lt;0,即λ1λ2=a+(-)bi，通解为：y=e^ax(C1cosbx+C2sinbx)<br>&emsp;2.若y’’+py’+qy=f(x) (<strong>) ,(</strong>)的通解=(</em>)的通解+(<strong>)的特解<br>&emsp;3.(</strong>)特解的问题：f(x)=e^Kx,这里的K<br>&emsp;&emsp;1.K=λ1 &amp;&amp; K!=λ2,则(<strong>)的特解设为Axe^Kx<br>&emsp;&emsp;2.K=λ1=λ2,则(</strong>)的特解设为Ax^2e^Kx<br>&emsp;&emsp;3.K!=λ1 &amp;&amp; K!=λ2,则(**)的特解设为Ae^Kx</p>
+<h2 id="高阶线性微分方程"><a href="#高阶线性微分方程" class="headerlink" title="高阶线性微分方程"></a>高阶线性微分方程</h2><p>&emsp;1.定义：<br>&emsp;&emsp;1.y’’+a(x)y’+b(x)y=0 (1),称为二阶齐次线性方程<br>&emsp;&emsp;2.y’’+a(x)y’+b(x)y=f(x) (2),称为二阶非齐次线性方程<br>&emsp;&emsp;若f(x)=f1(x)+f2(x);<br>&emsp;&emsp;3.y’’+a(x)y’+b(x)y=f1(x) (2)’<br>&emsp;&emsp;4.y’’+a(x)y’+b(x)y=f2(x) (2)’’<br>&emsp;2.解的结构：<br>&emsp;&emsp;1.若g1(x),g2(x),…,gn(x)为(1)的解，那么k1g1(x)+k2g2(x)+…+kngn(x) 为(1)的解<br>&emsp;&emsp;2.若g1(x),g2(x),…,gn(x)为(2)的解，则<br>&emsp;&emsp;&emsp;1.k1g1(x)+k2g2(x)+…+kngn(x) 为(1)的解 ==&gt; k1+k2+…+kn=0;<br>&emsp;&emsp;&emsp;2.k1g1(x)+k2g2(x)+…+kngn(x) 为(2)的解 ==&gt; k1+k2+…+kn=1;<br>&emsp;&emsp;3.g1(x),g2(x)为(1),(2)的解，g1(x)+g2(x)为(2)的解<br>&emsp;&emsp;4.g1(x),g2(x)为(2)的解，g1(x)-g2(x)为(2)的解<br>&emsp;&emsp;5.g1(x),g2(x)为(2)’,(2)’’的解，g1(x)+g2(x)为(2)的解</p>
+<h3 id="二阶常系数齐次线性方程-特例"><a href="#二阶常系数齐次线性方程-特例" class="headerlink" title="二阶常系数齐次线性方程(特例)"></a>二阶常系数齐次线性方程(特例)</h3><p>&emsp;1.定义：y’’+py’+qy=0 (1)<br>&emsp;2.解法：特征方程化为：λ^2+pλ+q=0<br>&emsp;&emsp;1.若Δ&gt;0,即λ1!=λ2，通解为：y=C1e^λ1x+C2e^λ2x<br>&emsp;&emsp;2.若Δ=0,即λ1=λ2，通解为：y=(C1+C2x)e^λ2x<br>&emsp;&emsp;2.若Δ&lt;0,即λ1λ2=a+(-)bi，通解为：y=e^ax(C1cosbx+C2sinbx)<br>&emsp;2.若y’’+py’+qy=f(x) (2), (2)的通解=(1)的通解+(2)的特解<br>&emsp;3.(2)特解的问题：f(x)=e^Kx,这里的K<br>&emsp;&emsp;1.K=λ1 &amp;&amp; K!=λ2,则(2)的特解设为Axe^Kx<br>&emsp;&emsp;2.K=λ1=λ2,则(2)的特解设为Ax^2e^Kx<br>&emsp;&emsp;3.K!=λ1 &amp;&amp; K!=λ2,则(2)的特解设为Ae^Kx</p>
 
             </div>
             <hr/>
